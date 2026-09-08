@@ -1,0 +1,6 @@
+/Users/adrian/Projects/Garmin/Navi/android/app/src/main/java/com/navi/garmin/ManeuverParser.kt
+/Users/adrian/Projects/Garmin/Navi/android/app/src/main/java/com/navi/garmin/ManeuverType.kt
+/Users/adrian/Projects/Garmin/Navi/android/app/src/main/java/com/navi/garmin/MapsNotificationService.kt
+/Users/adrian/Projects/Garmin/Navi/android/app/src/main/java/com/navi/garmin/MainActivity.kt
+/Users/adrian/Projects/Garmin/Navi/android/app/src/main/java/com/navi/garmin/NavigationData.kt
+/Users/adrian/Projects/Garmin/Navi/android/app/src/main/java/com/navi/garmin/GarminBridge.kt

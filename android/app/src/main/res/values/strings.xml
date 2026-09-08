@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Garmin Maps Navi</string>
+    <string name="service_name">Garmin Maps Navigation Listener</string>
+    <string name="permission_title">Wymagane uprawnienie</string>
+    <string name="permission_desc">Aplikacja potrzebuje dostępu do powiadomień, aby odczytywać wskazówki z Google Maps.</string>
+    <string name="btn_grant_permission">Nadaj dostęp do powiadomień</string>
+    <string name="permission_granted">Dostęp do powiadomień: AKTYWNY</string>
+    <string name="garmin_status_title">Połączenie z Garmin vívoactive 4</string>
+    <string name="live_data_title">Dane z Google Maps na żywo</string>
+    <string name="simulator_title">Symulator manewrów (Test na biurku)</string>
+</resources>
+

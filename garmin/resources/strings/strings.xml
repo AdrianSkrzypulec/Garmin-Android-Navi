@@ -1,0 +1,9 @@
+<strings>
+    <string id="AppName">Maps Navi</string>
+    <string id="WaitingForRoute">Oczekiwanie na trasę...</string>
+    <string id="NoRoute">Brak trasy</string>
+    <string id="Standby">Standby</string>
+    <string id="RoundaboutExit">zjazd</string>
+    <string id="DestinationReached">Dotarto do celu</string>
+</strings>
+

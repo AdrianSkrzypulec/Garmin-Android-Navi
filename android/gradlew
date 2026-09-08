@@ -1,0 +1,37 @@
+#!/bin/sh
+
+# Gradle startup script for POSIX systems
+APP_BASE_NAME=`basename "$0"`
+APP_HOME="`pwd -P`"
+
+warn () {
+    echo "$*"
+} >&2
+
+die () {
+    echo
+    echo "$*"
+    echo
+    exit 1
+} >&2
+
+# Determine Java command
+if [ -n "$JAVA_HOME" ] ; then
+    JAVACMD="$JAVA_HOME/bin/java"
+else
+    JAVACMD="java"
+fi
+
+CLASSPATH=$APP_HOME/gradle/wrapper/gradle-wrapper.jar
+
+# Run gradle wrapper if jar is present, or delegate to system gradle
+if [ -f "$CLASSPATH" ]; then
+    exec "$JAVACMD" -jar "$CLASSPATH" "$@"
+else
+    if command -v gradle >/dev/null 2>&1; then
+        exec gradle "$@"
+    else
+        die "Nie znaleziono gradle ani gradle-wrapper.jar. Otwórz projekt w Android Studio lub zainstaluj gradle."
+    fi
+fi
+

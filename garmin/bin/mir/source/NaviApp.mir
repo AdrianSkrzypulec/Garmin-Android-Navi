@@ -1,0 +1,268 @@
+[ @file = "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviApp.mc"; @line = 1; @symbol_importdef<0> = [Toybox,1,7,13]; @symbol_importdef<1> = [Application,1,14,25]; ]
+import Toybox.Application;
+[ @file = "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviApp.mc"; @line = 2; @symbol_importdef<0> = [Toybox,2,7,13]; @symbol_importdef<1> = [Communications,2,14,28]; ]
+import Toybox.Communications;
+[ @file = "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviApp.mc"; @line = 3; @symbol_importdef<0> = [Toybox,3,7,13]; @symbol_importdef<1> = [Lang,3,14,18]; ]
+import Toybox.Lang;
+[ @file = "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviApp.mc"; @line = 4; @symbol_importdef<0> = [Toybox,4,7,13]; @symbol_importdef<1> = [System,4,14,20]; ]
+import Toybox.System;
+[ @file = "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviApp.mc"; @line = 5; @symbol_importdef<0> = [Toybox,5,7,13]; @symbol_importdef<1> = [WatchUi,5,14,21]; ]
+import Toybox.WatchUi;
+[ @file = "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviApp.mc"; @line = 12; glance = true; @symbol_classdef = [NaviApp,12,6,13]; @symbol_extends<0> = [Application,12,22,33]; @symbol_extends<1> = [AppBase,12,34,41]; ]
+class NaviApp extends Application.AppBase {
+    [ @file = "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviApp.mc"; @line = 12; ]
+    <init> {
+    }
+    [ @file = "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviApp.mc"; @line = 12; ]
+    static
+    <init> {
+    }
+    [ @file = "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviApp.mc"; @line = 14; @position = 16; @symbol_vardef = [_model,14,16,22]; @symbol_type<0> = [NaviModel,14,26,35]; ]
+    private
+    var _model as NaviModel;
+    [ @file = "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviApp.mc"; @line = 15; @position = 16; @symbol_vardef = [_view,15,16,21]; @symbol_type<0> = [NaviView,15,25,33]; ]
+    private
+    var _view as NaviView or Null;
+    [ @file = "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviApp.mc"; @line = 16; @position = 16; @symbol_vardef = [_delegate,16,16,25]; @symbol_type<0> = [NaviDelegate,16,29,41]; ]
+    private
+    var _delegate as NaviDelegate or Null;
+    [ @file = "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviApp.mc"; @line = 17; @position = 16; @symbol_vardef = [_glanceView,17,16,27]; @symbol_type<0> = [NaviGlanceView,17,31,45]; ]
+    private
+    var _glanceView as NaviGlanceView or Null;
+    [ @file = "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviApp.mc"; @line = 19; @symbol_functiondef = [initialize,19,13,23]; ]
+    function initialize() as Void {
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviApp_mc_19_26_22_4_start:
+[ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviApp.mc" 20 8 ]
+        symbol [ AppBase %tmp.2 20 8 15 ];
+        %tmp.2 = getv ? :AppBase;
+        symbol [ initialize %tmp.3 20 16 26 ];
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+[ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviApp.mc" 21 8 ]
+        symbol [ NaviModel %tmp.7 21 21 30 ];
+        %tmp.7 = getv ? :NaviModel;
+        %tmp.4 = newc %tmp.7 ();
+        symbol [ _model ? 21 8 14 ];
+        putv self :_model %tmp.4;
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviApp_mc_19_26_22_4_stop:
+    }
+    [ @file = "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviApp.mc"; @line = 24; @symbol_functiondef = [onStart,24,13,20]; @symbol_param<0> = [state,24,21,26]; @symbol_param<0>_type<0> = [Lang,24,30,34]; @symbol_param<0>_type<1> = [Dictionary,24,35,45]; ]
+    function onStart(state as Lang.Dictionary or Null) as Void {
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviApp_mc_24_56_34_4_start:
+[ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviApp.mc" 26 8 ]
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviApp_mc_26_8_33_8_if_stmt:
+        symbol [ Communications %tmp.1 26 12 26 ];
+        %tmp.1 = getm $.Toybox.Communications;
+        %tmp.3 = const :registerForPhoneAppMessages;
+        symbol [ registerForPhoneAppMessages %tmp.3 26 32 59 const ];
+        %tmp.4 = canhazplz %tmp.1 %tmp.3;
+        bf %tmp.4 @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviApp_mc_26_8_33_8_if_end;
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviApp_mc_26_8_33_8_if_true:
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviApp_mc_26_61_33_8_start:
+[ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviApp.mc" 27 12 ]
+        try @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviApp_mc_27_12_32_12_beginTry @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviApp_mc_27_12_32_12_endTry @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviApp_mc_27_12_32_12_catch @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviApp_mc_27_12_32_12_finally;
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviApp_mc_27_12_32_12_beginTry:
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviApp_mc_27_16_30_12_start:
+[ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviApp.mc" 28 16 ]
+        symbol [ Communications %tmp.5 28 16 30 ];
+        %tmp.5 = getm $.Toybox.Communications;
+        symbol [ registerForPhoneAppMessages %tmp.6 28 31 58 ];
+        %tmp.6 = getv function %tmp.5 :registerForPhoneAppMessages;
+        %tmp.7 = self;
+        symbol [ method %tmp.8 28 59 65 ];
+        %tmp.8 = getv function %tmp.7 :method;
+        %tmp.10 = const :onPhoneAppMessage;
+        symbol [ onPhoneAppMessage %tmp.10 28 67 84 const ];
+        %tmp.11 = invoke %tmp.7 %tmp.8(%tmp.10);
+        invoke %tmp.5 %tmp.6(%tmp.11);
+[ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviApp.mc" 29 16 ]
+        symbol [ System %tmp.12 29 16 22 ];
+        %tmp.12 = getm $.Toybox.System;
+        symbol [ println %tmp.13 29 23 30 ];
+        %tmp.13 = getv function %tmp.12 :println;
+        %tmp.14 = "NaviApp: Registered for phone messages.";
+        invoke %tmp.12 %tmp.13(%tmp.14);
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviApp_mc_27_16_30_12_stop:
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviApp_mc_27_12_32_12_endTry:
+        jsr @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviApp_mc_27_12_32_12_finally;
+        goto @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviApp_mc_27_12_32_12_end;
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviApp_mc_27_12_32_12_catch:
+        %tmp.15 = exception;
+        push %tmp.15;
+[ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviApp.mc" 30 14 ]
+        [ "_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviApp_mc_27_12_32_12_catch" "_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviApp_mc_30_14_32_12_end" ]
+        %e.1 = local;
+        symbol [ e %e.1 30 21 22 ];
+        %tmp.16 = dup %tmp.15;
+        lputv %e.1 %tmp.16;
+        symbol [ e %e.1 30 21 22 ];
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviApp_mc_30_24_32_12_start:
+[ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviApp.mc" 31 16 ]
+        symbol [ System %tmp.17 31 16 22 ];
+        %tmp.17 = getm $.Toybox.System;
+        symbol [ println %tmp.18 31 23 30 ];
+        %tmp.18 = getv function %tmp.17 :println;
+        %tmp.19 = "NaviApp: Failed to register phone listener: ";
+        %tmp.20 = lgetv %e.1;
+        symbol [ e %tmp.20 31 80 81 ];
+        symbol [ getErrorMessage %tmp.21 31 82 97 ];
+        %tmp.21 = getv function %tmp.20 :getErrorMessage;
+        %tmp.22 = invoke %tmp.20 %tmp.21();
+        %tmp.23 = add %tmp.19 %tmp.22;
+        invoke %tmp.17 %tmp.18(%tmp.23);
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviApp_mc_30_24_32_12_stop:
+        jsr @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviApp_mc_27_12_32_12_finally;
+        pop;
+        goto @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviApp_mc_27_12_32_12_end;
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviApp_mc_30_14_32_12_end:
+        try @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviApp_mc_27_12_32_12_catch @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviApp_mc_30_14_32_12_end @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviApp_mc_30_14_32_12_end @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviApp_mc_27_12_32_12_finally;
+        jsr @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviApp_mc_27_12_32_12_finally;
+        throw %tmp.15;
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviApp_mc_27_12_32_12_finally:
+        jsrret;
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviApp_mc_27_12_32_12_end:
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviApp_mc_26_61_33_8_stop:
+        goto @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviApp_mc_26_8_33_8_if_end;
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviApp_mc_26_8_33_8_if_end:
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviApp_mc_24_56_34_4_stop:
+    }
+    [ @file = "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviApp.mc"; @line = 36; @symbol_functiondef = [onStop,36,13,19]; @symbol_param<0> = [state,36,20,25]; @symbol_param<0>_type<0> = [Lang,36,29,33]; @symbol_param<0>_type<1> = [Dictionary,36,34,44]; ]
+    function onStop(state as Lang.Dictionary or Null) as Void {
+    }
+    [ @file = "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviApp.mc"; @line = 42; @symbol_functiondef = [onPhoneAppMessage,42,13,30]; @symbol_param<0> = [msg,42,31,34]; @symbol_param<0>_type<0> = [Communications,42,38,52]; @symbol_param<0>_type<1> = [PhoneAppMessage,42,53,68]; ]
+    function onPhoneAppMessage(msg as Communications.PhoneAppMessage) as Void {
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviApp_mc_42_78_48_4_start:
+[ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviApp.mc" 43 8 ]
+        [ "_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviApp_mc_42_78_48_4_start" "_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviApp_mc_42_78_48_4_stop" ]
+        %payload.1 = local;
+        symbol [ payload %payload.1 43 12 19 ];
+        %tmp.1 = lgetv %msg;
+        symbol [ msg %tmp.1 43 22 25 ];
+        symbol [ data %tmp.2 43 26 30 ];
+        %tmp.2 = getv %tmp.1 :data;
+        lputv %payload.1 %tmp.2;
+        symbol [ payload %payload.1 43 12 19 ];
+[ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviApp.mc" 44 8 ]
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviApp_mc_44_8_47_8_if_stmt:
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviApp_mc_44_12_44_55_begin:
+        %tmp.3 = lgetv %payload.1;
+        symbol [ payload %tmp.3 44 12 19 ];
+        %tmp.4 = null;
+        %tmp.5 = ne %tmp.3 %tmp.4;
+        bf %tmp.5 @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviApp_mc_44_8_47_8_if_end;
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviApp_mc_44_31_44_55_true:
+        %tmp.6 = lgetv %payload.1;
+        symbol [ payload %tmp.6 44 31 38 ];
+        %tmp.7 = as %tmp.6 { (!Null) };
+        symbol [ Lang %tmp.8 44 50 54 ];
+        %tmp.8 = getm $.Toybox.Lang;
+        symbol [ Dictionary %tmp.9 44 55 65 ];
+        %tmp.9 = getv %tmp.8 :Dictionary;
+        %tmp.10 = isa %tmp.7 %tmp.9;
+        push %tmp.10;
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviApp_mc_44_31_44_55_end:
+        %tmp.11 = phi [%tmp.5 @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviApp_mc_44_12_44_55_begin] [%tmp.10 @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviApp_mc_44_31_44_55_true] [%tmp.11 @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviApp_mc_44_31_44_55_end];
+        bf %tmp.11 @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviApp_mc_44_8_47_8_if_end;
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviApp_mc_44_8_47_8_if_true:
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviApp_mc_44_67_47_8_start:
+[ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviApp.mc" 45 12 ]
+        symbol [ System %tmp.12 45 12 18 ];
+        %tmp.12 = getm $.Toybox.System;
+        symbol [ println %tmp.13 45 19 26 ];
+        %tmp.13 = getv function %tmp.12 :println;
+        %tmp.14 = "NaviApp: Received message -> ";
+        %tmp.15 = lgetv %payload.1;
+        symbol [ payload %tmp.15 45 61 68 ];
+        %tmp.16 = as %tmp.15 { (Lang.Dictionary) && (!Null) };
+        symbol [ toString %tmp.17 45 69 77 ];
+        %tmp.17 = getv function %tmp.16 :toString;
+        %tmp.18 = invoke %tmp.16 %tmp.17();
+        %tmp.19 = add %tmp.14 %tmp.18;
+        invoke %tmp.12 %tmp.13(%tmp.19);
+[ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviApp.mc" 46 12 ]
+        symbol [ _model %tmp.21 46 12 18 ];
+        %tmp.21 = getv ? :_model;
+        symbol [ updateFromDictionary %tmp.22 46 19 39 ];
+        %tmp.22 = getv function %tmp.21 :updateFromDictionary;
+        %tmp.23 = lgetv %payload.1;
+        symbol [ payload %tmp.23 46 40 47 ];
+        %tmp.24 = as %tmp.23 { (Lang.Dictionary) && (!Null) };
+        %tmp.25 = as %tmp.24 Lang.Dictionary;
+        symbol [ Lang %tmp.25 46 51 55 ];
+        symbol [ Dictionary %tmp.25 46 56 66 ];
+        invoke %tmp.21 %tmp.22(%tmp.25);
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviApp_mc_44_67_47_8_stop:
+        goto @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviApp_mc_44_8_47_8_if_end;
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviApp_mc_44_8_47_8_if_end:
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviApp_mc_42_78_48_4_stop:
+    }
+    [ @file = "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviApp.mc"; @line = 53; @symbol_functiondef = [getInitialView,53,13,27]; @symbol_return<0> = [WatchUi,53,34,41]; @symbol_return<1> = [Views,53,42,47]; @symbol_return<2> = [WatchUi,53,53,60]; @symbol_return<3> = [Views,53,61,66]; @symbol_return<4> = [WatchUi,53,68,75]; @symbol_return<5> = [InputDelegates,53,76,90]; ]
+    function getInitialView() as [WatchUi.Views] or [WatchUi.Views, WatchUi.InputDelegates] {
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviApp_mc_53_92_57_4_start:
+[ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviApp.mc" 54 8 ]
+        symbol [ NaviView %tmp.4 54 20 28 ];
+        %tmp.4 = getv ? :NaviView;
+        symbol [ _model %tmp.6 54 29 35 ];
+        %tmp.6 = getv ? :_model;
+        %tmp.1 = newc %tmp.4 (%tmp.6);
+        symbol [ _view ? 54 8 13 ];
+        putv self :_view %tmp.1;
+[ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviApp.mc" 55 8 ]
+        symbol [ NaviDelegate %tmp.10 55 24 36 ];
+        %tmp.10 = getv ? :NaviDelegate;
+        symbol [ _model %tmp.12 55 37 43 ];
+        %tmp.12 = getv ? :_model;
+        %tmp.7 = newc %tmp.10 (%tmp.12);
+        symbol [ _delegate ? 55 8 17 ];
+        putv self :_delegate %tmp.7;
+[ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviApp.mc" 56 8 ]
+        %tmp.13 = newa 2;
+        symbol [ _view %tmp.15 56 16 21 ];
+        %tmp.15 = getv ? :_view;
+        %tmp.16 = dup %tmp.13;
+        %tmp.17 = aputv %tmp.16 0 %tmp.15;
+        symbol [ _delegate %tmp.19 56 23 32 ];
+        %tmp.19 = getv ? :_delegate;
+        %tmp.20 = dup %tmp.17;
+        %tmp.21 = aputv %tmp.20 1 %tmp.19;
+        ret %tmp.21;
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviApp_mc_53_92_57_4_stop:
+    }
+    [ @file = "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviApp.mc"; @line = 62; @symbol_functiondef = [getGlanceView,62,13,26]; @symbol_return<0> = [WatchUi,62,33,40]; @symbol_return<1> = [GlanceView,62,41,51]; @symbol_return<2> = [WatchUi,62,57,64]; @symbol_return<3> = [GlanceView,62,65,75]; @symbol_return<4> = [WatchUi,62,77,84]; @symbol_return<5> = [GlanceViewDelegate,62,85,103]; ]
+    function getGlanceView() as [WatchUi.GlanceView] or [WatchUi.GlanceView, WatchUi.GlanceViewDelegate] or Null {
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviApp_mc_62_113_65_4_start:
+[ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviApp.mc" 63 8 ]
+        symbol [ NaviGlanceView %tmp.4 63 26 40 ];
+        %tmp.4 = getv ? :NaviGlanceView;
+        symbol [ _model %tmp.6 63 41 47 ];
+        %tmp.6 = getv ? :_model;
+        %tmp.1 = newc %tmp.4 (%tmp.6);
+        symbol [ _glanceView ? 63 8 19 ];
+        putv self :_glanceView %tmp.1;
+[ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviApp.mc" 64 8 ]
+        %tmp.7 = newa 1;
+        symbol [ _glanceView %tmp.9 64 16 27 ];
+        %tmp.9 = getv ? :_glanceView;
+        %tmp.10 = dup %tmp.7;
+        %tmp.11 = aputv %tmp.10 0 %tmp.9;
+        ret %tmp.11;
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviApp_mc_62_113_65_4_stop:
+    }
+}
+[ @file = "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviApp.mc"; @line = 69; glance = true; @symbol_functiondef = [getApp,69,9,15]; @symbol_return<0> = [NaviApp,69,21,28]; ]
+function getApp() as NaviApp {
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviApp_mc_69_29_71_0_start:
+[ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviApp.mc" 70 4 ]
+    symbol [ Application %tmp.1 70 11 22 ];
+    %tmp.1 = getm $.Toybox.Application;
+    symbol [ getApp %tmp.2 70 23 29 ];
+    %tmp.2 = getv function %tmp.1 :getApp;
+    %tmp.3 = invoke %tmp.1 %tmp.2();
+    %tmp.4 = as %tmp.3 NaviApp;
+    symbol [ NaviApp %tmp.4 70 35 42 ];
+    ret %tmp.4;
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviApp_mc_69_29_71_0_stop:
+}
+[ @file = "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviApp.mc"; @line = 1; ]
+<init> {
+}

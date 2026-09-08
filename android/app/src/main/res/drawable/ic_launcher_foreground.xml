@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Center circular glow -->
+    <path
+        android:fillColor="#1E88E5"
+        android:pathData="M54,54m-28,0a28,28 0 1,0 56,0a28,28 0 1,0 -56,0" />
+    <!-- White outer ring -->
+    <path
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="2"
+        android:pathData="M54,54m-22,0a22,22 0 1,0 44,0a22,22 0 1,0 -44,0" />
+    <!-- Sharp Green Navigation Arrow -->
+    <path
+        android:fillColor="#00E676"
+        android:pathData="M54,34L69,68L54,61L39,68Z" />
+    <!-- Shaded arrow wing -->
+    <path
+        android:fillColor="#00C853"
+        android:pathData="M54,34L39,68L54,61Z" />
+</vector>
+

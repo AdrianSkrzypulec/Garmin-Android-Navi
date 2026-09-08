@@ -1,0 +1,13 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "monkeyc",
+            "request": "launch",
+            "name": "Run in vívoactive 4 Simulator",
+            "stopAtEntry": false,
+            "device": "vivoactive4"
+        }
+    ]
+}
+

@@ -1,0 +1,641 @@
+[ @file = "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviModel.mc"; @line = 1; @symbol_importdef<0> = [Toybox,1,7,13]; @symbol_importdef<1> = [Attention,1,14,23]; ]
+import Toybox.Attention;
+[ @file = "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviModel.mc"; @line = 2; @symbol_importdef<0> = [Toybox,2,7,13]; @symbol_importdef<1> = [Lang,2,14,18]; ]
+import Toybox.Lang;
+[ @file = "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviModel.mc"; @line = 3; @symbol_importdef<0> = [Toybox,3,7,13]; @symbol_importdef<1> = [System,3,14,20]; ]
+import Toybox.System;
+[ @file = "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviModel.mc"; @line = 4; @symbol_importdef<0> = [Toybox,4,7,13]; @symbol_importdef<1> = [WatchUi,4,14,21]; ]
+import Toybox.WatchUi;
+[ @file = "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviModel.mc"; @line = 11; glance = true; @symbol_classdef = [NaviModel,11,6,15]; ]
+class NaviModel {
+    [ @file = "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviModel.mc"; @line = 11; ]
+    <init> {
+    }
+    [ @file = "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviModel.mc"; @line = 11; ]
+    static
+    <init> {
+    }
+    [ @file = "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviModel.mc"; @line = 13; @position = 15; @symbol_vardef = [action,13,15,21]; @symbol_type<0> = [String,13,25,31]; ]
+    public
+    var action as String = "NONE";
+    [ @file = "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviModel.mc"; @line = 14; @position = 15; @symbol_vardef = [distance,14,15,23]; @symbol_type<0> = [String,14,27,33]; ]
+    public
+    var distance as String = "--";
+    [ @file = "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviModel.mc"; @line = 15; @position = 15; @symbol_vardef = [street,15,15,21]; @symbol_type<0> = [String,15,25,31]; ]
+    public
+    var street as String = "";
+    [ @file = "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviModel.mc"; @line = 16; @position = 15; @symbol_vardef = [eta,16,15,18]; @symbol_type<0> = [String,16,22,28]; ]
+    public
+    var eta as String = "";
+    [ @file = "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviModel.mc"; @line = 17; @position = 15; @symbol_vardef = [remainDist,17,15,25]; @symbol_type<0> = [String,17,29,35]; ]
+    public
+    var remainDist as String = "";
+    [ @file = "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviModel.mc"; @line = 18; @position = 15; @symbol_vardef = [remainTime,18,15,25]; @symbol_type<0> = [String,18,29,35]; ]
+    public
+    var remainTime as String = "";
+    [ @file = "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviModel.mc"; @line = 19; @position = 15; @symbol_vardef = [exitNumber,19,15,25]; @symbol_type<0> = [Number,19,29,35]; ]
+    public
+    var exitNumber as Number = 0;
+    [ @file = "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviModel.mc"; @line = 20; @position = 15; @symbol_vardef = [hasRoute,20,15,23]; @symbol_type<0> = [Boolean,20,27,34]; ]
+    public
+    var hasRoute as Boolean = false;
+    [ @file = "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviModel.mc"; @line = 22; @position = 16; @symbol_vardef = [_lastAction,22,16,27]; @symbol_type<0> = [String,22,31,37]; ]
+    private
+    var _lastAction as String = "NONE";
+    [ @file = "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviModel.mc"; @line = 23; @position = 16; @symbol_vardef = [_lastDistance,23,16,29]; @symbol_type<0> = [String,23,33,39]; ]
+    private
+    var _lastDistance as String = "";
+    [ @file = "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviModel.mc"; @line = 25; @symbol_functiondef = [initialize,25,13,23]; ]
+    function initialize() as Void {
+    }
+    [ @file = "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviModel.mc"; @line = 31; @symbol_functiondef = [updateFromDictionary,31,13,33]; @symbol_param<0> = [dict,31,34,38]; @symbol_param<0>_type<0> = [Lang,31,42,46]; @symbol_param<0>_type<1> = [Dictionary,31,47,57]; ]
+    function updateFromDictionary(dict as Lang.Dictionary) as Void {
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_31_67_84_4_start:
+[ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviModel.mc" 33 8 ]
+        [ "_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_31_67_84_4_start" "_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_31_67_84_4_stop" ]
+        %newAction.1 = local;
+        symbol [ newAction %newAction.1 33 12 21 ];
+        %tmp.1 = lgetv %dict;
+        symbol [ dict %tmp.1 33 24 28 ];
+        symbol [ get %tmp.2 33 29 32 ];
+        %tmp.2 = getv function %tmp.1 :get;
+        %tmp.3 = "action";
+        %tmp.4 = invoke %tmp.1 %tmp.2(%tmp.3);
+        lputv %newAction.1 %tmp.4;
+        symbol [ newAction %newAction.1 33 12 21 ];
+[ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviModel.mc" 34 8 ]
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_34_8_36_8_if_stmt:
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_34_12_34_59_begin:
+        %tmp.5 = lgetv %newAction.1;
+        symbol [ newAction %tmp.5 34 12 21 ];
+        %tmp.6 = null;
+        %tmp.7 = ne %tmp.5 %tmp.6;
+        bf %tmp.7 @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_34_8_36_8_if_end;
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_34_33_34_59_true:
+        %tmp.8 = lgetv %newAction.1;
+        symbol [ newAction %tmp.8 34 33 42 ];
+        %tmp.9 = as %tmp.8 { (!Null) };
+        symbol [ Lang %tmp.10 34 54 58 ];
+        %tmp.10 = getm $.Toybox.Lang;
+        symbol [ String %tmp.11 34 59 65 ];
+        %tmp.11 = getv %tmp.10 :String;
+        %tmp.12 = isa %tmp.9 %tmp.11;
+        push %tmp.12;
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_34_33_34_59_end:
+        %tmp.13 = phi [%tmp.7 @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_34_12_34_59_begin] [%tmp.12 @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_34_33_34_59_true] [%tmp.13 @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_34_33_34_59_end];
+        bf %tmp.13 @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_34_8_36_8_if_end;
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_34_8_36_8_if_true:
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_34_67_36_8_start:
+[ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviModel.mc" 35 12 ]
+        %tmp.14 = lgetv %newAction.1;
+        symbol [ newAction %tmp.14 35 21 30 ];
+        %tmp.15 = as %tmp.14 { (Lang.String) && (!Null) };
+        symbol [ action ? 35 12 18 ];
+        putv self :action %tmp.15;
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_34_67_36_8_stop:
+        goto @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_34_8_36_8_if_end;
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_34_8_36_8_if_end:
+[ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviModel.mc" 38 8 ]
+        [ "_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_31_67_84_4_start" "_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_31_67_84_4_stop" ]
+        %newDist.2 = local;
+        symbol [ newDist %newDist.2 38 12 19 ];
+        %tmp.16 = lgetv %dict;
+        symbol [ dict %tmp.16 38 22 26 ];
+        symbol [ get %tmp.17 38 27 30 ];
+        %tmp.17 = getv function %tmp.16 :get;
+        %tmp.18 = "distance";
+        %tmp.19 = invoke %tmp.16 %tmp.17(%tmp.18);
+        lputv %newDist.2 %tmp.19;
+        symbol [ newDist %newDist.2 38 12 19 ];
+[ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviModel.mc" 39 8 ]
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_39_8_41_8_if_stmt:
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_39_12_39_55_begin:
+        %tmp.20 = lgetv %newDist.2;
+        symbol [ newDist %tmp.20 39 12 19 ];
+        %tmp.21 = null;
+        %tmp.22 = ne %tmp.20 %tmp.21;
+        bf %tmp.22 @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_39_8_41_8_if_end;
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_39_31_39_55_true:
+        %tmp.23 = lgetv %newDist.2;
+        symbol [ newDist %tmp.23 39 31 38 ];
+        %tmp.24 = as %tmp.23 { (!Null) };
+        symbol [ Lang %tmp.25 39 50 54 ];
+        %tmp.25 = getm $.Toybox.Lang;
+        symbol [ String %tmp.26 39 55 61 ];
+        %tmp.26 = getv %tmp.25 :String;
+        %tmp.27 = isa %tmp.24 %tmp.26;
+        push %tmp.27;
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_39_31_39_55_end:
+        %tmp.28 = phi [%tmp.22 @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_39_12_39_55_begin] [%tmp.27 @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_39_31_39_55_true] [%tmp.28 @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_39_31_39_55_end];
+        bf %tmp.28 @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_39_8_41_8_if_end;
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_39_8_41_8_if_true:
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_39_63_41_8_start:
+[ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviModel.mc" 40 12 ]
+        %tmp.29 = lgetv %newDist.2;
+        symbol [ newDist %tmp.29 40 23 30 ];
+        %tmp.30 = as %tmp.29 { (Lang.String) && (!Null) };
+        symbol [ distance ? 40 12 20 ];
+        putv self :distance %tmp.30;
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_39_63_41_8_stop:
+        goto @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_39_8_41_8_if_end;
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_39_8_41_8_if_end:
+[ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviModel.mc" 43 8 ]
+        [ "_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_31_67_84_4_start" "_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_31_67_84_4_stop" ]
+        %newStreet.3 = local;
+        symbol [ newStreet %newStreet.3 43 12 21 ];
+        %tmp.31 = lgetv %dict;
+        symbol [ dict %tmp.31 43 24 28 ];
+        symbol [ get %tmp.32 43 29 32 ];
+        %tmp.32 = getv function %tmp.31 :get;
+        %tmp.33 = "street";
+        %tmp.34 = invoke %tmp.31 %tmp.32(%tmp.33);
+        lputv %newStreet.3 %tmp.34;
+        symbol [ newStreet %newStreet.3 43 12 21 ];
+[ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviModel.mc" 44 8 ]
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_44_8_46_8_if_stmt:
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_44_12_44_59_begin:
+        %tmp.35 = lgetv %newStreet.3;
+        symbol [ newStreet %tmp.35 44 12 21 ];
+        %tmp.36 = null;
+        %tmp.37 = ne %tmp.35 %tmp.36;
+        bf %tmp.37 @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_44_8_46_8_if_end;
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_44_33_44_59_true:
+        %tmp.38 = lgetv %newStreet.3;
+        symbol [ newStreet %tmp.38 44 33 42 ];
+        %tmp.39 = as %tmp.38 { (!Null) };
+        symbol [ Lang %tmp.40 44 54 58 ];
+        %tmp.40 = getm $.Toybox.Lang;
+        symbol [ String %tmp.41 44 59 65 ];
+        %tmp.41 = getv %tmp.40 :String;
+        %tmp.42 = isa %tmp.39 %tmp.41;
+        push %tmp.42;
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_44_33_44_59_end:
+        %tmp.43 = phi [%tmp.37 @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_44_12_44_59_begin] [%tmp.42 @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_44_33_44_59_true] [%tmp.43 @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_44_33_44_59_end];
+        bf %tmp.43 @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_44_8_46_8_if_end;
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_44_8_46_8_if_true:
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_44_67_46_8_start:
+[ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviModel.mc" 45 12 ]
+        %tmp.44 = lgetv %newStreet.3;
+        symbol [ newStreet %tmp.44 45 21 30 ];
+        %tmp.45 = as %tmp.44 { (Lang.String) && (!Null) };
+        symbol [ street ? 45 12 18 ];
+        putv self :street %tmp.45;
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_44_67_46_8_stop:
+        goto @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_44_8_46_8_if_end;
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_44_8_46_8_if_end:
+[ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviModel.mc" 48 8 ]
+        [ "_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_31_67_84_4_start" "_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_31_67_84_4_stop" ]
+        %newEta.4 = local;
+        symbol [ newEta %newEta.4 48 12 18 ];
+        %tmp.46 = lgetv %dict;
+        symbol [ dict %tmp.46 48 21 25 ];
+        symbol [ get %tmp.47 48 26 29 ];
+        %tmp.47 = getv function %tmp.46 :get;
+        %tmp.48 = "eta";
+        %tmp.49 = invoke %tmp.46 %tmp.47(%tmp.48);
+        lputv %newEta.4 %tmp.49;
+        symbol [ newEta %newEta.4 48 12 18 ];
+[ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviModel.mc" 49 8 ]
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_49_8_51_8_if_stmt:
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_49_12_49_53_begin:
+        %tmp.50 = lgetv %newEta.4;
+        symbol [ newEta %tmp.50 49 12 18 ];
+        %tmp.51 = null;
+        %tmp.52 = ne %tmp.50 %tmp.51;
+        bf %tmp.52 @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_49_8_51_8_if_end;
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_49_30_49_53_true:
+        %tmp.53 = lgetv %newEta.4;
+        symbol [ newEta %tmp.53 49 30 36 ];
+        %tmp.54 = as %tmp.53 { (!Null) };
+        symbol [ Lang %tmp.55 49 48 52 ];
+        %tmp.55 = getm $.Toybox.Lang;
+        symbol [ String %tmp.56 49 53 59 ];
+        %tmp.56 = getv %tmp.55 :String;
+        %tmp.57 = isa %tmp.54 %tmp.56;
+        push %tmp.57;
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_49_30_49_53_end:
+        %tmp.58 = phi [%tmp.52 @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_49_12_49_53_begin] [%tmp.57 @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_49_30_49_53_true] [%tmp.58 @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_49_30_49_53_end];
+        bf %tmp.58 @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_49_8_51_8_if_end;
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_49_8_51_8_if_true:
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_49_61_51_8_start:
+[ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviModel.mc" 50 12 ]
+        %tmp.59 = lgetv %newEta.4;
+        symbol [ newEta %tmp.59 50 18 24 ];
+        %tmp.60 = as %tmp.59 { (Lang.String) && (!Null) };
+        symbol [ eta ? 50 12 15 ];
+        putv self :eta %tmp.60;
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_49_61_51_8_stop:
+        goto @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_49_8_51_8_if_end;
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_49_8_51_8_if_end:
+[ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviModel.mc" 53 8 ]
+        [ "_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_31_67_84_4_start" "_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_31_67_84_4_stop" ]
+        %newRemainDist.5 = local;
+        symbol [ newRemainDist %newRemainDist.5 53 12 25 ];
+        %tmp.61 = lgetv %dict;
+        symbol [ dict %tmp.61 53 28 32 ];
+        symbol [ get %tmp.62 53 33 36 ];
+        %tmp.62 = getv function %tmp.61 :get;
+        %tmp.63 = "remainDist";
+        %tmp.64 = invoke %tmp.61 %tmp.62(%tmp.63);
+        lputv %newRemainDist.5 %tmp.64;
+        symbol [ newRemainDist %newRemainDist.5 53 12 25 ];
+[ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviModel.mc" 54 8 ]
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_54_8_56_8_if_stmt:
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_54_12_54_67_begin:
+        %tmp.65 = lgetv %newRemainDist.5;
+        symbol [ newRemainDist %tmp.65 54 12 25 ];
+        %tmp.66 = null;
+        %tmp.67 = ne %tmp.65 %tmp.66;
+        bf %tmp.67 @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_54_8_56_8_if_end;
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_54_37_54_67_true:
+        %tmp.68 = lgetv %newRemainDist.5;
+        symbol [ newRemainDist %tmp.68 54 37 50 ];
+        %tmp.69 = as %tmp.68 { (!Null) };
+        symbol [ Lang %tmp.70 54 62 66 ];
+        %tmp.70 = getm $.Toybox.Lang;
+        symbol [ String %tmp.71 54 67 73 ];
+        %tmp.71 = getv %tmp.70 :String;
+        %tmp.72 = isa %tmp.69 %tmp.71;
+        push %tmp.72;
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_54_37_54_67_end:
+        %tmp.73 = phi [%tmp.67 @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_54_12_54_67_begin] [%tmp.72 @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_54_37_54_67_true] [%tmp.73 @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_54_37_54_67_end];
+        bf %tmp.73 @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_54_8_56_8_if_end;
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_54_8_56_8_if_true:
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_54_75_56_8_start:
+[ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviModel.mc" 55 12 ]
+        %tmp.74 = lgetv %newRemainDist.5;
+        symbol [ newRemainDist %tmp.74 55 25 38 ];
+        %tmp.75 = as %tmp.74 { (Lang.String) && (!Null) };
+        symbol [ remainDist ? 55 12 22 ];
+        putv self :remainDist %tmp.75;
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_54_75_56_8_stop:
+        goto @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_54_8_56_8_if_end;
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_54_8_56_8_if_end:
+[ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviModel.mc" 58 8 ]
+        [ "_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_31_67_84_4_start" "_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_31_67_84_4_stop" ]
+        %newRemainTime.6 = local;
+        symbol [ newRemainTime %newRemainTime.6 58 12 25 ];
+        %tmp.76 = lgetv %dict;
+        symbol [ dict %tmp.76 58 28 32 ];
+        symbol [ get %tmp.77 58 33 36 ];
+        %tmp.77 = getv function %tmp.76 :get;
+        %tmp.78 = "remainTime";
+        %tmp.79 = invoke %tmp.76 %tmp.77(%tmp.78);
+        lputv %newRemainTime.6 %tmp.79;
+        symbol [ newRemainTime %newRemainTime.6 58 12 25 ];
+[ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviModel.mc" 59 8 ]
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_59_8_61_8_if_stmt:
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_59_12_59_67_begin:
+        %tmp.80 = lgetv %newRemainTime.6;
+        symbol [ newRemainTime %tmp.80 59 12 25 ];
+        %tmp.81 = null;
+        %tmp.82 = ne %tmp.80 %tmp.81;
+        bf %tmp.82 @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_59_8_61_8_if_end;
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_59_37_59_67_true:
+        %tmp.83 = lgetv %newRemainTime.6;
+        symbol [ newRemainTime %tmp.83 59 37 50 ];
+        %tmp.84 = as %tmp.83 { (!Null) };
+        symbol [ Lang %tmp.85 59 62 66 ];
+        %tmp.85 = getm $.Toybox.Lang;
+        symbol [ String %tmp.86 59 67 73 ];
+        %tmp.86 = getv %tmp.85 :String;
+        %tmp.87 = isa %tmp.84 %tmp.86;
+        push %tmp.87;
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_59_37_59_67_end:
+        %tmp.88 = phi [%tmp.82 @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_59_12_59_67_begin] [%tmp.87 @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_59_37_59_67_true] [%tmp.88 @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_59_37_59_67_end];
+        bf %tmp.88 @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_59_8_61_8_if_end;
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_59_8_61_8_if_true:
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_59_75_61_8_start:
+[ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviModel.mc" 60 12 ]
+        %tmp.89 = lgetv %newRemainTime.6;
+        symbol [ newRemainTime %tmp.89 60 25 38 ];
+        %tmp.90 = as %tmp.89 { (Lang.String) && (!Null) };
+        symbol [ remainTime ? 60 12 22 ];
+        putv self :remainTime %tmp.90;
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_59_75_61_8_stop:
+        goto @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_59_8_61_8_if_end;
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_59_8_61_8_if_end:
+[ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviModel.mc" 63 8 ]
+        [ "_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_31_67_84_4_start" "_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_31_67_84_4_stop" ]
+        %newExitNum.7 = local;
+        symbol [ newExitNum %newExitNum.7 63 12 22 ];
+        %tmp.91 = lgetv %dict;
+        symbol [ dict %tmp.91 63 25 29 ];
+        symbol [ get %tmp.92 63 30 33 ];
+        %tmp.92 = getv function %tmp.91 :get;
+        %tmp.93 = "exitNumber";
+        %tmp.94 = invoke %tmp.91 %tmp.92(%tmp.93);
+        lputv %newExitNum.7 %tmp.94;
+        symbol [ newExitNum %newExitNum.7 63 12 22 ];
+[ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviModel.mc" 64 8 ]
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_64_8_66_8_if_stmt:
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_64_12_64_61_begin:
+        %tmp.95 = lgetv %newExitNum.7;
+        symbol [ newExitNum %tmp.95 64 12 22 ];
+        %tmp.96 = null;
+        %tmp.97 = ne %tmp.95 %tmp.96;
+        bf %tmp.97 @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_64_8_66_8_if_end;
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_64_34_64_61_true:
+        %tmp.98 = lgetv %newExitNum.7;
+        symbol [ newExitNum %tmp.98 64 34 44 ];
+        %tmp.99 = as %tmp.98 { (!Null) };
+        symbol [ Lang %tmp.100 64 56 60 ];
+        %tmp.100 = getm $.Toybox.Lang;
+        symbol [ Number %tmp.101 64 61 67 ];
+        %tmp.101 = getv %tmp.100 :Number;
+        %tmp.102 = isa %tmp.99 %tmp.101;
+        push %tmp.102;
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_64_34_64_61_end:
+        %tmp.103 = phi [%tmp.97 @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_64_12_64_61_begin] [%tmp.102 @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_64_34_64_61_true] [%tmp.103 @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_64_34_64_61_end];
+        bf %tmp.103 @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_64_8_66_8_if_end;
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_64_8_66_8_if_true:
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_64_69_66_8_start:
+[ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviModel.mc" 65 12 ]
+        %tmp.104 = lgetv %newExitNum.7;
+        symbol [ newExitNum %tmp.104 65 25 35 ];
+        %tmp.105 = as %tmp.104 { (!Null) && (Lang.Number) };
+        symbol [ exitNumber ? 65 12 22 ];
+        putv self :exitNumber %tmp.105;
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_64_69_66_8_stop:
+        goto @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_64_8_66_8_if_end;
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_64_8_66_8_if_end:
+[ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviModel.mc" 68 8 ]
+        [ "_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_31_67_84_4_start" "_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_31_67_84_4_stop" ]
+        %newHasRoute.8 = local;
+        symbol [ newHasRoute %newHasRoute.8 68 12 23 ];
+        %tmp.106 = lgetv %dict;
+        symbol [ dict %tmp.106 68 26 30 ];
+        symbol [ get %tmp.107 68 31 34 ];
+        %tmp.107 = getv function %tmp.106 :get;
+        %tmp.108 = "hasRoute";
+        %tmp.109 = invoke %tmp.106 %tmp.107(%tmp.108);
+        lputv %newHasRoute.8 %tmp.109;
+        symbol [ newHasRoute %newHasRoute.8 68 12 23 ];
+[ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviModel.mc" 69 8 ]
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_69_8_71_8_if_stmt:
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_69_12_69_63_begin:
+        %tmp.110 = lgetv %newHasRoute.8;
+        symbol [ newHasRoute %tmp.110 69 12 23 ];
+        %tmp.111 = null;
+        %tmp.112 = ne %tmp.110 %tmp.111;
+        bf %tmp.112 @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_69_8_71_8_if_end;
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_69_35_69_63_true:
+        %tmp.113 = lgetv %newHasRoute.8;
+        symbol [ newHasRoute %tmp.113 69 35 46 ];
+        %tmp.114 = as %tmp.113 { (!Null) };
+        symbol [ Lang %tmp.115 69 58 62 ];
+        %tmp.115 = getm $.Toybox.Lang;
+        symbol [ Boolean %tmp.116 69 63 70 ];
+        %tmp.116 = getv %tmp.115 :Boolean;
+        %tmp.117 = isa %tmp.114 %tmp.116;
+        push %tmp.117;
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_69_35_69_63_end:
+        %tmp.118 = phi [%tmp.112 @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_69_12_69_63_begin] [%tmp.117 @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_69_35_69_63_true] [%tmp.118 @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_69_35_69_63_end];
+        bf %tmp.118 @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_69_8_71_8_if_end;
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_69_8_71_8_if_true:
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_69_72_71_8_start:
+[ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviModel.mc" 70 12 ]
+        %tmp.119 = lgetv %newHasRoute.8;
+        symbol [ newHasRoute %tmp.119 70 23 34 ];
+        %tmp.120 = as %tmp.119 { (!Null) && (Lang.Boolean) };
+        symbol [ hasRoute ? 70 12 20 ];
+        putv self :hasRoute %tmp.120;
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_69_72_71_8_stop:
+        goto @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_69_8_71_8_if_end;
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_69_8_71_8_if_end:
+[ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviModel.mc" 74 8 ]
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_74_8_78_8_if_stmt:
+        symbol [ hasRoute %tmp.122 74 12 20 ];
+        %tmp.122 = getv ? :hasRoute;
+        bf %tmp.122 @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_74_8_78_8_if_end;
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_74_8_78_8_if_true:
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_74_22_78_8_start:
+[ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviModel.mc" 75 12 ]
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_75_12_77_12_if_stmt:
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_75_16_75_107_begin:
+        symbol [ action %tmp.124 75 17 23 ];
+        %tmp.124 = getv ? :action;
+        symbol [ equals %tmp.125 75 24 30 ];
+        %tmp.125 = getv function %tmp.124 :equals;
+        symbol [ _lastAction %tmp.127 75 31 42 ];
+        %tmp.127 = getv ? :_lastAction;
+        %tmp.128 = invoke %tmp.124 %tmp.125(%tmp.127);
+        %tmp.129 = not %tmp.128;
+        bt %tmp.129 @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_75_12_77_12_if_true;
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_75_47_75_107_false:
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_75_48_75_106_begin:
+        symbol [ distance %tmp.131 75 49 57 ];
+        %tmp.131 = getv ? :distance;
+        symbol [ equals %tmp.132 75 58 64 ];
+        %tmp.132 = getv function %tmp.131 :equals;
+        symbol [ _lastDistance %tmp.134 75 65 78 ];
+        %tmp.134 = getv ? :_lastDistance;
+        %tmp.135 = invoke %tmp.131 %tmp.132(%tmp.134);
+        %tmp.136 = not %tmp.135;
+        bf %tmp.136 @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_75_12_77_12_if_end;
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_75_83_75_106_true:
+        %tmp.137 = self;
+        symbol [ isImminentTurn %tmp.138 75 83 97 ];
+        %tmp.138 = getv function %tmp.137 :isImminentTurn;
+        symbol [ distance %tmp.140 75 98 106 ];
+        %tmp.140 = getv ? :distance;
+        %tmp.141 = invoke %tmp.137 %tmp.138(%tmp.140);
+        push %tmp.141;
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_75_83_75_106_end:
+        %tmp.142 = phi [%tmp.136 @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_75_48_75_106_begin] [%tmp.141 @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_75_83_75_106_true] [%tmp.142 @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_75_83_75_106_end];
+        push %tmp.142;
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_75_47_75_107_end:
+        %tmp.143 = phi [%tmp.129 @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_75_16_75_107_begin] [%tmp.142 @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_75_47_75_107_false] [%tmp.143 @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_75_47_75_107_end];
+        bf %tmp.143 @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_75_12_77_12_if_end;
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_75_12_77_12_if_true:
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_75_110_77_12_start:
+[ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviModel.mc" 76 16 ]
+        %tmp.144 = self;
+        symbol [ triggerHaptic %tmp.145 76 16 29 ];
+        %tmp.145 = getv function %tmp.144 :triggerHaptic;
+        invoke %tmp.144 %tmp.145();
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_75_110_77_12_stop:
+        goto @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_75_12_77_12_if_end;
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_75_12_77_12_if_end:
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_74_22_78_8_stop:
+        goto @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_74_8_78_8_if_end;
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_74_8_78_8_if_end:
+[ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviModel.mc" 80 8 ]
+        symbol [ action %tmp.147 80 22 28 ];
+        %tmp.147 = getv ? :action;
+        symbol [ _lastAction ? 80 8 19 ];
+        putv self :_lastAction %tmp.147;
+[ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviModel.mc" 81 8 ]
+        symbol [ distance %tmp.149 81 24 32 ];
+        %tmp.149 = getv ? :distance;
+        symbol [ _lastDistance ? 81 8 21 ];
+        putv self :_lastDistance %tmp.149;
+[ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviModel.mc" 83 8 ]
+        symbol [ WatchUi %tmp.150 83 8 15 ];
+        %tmp.150 = getm $.Toybox.WatchUi;
+        symbol [ requestUpdate %tmp.151 83 16 29 ];
+        %tmp.151 = getv function %tmp.150 :requestUpdate;
+        invoke %tmp.150 %tmp.151();
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_31_67_84_4_stop:
+    }
+    [ @file = "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviModel.mc"; @line = 89; @symbol_functiondef = [isImminentTurn,89,21,35]; @symbol_param<0> = [distStr,89,36,43]; @symbol_param<0>_type<0> = [String,89,47,53]; @symbol_return<0> = [Boolean,89,58,65]; ]
+    private
+    function isImminentTurn(distStr as String) as Boolean {
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_89_66_95_4_start:
+[ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviModel.mc" 90 8 ]
+        [ "_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_89_66_95_4_start" "_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_89_66_95_4_stop" ]
+        %lower.1 = local;
+        symbol [ lower %lower.1 90 12 17 ];
+        %tmp.1 = lgetv %distStr;
+        symbol [ distStr %tmp.1 90 20 27 ];
+        symbol [ toLower %tmp.2 90 28 35 ];
+        %tmp.2 = getv function %tmp.1 :toLower;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        lputv %lower.1 %tmp.3;
+        symbol [ lower %lower.1 90 12 17 ];
+[ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviModel.mc" 91 8 ]
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_91_8_93_8_if_stmt:
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_91_12_91_65_begin:
+        %tmp.4 = lgetv %lower.1;
+        symbol [ lower %tmp.4 91 12 17 ];
+        symbol [ find %tmp.5 91 18 22 ];
+        %tmp.5 = getv function %tmp.4 :find;
+        %tmp.6 = "50 m";
+        %tmp.7 = invoke %tmp.4 %tmp.5(%tmp.6);
+        %tmp.8 = null;
+        %tmp.9 = ne %tmp.7 %tmp.8;
+        bt %tmp.9 @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_91_8_93_8_if_true;
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_91_42_91_65_false:
+        %tmp.10 = lgetv %lower.1;
+        symbol [ lower %tmp.10 91 42 47 ];
+        symbol [ find %tmp.11 91 48 52 ];
+        %tmp.11 = getv function %tmp.10 :find;
+        %tmp.12 = "100 m";
+        %tmp.13 = invoke %tmp.10 %tmp.11(%tmp.12);
+        %tmp.14 = null;
+        %tmp.15 = ne %tmp.13 %tmp.14;
+        push %tmp.15;
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_91_42_91_65_end:
+        %tmp.16 = phi [%tmp.9 @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_91_12_91_65_begin] [%tmp.15 @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_91_42_91_65_false] [%tmp.16 @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_91_42_91_65_end];
+        bf %tmp.16 @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_91_8_93_8_if_end;
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_91_8_93_8_if_true:
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_91_71_93_8_start:
+[ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviModel.mc" 92 12 ]
+        %tmp.17 = true;
+        ret %tmp.17;
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_91_71_93_8_stop:
+        goto @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_91_8_93_8_if_end;
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_91_8_93_8_if_end:
+[ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviModel.mc" 94 8 ]
+        %tmp.18 = false;
+        ret %tmp.18;
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_89_66_95_4_stop:
+    }
+    [ @file = "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviModel.mc"; @line = 100; @symbol_functiondef = [triggerHaptic,100,20,33]; ]
+    public
+    function triggerHaptic() as Void {
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_100_44_113_4_start:
+[ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviModel.mc" 101 8 ]
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_101_8_112_8_if_stmt:
+        symbol [ Attention %tmp.1 101 12 21 ];
+        %tmp.1 = getm $.Toybox.Attention;
+        %tmp.3 = const :vibrate;
+        symbol [ vibrate %tmp.3 101 27 34 const ];
+        %tmp.4 = canhazplz %tmp.1 %tmp.3;
+        bf %tmp.4 @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_101_8_112_8_if_end;
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_101_8_112_8_if_true:
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_101_36_112_8_start:
+[ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviModel.mc" 102 12 ]
+        try @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_102_12_111_12_beginTry @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_102_12_111_12_endTry @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_102_12_111_12_catch @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_102_12_111_12_finally;
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_102_12_111_12_beginTry:
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_102_16_109_12_start:
+[ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviModel.mc" 103 16 ]
+        [ "_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_102_16_109_12_start" "_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_102_16_109_12_stop" ]
+        %vibeProfile.1 = local;
+        symbol [ vibeProfile %vibeProfile.1 103 20 31 ];
+        %tmp.5 = newa 3;
+        symbol [ Attention %tmp.8 104 24 33 ];
+        %tmp.8 = getm $.Toybox.Attention;
+        symbol [ VibeProfile %tmp.9 104 34 45 ];
+        %tmp.9 = getv function ? %tmp.8 :VibeProfile;
+        %tmp.10 = 100;
+        %tmp.11 = 200;
+        %tmp.6 = newc %tmp.9 (%tmp.10, %tmp.11);
+        %tmp.12 = dup %tmp.5;
+        %tmp.13 = aputv %tmp.12 0 %tmp.6;
+        symbol [ Attention %tmp.16 105 24 33 ];
+        %tmp.16 = getm $.Toybox.Attention;
+        symbol [ VibeProfile %tmp.17 105 34 45 ];
+        %tmp.17 = getv function ? %tmp.16 :VibeProfile;
+        %tmp.18 = 0;
+        %tmp.19 = 100;
+        %tmp.14 = newc %tmp.17 (%tmp.18, %tmp.19);
+        %tmp.20 = dup %tmp.13;
+        %tmp.21 = aputv %tmp.20 1 %tmp.14;
+        symbol [ Attention %tmp.24 106 24 33 ];
+        %tmp.24 = getm $.Toybox.Attention;
+        symbol [ VibeProfile %tmp.25 106 34 45 ];
+        %tmp.25 = getv function ? %tmp.24 :VibeProfile;
+        %tmp.26 = 100;
+        %tmp.27 = 300;
+        %tmp.22 = newc %tmp.25 (%tmp.26, %tmp.27);
+        %tmp.28 = dup %tmp.21;
+        %tmp.29 = aputv %tmp.28 2 %tmp.22;
+        lputv %vibeProfile.1 %tmp.29;
+        symbol [ vibeProfile %vibeProfile.1 103 20 31 ];
+[ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviModel.mc" 108 16 ]
+        symbol [ Attention %tmp.30 108 16 25 ];
+        %tmp.30 = getm $.Toybox.Attention;
+        symbol [ vibrate %tmp.31 108 26 33 ];
+        %tmp.31 = getv function %tmp.30 :vibrate;
+        %tmp.32 = lgetv %vibeProfile.1;
+        symbol [ vibeProfile %tmp.32 108 34 45 ];
+        invoke %tmp.30 %tmp.31(%tmp.32);
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_102_16_109_12_stop:
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_102_12_111_12_endTry:
+        jsr @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_102_12_111_12_finally;
+        goto @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_102_12_111_12_end;
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_102_12_111_12_catch:
+        %tmp.33 = exception;
+        push %tmp.33;
+[ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviModel.mc" 109 14 ]
+        [ "_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_102_12_111_12_catch" "_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_109_14_111_12_end" ]
+        %e.2 = local;
+        symbol [ e %e.2 109 21 22 ];
+        %tmp.34 = dup %tmp.33;
+        lputv %e.2 %tmp.34;
+        symbol [ e %e.2 109 21 22 ];
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_109_24_111_12_start:
+[ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviModel.mc" 110 16 ]
+        symbol [ System %tmp.35 110 16 22 ];
+        %tmp.35 = getm $.Toybox.System;
+        symbol [ println %tmp.36 110 23 30 ];
+        %tmp.36 = getv function %tmp.35 :println;
+        %tmp.37 = "Haptic error: ";
+        %tmp.38 = lgetv %e.2;
+        symbol [ e %tmp.38 110 50 51 ];
+        symbol [ getErrorMessage %tmp.39 110 52 67 ];
+        %tmp.39 = getv function %tmp.38 :getErrorMessage;
+        %tmp.40 = invoke %tmp.38 %tmp.39();
+        %tmp.41 = add %tmp.37 %tmp.40;
+        invoke %tmp.35 %tmp.36(%tmp.41);
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_109_24_111_12_stop:
+        jsr @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_102_12_111_12_finally;
+        pop;
+        goto @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_102_12_111_12_end;
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_109_14_111_12_end:
+        try @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_102_12_111_12_catch @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_109_14_111_12_end @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_109_14_111_12_end @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_102_12_111_12_finally;
+        jsr @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_102_12_111_12_finally;
+        throw %tmp.33;
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_102_12_111_12_finally:
+        jsrret;
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_102_12_111_12_end:
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_101_36_112_8_stop:
+        goto @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_101_8_112_8_if_end;
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_101_8_112_8_if_end:
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_100_44_113_4_stop:
+    }
+}
+[ @file = "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviModel.mc"; @line = 1; ]
+<init> {
+}

@@ -1,0 +1,78 @@
+[ @file = "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviDelegate.mc"; @line = 1; @symbol_importdef<0> = [Toybox,1,7,13]; @symbol_importdef<1> = [Lang,1,14,18]; ]
+import Toybox.Lang;
+[ @file = "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviDelegate.mc"; @line = 2; @symbol_importdef<0> = [Toybox,2,7,13]; @symbol_importdef<1> = [WatchUi,2,14,21]; ]
+import Toybox.WatchUi;
+[ @file = "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviDelegate.mc"; @line = 7; @symbol_classdef = [NaviDelegate,7,6,18]; @symbol_extends<0> = [WatchUi,7,27,34]; @symbol_extends<1> = [BehaviorDelegate,7,35,51]; ]
+class NaviDelegate extends WatchUi.BehaviorDelegate {
+    [ @file = "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviDelegate.mc"; @line = 7; ]
+    <init> {
+    }
+    [ @file = "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviDelegate.mc"; @line = 7; ]
+    static
+    <init> {
+    }
+    [ @file = "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviDelegate.mc"; @line = 9; @position = 16; @symbol_vardef = [_model,9,16,22]; @symbol_type<0> = [NaviModel,9,26,35]; ]
+    private
+    var _model as NaviModel;
+    [ @file = "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviDelegate.mc"; @line = 11; @symbol_functiondef = [initialize,11,13,23]; @symbol_param<0> = [model,11,24,29]; @symbol_param<0>_type<0> = [NaviModel,11,33,42]; ]
+    function initialize(model as NaviModel) as Void {
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviDelegate_mc_11_44_14_4_start:
+[ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviDelegate.mc" 12 8 ]
+        symbol [ BehaviorDelegate %tmp.2 12 8 24 ];
+        %tmp.2 = getv ? :BehaviorDelegate;
+        symbol [ initialize %tmp.3 12 25 35 ];
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+[ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviDelegate.mc" 13 8 ]
+        %tmp.4 = lgetv %model;
+        symbol [ model %tmp.4 13 17 22 ];
+        symbol [ _model ? 13 8 14 ];
+        putv self :_model %tmp.4;
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviDelegate_mc_11_44_14_4_stop:
+    }
+    [ @file = "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviDelegate.mc"; @line = 19; @symbol_functiondef = [onTap,19,13,18]; @symbol_param<0> = [clickEvent,19,19,29]; @symbol_param<0>_type<0> = [WatchUi,19,33,40]; @symbol_param<0>_type<1> = [ClickEvent,19,41,51]; @symbol_return<0> = [Lang,19,56,60]; @symbol_return<1> = [Boolean,19,61,68]; ]
+    function onTap(clickEvent as WatchUi.ClickEvent) as Lang.Boolean {
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviDelegate_mc_19_69_23_4_start:
+[ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviDelegate.mc" 20 8 ]
+        symbol [ _model %tmp.2 20 8 14 ];
+        %tmp.2 = getv ? :_model;
+        symbol [ triggerHaptic %tmp.3 20 15 28 ];
+        %tmp.3 = getv function %tmp.2 :triggerHaptic;
+        invoke %tmp.2 %tmp.3();
+[ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviDelegate.mc" 21 8 ]
+        symbol [ WatchUi %tmp.4 21 8 15 ];
+        %tmp.4 = getm $.Toybox.WatchUi;
+        symbol [ requestUpdate %tmp.5 21 16 29 ];
+        %tmp.5 = getv function %tmp.4 :requestUpdate;
+        invoke %tmp.4 %tmp.5();
+[ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviDelegate.mc" 22 8 ]
+        %tmp.6 = true;
+        ret %tmp.6;
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviDelegate_mc_19_69_23_4_stop:
+    }
+    [ @file = "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviDelegate.mc"; @line = 28; @symbol_functiondef = [onBack,28,13,19]; @symbol_return<0> = [Lang,28,25,29]; @symbol_return<1> = [Boolean,28,30,37]; ]
+    function onBack() as Lang.Boolean {
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviDelegate_mc_28_38_31_4_start:
+[ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviDelegate.mc" 30 8 ]
+        %tmp.1 = false;
+        ret %tmp.1;
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviDelegate_mc_28_38_31_4_stop:
+    }
+    [ @file = "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviDelegate.mc"; @line = 36; @symbol_functiondef = [onSelect,36,13,21]; @symbol_return<0> = [Lang,36,27,31]; @symbol_return<1> = [Boolean,36,32,39]; ]
+    function onSelect() as Lang.Boolean {
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviDelegate_mc_36_40_39_4_start:
+[ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviDelegate.mc" 37 8 ]
+        symbol [ _model %tmp.2 37 8 14 ];
+        %tmp.2 = getv ? :_model;
+        symbol [ triggerHaptic %tmp.3 37 15 28 ];
+        %tmp.3 = getv function %tmp.2 :triggerHaptic;
+        invoke %tmp.2 %tmp.3();
+[ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviDelegate.mc" 38 8 ]
+        %tmp.4 = true;
+        ret %tmp.4;
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviDelegate_mc_36_40_39_4_stop:
+    }
+}
+[ @file = "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviDelegate.mc"; @line = 1; ]
+<init> {
+}

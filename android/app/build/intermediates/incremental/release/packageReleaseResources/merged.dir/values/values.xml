@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="accent">#00E676</color>
+    <color name="background">#F5F5F7</color>
+    <color name="card_bg">#FFFFFF</color>
+    <color name="primary">#1976D2</color>
+    <color name="primary_dark">#0D47A1</color>
+    <color name="status_green">#2E7D32</color>
+    <color name="status_red">#C62828</color>
+    <color name="text_primary">#212121</color>
+    <color name="text_secondary">#757575</color>
+    <string name="app_name">Garmin Maps Navi</string>
+    <string name="btn_grant_permission">Nadaj dostęp do powiadomień</string>
+    <string name="garmin_status_title">Połączenie z Garmin vívoactive 4</string>
+    <string name="live_data_title">Dane z Google Maps na żywo</string>
+    <string name="permission_desc">Aplikacja potrzebuje dostępu do powiadomień, aby odczytywać wskazówki z Google Maps.</string>
+    <string name="permission_granted">Dostęp do powiadomień: AKTYWNY</string>
+    <string name="permission_title">Wymagane uprawnienie</string>
+    <string name="service_name">Garmin Maps Navigation Listener</string>
+    <string name="simulator_title">Symulator manewrów (Test na biurku)</string>
+    <style name="Theme.GarminMapsNavi" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryVariant">@color/primary_dark</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+        <item name="colorSecondary">@color/accent</item>
+        <item name="android:statusBarColor">@color/primary_dark</item>
+    </style>
+</resources>
