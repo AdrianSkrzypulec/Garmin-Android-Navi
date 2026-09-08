@@ -14,10 +14,9 @@ class NaviDelegate extends WatchUi.BehaviorDelegate {
     }
 
     /**
-     * Tapping the screen triggers a test haptic vibration and forces UI redraw.
+     * Tapping the screen forces UI redraw.
      */
     function onTap(clickEvent as WatchUi.ClickEvent) as Lang.Boolean {
-        _model.triggerHaptic();
         WatchUi.requestUpdate();
         return true;
     }
@@ -34,7 +33,6 @@ class NaviDelegate extends WatchUi.BehaviorDelegate {
      * Handle physical select button (vívoactive 4 top-right button)
      */
     function onSelect() as Lang.Boolean {
-        _model.triggerHaptic();
         return true;
     }
 }

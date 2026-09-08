@@ -95,21 +95,11 @@ class NaviModel {
     }
 
     /**
-     * Triggers distinct double-pulse vibration on Garmin vívoactive 4
+     * Triggers distinct double-pulse vibration on Garmin vívoactive 4 (Disabled)
      */
     public function triggerHaptic() as Void {
-        if (Attention has :vibrate) {
-            try {
-                var vibeProfile = [
-                    new Attention.VibeProfile(100, 200), // 100% duty, 200ms
-                    new Attention.VibeProfile(0, 100),   // Pause 100ms
-                    new Attention.VibeProfile(100, 300)  // 100% duty, 300ms
-                ];
-                Attention.vibrate(vibeProfile);
-            } catch (e) {
-                System.println("Haptic error: " + e.getErrorMessage());
-            }
-        }
+        // Wibracje wyłączone na życzenie użytkownika
+        return;
     }
 }
 

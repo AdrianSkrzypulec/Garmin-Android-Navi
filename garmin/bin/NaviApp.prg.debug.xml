@@ -271,81 +271,75 @@
         <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviModel.mc" id="27" lineNum="92" parent="globals/NaviModel" pc="268441504" symbol="&lt;globals/NaviModel/&lt;&gt;isImminentTurn&gt;"/>
         <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviModel.mc" id="27" lineNum="94" parent="globals/NaviModel" pc="268441510" symbol="&lt;globals/NaviModel/&lt;&gt;isImminentTurn&gt;"/>
         <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviModel.mc" id="28" lineNum="100" parent="globals/NaviModel" pc="268441513" symbol="triggerHaptic"/>
-        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviModel.mc" id="28" lineNum="101" parent="globals/NaviModel" pc="268441517" symbol="triggerHaptic"/>
-        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviModel.mc" id="28" lineNum="103" parent="globals/NaviModel" pc="268441532" symbol="triggerHaptic"/>
-        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviModel.mc" id="28" lineNum="108" parent="globals/NaviModel" pc="268441672" symbol="triggerHaptic"/>
-        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviModel.mc" id="28" lineNum="109" parent="globals/NaviModel" pc="268441696" symbol="triggerHaptic"/>
-        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviModel.mc" id="28" lineNum="110" parent="globals/NaviModel" pc="268441700" symbol="triggerHaptic"/>
-        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviDelegate.mc" id="30" lineNum="28" parent="globals/NaviDelegate" pc="268441749" symbol="onBack"/>
-        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviDelegate.mc" id="30" lineNum="30" parent="globals/NaviDelegate" pc="268441751" symbol="onBack"/>
-        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviDelegate.mc" id="31" lineNum="11" parent="globals/NaviDelegate" pc="268441754" symbol="initialize"/>
-        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviDelegate.mc" id="31" lineNum="12" parent="globals/NaviDelegate" pc="268441756" symbol="initialize"/>
-        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviDelegate.mc" id="31" lineNum="13" parent="globals/NaviDelegate" pc="268441774" symbol="initialize"/>
-        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviDelegate.mc" id="32" lineNum="19" parent="globals/NaviDelegate" pc="268441785" symbol="onTap"/>
-        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviDelegate.mc" id="32" lineNum="20" parent="globals/NaviDelegate" pc="268441787" symbol="onTap"/>
-        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviDelegate.mc" id="32" lineNum="21" parent="globals/NaviDelegate" pc="268441805" symbol="onTap"/>
-        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviDelegate.mc" id="32" lineNum="22" parent="globals/NaviDelegate" pc="268441821" symbol="onTap"/>
-        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviDelegate.mc" id="33" lineNum="36" parent="globals/NaviDelegate" pc="268441824" symbol="onSelect"/>
-        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviDelegate.mc" id="33" lineNum="37" parent="globals/NaviDelegate" pc="268441826" symbol="onSelect"/>
-        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviDelegate.mc" id="33" lineNum="38" parent="globals/NaviDelegate" pc="268441844" symbol="onSelect"/>
-        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviView.mc" id="34" lineNum="130" parent="globals/NaviView" pc="268441847" symbol="&lt;globals/NaviView/&lt;&gt;fitTextToWidth&gt;"/>
-        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviView.mc" id="34" lineNum="136" parent="globals/NaviView" pc="268441851" symbol="&lt;globals/NaviView/&lt;&gt;fitTextToWidth&gt;"/>
-        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviView.mc" id="34" lineNum="137" parent="globals/NaviView" pc="268441868" symbol="&lt;globals/NaviView/&lt;&gt;fitTextToWidth&gt;"/>
-        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviView.mc" id="34" lineNum="138" parent="globals/NaviView" pc="268441876" symbol="&lt;globals/NaviView/&lt;&gt;fitTextToWidth&gt;"/>
-        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviView.mc" id="34" lineNum="141" parent="globals/NaviView" pc="268441882" symbol="&lt;globals/NaviView/&lt;&gt;fitTextToWidth&gt;"/>
-        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviView.mc" id="34" lineNum="142" parent="globals/NaviView" pc="268441886" symbol="&lt;globals/NaviView/&lt;&gt;fitTextToWidth&gt;"/>
-        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviView.mc" id="34" lineNum="143" parent="globals/NaviView" pc="268441936" symbol="&lt;globals/NaviView/&lt;&gt;fitTextToWidth&gt;"/>
-        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviView.mc" id="34" lineNum="145" parent="globals/NaviView" pc="268441974" symbol="&lt;globals/NaviView/&lt;&gt;fitTextToWidth&gt;"/>
-        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviView.mc" id="35" lineNum="46" parent="globals/NaviView" pc="268441983" symbol="&lt;globals/NaviView/&lt;&gt;renderActiveRoute&gt;"/>
-        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviView.mc" id="35" lineNum="54" parent="globals/NaviView" pc="268441987" symbol="&lt;globals/NaviView/&lt;&gt;renderActiveRoute&gt;"/>
-        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviView.mc" id="35" lineNum="55" parent="globals/NaviView" pc="268441994" symbol="&lt;globals/NaviView/&lt;&gt;renderActiveRoute&gt;"/>
-        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviView.mc" id="35" lineNum="56" parent="globals/NaviView" pc="268442058" symbol="&lt;globals/NaviView/&lt;&gt;renderActiveRoute&gt;"/>
-        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviView.mc" id="35" lineNum="57" parent="globals/NaviView" pc="268442098" symbol="&lt;globals/NaviView/&lt;&gt;renderActiveRoute&gt;"/>
-        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviView.mc" id="35" lineNum="58" parent="globals/NaviView" pc="268442130" symbol="&lt;globals/NaviView/&lt;&gt;renderActiveRoute&gt;"/>
-        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviView.mc" id="35" lineNum="59" parent="globals/NaviView" pc="268442155" symbol="&lt;globals/NaviView/&lt;&gt;renderActiveRoute&gt;"/>
-        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviView.mc" id="35" lineNum="60" parent="globals/NaviView" pc="268442187" symbol="&lt;globals/NaviView/&lt;&gt;renderActiveRoute&gt;"/>
-        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviView.mc" id="35" lineNum="63" parent="globals/NaviView" pc="268442206" symbol="&lt;globals/NaviView/&lt;&gt;renderActiveRoute&gt;"/>
-        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviView.mc" id="35" lineNum="64" parent="globals/NaviView" pc="268442226" symbol="&lt;globals/NaviView/&lt;&gt;renderActiveRoute&gt;"/>
-        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviView.mc" id="35" lineNum="65" parent="globals/NaviView" pc="268442248" symbol="&lt;globals/NaviView/&lt;&gt;renderActiveRoute&gt;"/>
-        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviView.mc" id="35" lineNum="69" parent="globals/NaviView" pc="268442282" symbol="&lt;globals/NaviView/&lt;&gt;renderActiveRoute&gt;"/>
-        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviView.mc" id="35" lineNum="70" parent="globals/NaviView" pc="268442304" symbol="&lt;globals/NaviView/&lt;&gt;renderActiveRoute&gt;"/>
-        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviView.mc" id="35" lineNum="71" parent="globals/NaviView" pc="268442321" symbol="&lt;globals/NaviView/&lt;&gt;renderActiveRoute&gt;"/>
-        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviView.mc" id="35" lineNum="75" parent="globals/NaviView" pc="268442359" symbol="&lt;globals/NaviView/&lt;&gt;renderActiveRoute&gt;"/>
-        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviView.mc" id="35" lineNum="78" parent="globals/NaviView" pc="268442419" symbol="&lt;globals/NaviView/&lt;&gt;renderActiveRoute&gt;"/>
-        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviView.mc" id="35" lineNum="79" parent="globals/NaviView" pc="268442426" symbol="&lt;globals/NaviView/&lt;&gt;renderActiveRoute&gt;"/>
-        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviView.mc" id="35" lineNum="80" parent="globals/NaviView" pc="268442451" symbol="&lt;globals/NaviView/&lt;&gt;renderActiveRoute&gt;"/>
-        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviView.mc" id="35" lineNum="81" parent="globals/NaviView" pc="268442493" symbol="&lt;globals/NaviView/&lt;&gt;renderActiveRoute&gt;"/>
-        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviView.mc" id="35" lineNum="84" parent="globals/NaviView" pc="268442503" symbol="&lt;globals/NaviView/&lt;&gt;renderActiveRoute&gt;"/>
-        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviView.mc" id="35" lineNum="86" parent="globals/NaviView" pc="268442522" symbol="&lt;globals/NaviView/&lt;&gt;renderActiveRoute&gt;"/>
-        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviView.mc" id="35" lineNum="89" parent="globals/NaviView" pc="268442565" symbol="&lt;globals/NaviView/&lt;&gt;renderActiveRoute&gt;"/>
-        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviView.mc" id="35" lineNum="90" parent="globals/NaviView" pc="268442597" symbol="&lt;globals/NaviView/&lt;&gt;renderActiveRoute&gt;"/>
-        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviView.mc" id="35" lineNum="91" parent="globals/NaviView" pc="268442636" symbol="&lt;globals/NaviView/&lt;&gt;renderActiveRoute&gt;"/>
-        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviView.mc" id="35" lineNum="92" parent="globals/NaviView" pc="268442658" symbol="&lt;globals/NaviView/&lt;&gt;renderActiveRoute&gt;"/>
-        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviView.mc" id="35" lineNum="96" parent="globals/NaviView" pc="268442692" symbol="&lt;globals/NaviView/&lt;&gt;renderActiveRoute&gt;"/>
-        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviView.mc" id="35" lineNum="97" parent="globals/NaviView" pc="268442724" symbol="&lt;globals/NaviView/&lt;&gt;renderActiveRoute&gt;"/>
-        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviView.mc" id="35" lineNum="98" parent="globals/NaviView" pc="268442746" symbol="&lt;globals/NaviView/&lt;&gt;renderActiveRoute&gt;"/>
-        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviView.mc" id="37" lineNum="17" parent="globals/NaviView" pc="268442793" symbol="onLayout"/>
-        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviView.mc" id="38" lineNum="12" parent="globals/NaviView" pc="268442796" symbol="initialize"/>
-        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviView.mc" id="38" lineNum="13" parent="globals/NaviView" pc="268442798" symbol="initialize"/>
-        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviView.mc" id="38" lineNum="14" parent="globals/NaviView" pc="268442816" symbol="initialize"/>
-        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviView.mc" id="40" lineNum="105" parent="globals/NaviView" pc="268442827" symbol="&lt;globals/NaviView/&lt;&gt;renderStandby&gt;"/>
-        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviView.mc" id="40" lineNum="113" parent="globals/NaviView" pc="268442829" symbol="&lt;globals/NaviView/&lt;&gt;renderStandby&gt;"/>
-        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviView.mc" id="40" lineNum="114" parent="globals/NaviView" pc="268442851" symbol="&lt;globals/NaviView/&lt;&gt;renderStandby&gt;"/>
-        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviView.mc" id="40" lineNum="117" parent="globals/NaviView" pc="268442885" symbol="&lt;globals/NaviView/&lt;&gt;renderStandby&gt;"/>
-        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviView.mc" id="40" lineNum="120" parent="globals/NaviView" pc="268442927" symbol="&lt;globals/NaviView/&lt;&gt;renderStandby&gt;"/>
-        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviView.mc" id="40" lineNum="121" parent="globals/NaviView" pc="268442949" symbol="&lt;globals/NaviView/&lt;&gt;renderStandby&gt;"/>
-        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviView.mc" id="40" lineNum="123" parent="globals/NaviView" pc="268442983" symbol="&lt;globals/NaviView/&lt;&gt;renderStandby&gt;"/>
-        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviView.mc" id="40" lineNum="124" parent="globals/NaviView" pc="268443005" symbol="&lt;globals/NaviView/&lt;&gt;renderStandby&gt;"/>
-        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviView.mc" id="41" lineNum="26" parent="globals/NaviView" pc="268443040" symbol="onUpdate"/>
-        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviView.mc" id="41" lineNum="27" parent="globals/NaviView" pc="268443044" symbol="onUpdate"/>
-        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviView.mc" id="41" lineNum="28" parent="globals/NaviView" pc="268443057" symbol="onUpdate"/>
-        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviView.mc" id="41" lineNum="29" parent="globals/NaviView" pc="268443070" symbol="onUpdate"/>
-        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviView.mc" id="41" lineNum="30" parent="globals/NaviView" pc="268443080" symbol="onUpdate"/>
-        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviView.mc" id="41" lineNum="33" parent="globals/NaviView" pc="268443090" symbol="onUpdate"/>
-        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviView.mc" id="41" lineNum="34" parent="globals/NaviView" pc="268443112" symbol="onUpdate"/>
-        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviView.mc" id="41" lineNum="36" parent="globals/NaviView" pc="268443124" symbol="onUpdate"/>
-        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviView.mc" id="41" lineNum="37" parent="globals/NaviView" pc="268443141" symbol="onUpdate"/>
-        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviView.mc" id="41" lineNum="39" parent="globals/NaviView" pc="268443166" symbol="onUpdate"/>
+        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviModel.mc" id="28" lineNum="102" parent="globals/NaviModel" pc="268441515" symbol="triggerHaptic"/>
+        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviDelegate.mc" id="30" lineNum="27" parent="globals/NaviDelegate" pc="268441516" symbol="onBack"/>
+        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviDelegate.mc" id="30" lineNum="29" parent="globals/NaviDelegate" pc="268441518" symbol="onBack"/>
+        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviDelegate.mc" id="31" lineNum="11" parent="globals/NaviDelegate" pc="268441521" symbol="initialize"/>
+        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviDelegate.mc" id="31" lineNum="12" parent="globals/NaviDelegate" pc="268441523" symbol="initialize"/>
+        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviDelegate.mc" id="31" lineNum="13" parent="globals/NaviDelegate" pc="268441541" symbol="initialize"/>
+        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviDelegate.mc" id="32" lineNum="19" parent="globals/NaviDelegate" pc="268441552" symbol="onTap"/>
+        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviDelegate.mc" id="32" lineNum="20" parent="globals/NaviDelegate" pc="268441554" symbol="onTap"/>
+        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviDelegate.mc" id="32" lineNum="21" parent="globals/NaviDelegate" pc="268441570" symbol="onTap"/>
+        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviDelegate.mc" id="33" lineNum="35" parent="globals/NaviDelegate" pc="268441573" symbol="onSelect"/>
+        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviDelegate.mc" id="33" lineNum="36" parent="globals/NaviDelegate" pc="268441575" symbol="onSelect"/>
+        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviView.mc" id="34" lineNum="130" parent="globals/NaviView" pc="268441578" symbol="&lt;globals/NaviView/&lt;&gt;fitTextToWidth&gt;"/>
+        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviView.mc" id="34" lineNum="136" parent="globals/NaviView" pc="268441582" symbol="&lt;globals/NaviView/&lt;&gt;fitTextToWidth&gt;"/>
+        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviView.mc" id="34" lineNum="137" parent="globals/NaviView" pc="268441599" symbol="&lt;globals/NaviView/&lt;&gt;fitTextToWidth&gt;"/>
+        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviView.mc" id="34" lineNum="138" parent="globals/NaviView" pc="268441607" symbol="&lt;globals/NaviView/&lt;&gt;fitTextToWidth&gt;"/>
+        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviView.mc" id="34" lineNum="141" parent="globals/NaviView" pc="268441613" symbol="&lt;globals/NaviView/&lt;&gt;fitTextToWidth&gt;"/>
+        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviView.mc" id="34" lineNum="142" parent="globals/NaviView" pc="268441617" symbol="&lt;globals/NaviView/&lt;&gt;fitTextToWidth&gt;"/>
+        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviView.mc" id="34" lineNum="143" parent="globals/NaviView" pc="268441667" symbol="&lt;globals/NaviView/&lt;&gt;fitTextToWidth&gt;"/>
+        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviView.mc" id="34" lineNum="145" parent="globals/NaviView" pc="268441705" symbol="&lt;globals/NaviView/&lt;&gt;fitTextToWidth&gt;"/>
+        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviView.mc" id="35" lineNum="46" parent="globals/NaviView" pc="268441714" symbol="&lt;globals/NaviView/&lt;&gt;renderActiveRoute&gt;"/>
+        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviView.mc" id="35" lineNum="54" parent="globals/NaviView" pc="268441718" symbol="&lt;globals/NaviView/&lt;&gt;renderActiveRoute&gt;"/>
+        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviView.mc" id="35" lineNum="55" parent="globals/NaviView" pc="268441725" symbol="&lt;globals/NaviView/&lt;&gt;renderActiveRoute&gt;"/>
+        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviView.mc" id="35" lineNum="56" parent="globals/NaviView" pc="268441789" symbol="&lt;globals/NaviView/&lt;&gt;renderActiveRoute&gt;"/>
+        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviView.mc" id="35" lineNum="57" parent="globals/NaviView" pc="268441829" symbol="&lt;globals/NaviView/&lt;&gt;renderActiveRoute&gt;"/>
+        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviView.mc" id="35" lineNum="58" parent="globals/NaviView" pc="268441861" symbol="&lt;globals/NaviView/&lt;&gt;renderActiveRoute&gt;"/>
+        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviView.mc" id="35" lineNum="59" parent="globals/NaviView" pc="268441886" symbol="&lt;globals/NaviView/&lt;&gt;renderActiveRoute&gt;"/>
+        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviView.mc" id="35" lineNum="60" parent="globals/NaviView" pc="268441918" symbol="&lt;globals/NaviView/&lt;&gt;renderActiveRoute&gt;"/>
+        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviView.mc" id="35" lineNum="63" parent="globals/NaviView" pc="268441937" symbol="&lt;globals/NaviView/&lt;&gt;renderActiveRoute&gt;"/>
+        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviView.mc" id="35" lineNum="64" parent="globals/NaviView" pc="268441957" symbol="&lt;globals/NaviView/&lt;&gt;renderActiveRoute&gt;"/>
+        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviView.mc" id="35" lineNum="65" parent="globals/NaviView" pc="268441979" symbol="&lt;globals/NaviView/&lt;&gt;renderActiveRoute&gt;"/>
+        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviView.mc" id="35" lineNum="69" parent="globals/NaviView" pc="268442013" symbol="&lt;globals/NaviView/&lt;&gt;renderActiveRoute&gt;"/>
+        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviView.mc" id="35" lineNum="70" parent="globals/NaviView" pc="268442035" symbol="&lt;globals/NaviView/&lt;&gt;renderActiveRoute&gt;"/>
+        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviView.mc" id="35" lineNum="71" parent="globals/NaviView" pc="268442052" symbol="&lt;globals/NaviView/&lt;&gt;renderActiveRoute&gt;"/>
+        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviView.mc" id="35" lineNum="75" parent="globals/NaviView" pc="268442090" symbol="&lt;globals/NaviView/&lt;&gt;renderActiveRoute&gt;"/>
+        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviView.mc" id="35" lineNum="78" parent="globals/NaviView" pc="268442150" symbol="&lt;globals/NaviView/&lt;&gt;renderActiveRoute&gt;"/>
+        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviView.mc" id="35" lineNum="79" parent="globals/NaviView" pc="268442157" symbol="&lt;globals/NaviView/&lt;&gt;renderActiveRoute&gt;"/>
+        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviView.mc" id="35" lineNum="80" parent="globals/NaviView" pc="268442182" symbol="&lt;globals/NaviView/&lt;&gt;renderActiveRoute&gt;"/>
+        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviView.mc" id="35" lineNum="81" parent="globals/NaviView" pc="268442224" symbol="&lt;globals/NaviView/&lt;&gt;renderActiveRoute&gt;"/>
+        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviView.mc" id="35" lineNum="84" parent="globals/NaviView" pc="268442234" symbol="&lt;globals/NaviView/&lt;&gt;renderActiveRoute&gt;"/>
+        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviView.mc" id="35" lineNum="86" parent="globals/NaviView" pc="268442253" symbol="&lt;globals/NaviView/&lt;&gt;renderActiveRoute&gt;"/>
+        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviView.mc" id="35" lineNum="89" parent="globals/NaviView" pc="268442296" symbol="&lt;globals/NaviView/&lt;&gt;renderActiveRoute&gt;"/>
+        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviView.mc" id="35" lineNum="90" parent="globals/NaviView" pc="268442328" symbol="&lt;globals/NaviView/&lt;&gt;renderActiveRoute&gt;"/>
+        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviView.mc" id="35" lineNum="91" parent="globals/NaviView" pc="268442367" symbol="&lt;globals/NaviView/&lt;&gt;renderActiveRoute&gt;"/>
+        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviView.mc" id="35" lineNum="92" parent="globals/NaviView" pc="268442389" symbol="&lt;globals/NaviView/&lt;&gt;renderActiveRoute&gt;"/>
+        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviView.mc" id="35" lineNum="96" parent="globals/NaviView" pc="268442423" symbol="&lt;globals/NaviView/&lt;&gt;renderActiveRoute&gt;"/>
+        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviView.mc" id="35" lineNum="97" parent="globals/NaviView" pc="268442455" symbol="&lt;globals/NaviView/&lt;&gt;renderActiveRoute&gt;"/>
+        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviView.mc" id="35" lineNum="98" parent="globals/NaviView" pc="268442477" symbol="&lt;globals/NaviView/&lt;&gt;renderActiveRoute&gt;"/>
+        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviView.mc" id="37" lineNum="17" parent="globals/NaviView" pc="268442524" symbol="onLayout"/>
+        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviView.mc" id="38" lineNum="12" parent="globals/NaviView" pc="268442527" symbol="initialize"/>
+        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviView.mc" id="38" lineNum="13" parent="globals/NaviView" pc="268442529" symbol="initialize"/>
+        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviView.mc" id="38" lineNum="14" parent="globals/NaviView" pc="268442547" symbol="initialize"/>
+        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviView.mc" id="40" lineNum="105" parent="globals/NaviView" pc="268442558" symbol="&lt;globals/NaviView/&lt;&gt;renderStandby&gt;"/>
+        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviView.mc" id="40" lineNum="113" parent="globals/NaviView" pc="268442560" symbol="&lt;globals/NaviView/&lt;&gt;renderStandby&gt;"/>
+        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviView.mc" id="40" lineNum="114" parent="globals/NaviView" pc="268442582" symbol="&lt;globals/NaviView/&lt;&gt;renderStandby&gt;"/>
+        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviView.mc" id="40" lineNum="117" parent="globals/NaviView" pc="268442616" symbol="&lt;globals/NaviView/&lt;&gt;renderStandby&gt;"/>
+        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviView.mc" id="40" lineNum="120" parent="globals/NaviView" pc="268442658" symbol="&lt;globals/NaviView/&lt;&gt;renderStandby&gt;"/>
+        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviView.mc" id="40" lineNum="121" parent="globals/NaviView" pc="268442680" symbol="&lt;globals/NaviView/&lt;&gt;renderStandby&gt;"/>
+        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviView.mc" id="40" lineNum="123" parent="globals/NaviView" pc="268442714" symbol="&lt;globals/NaviView/&lt;&gt;renderStandby&gt;"/>
+        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviView.mc" id="40" lineNum="124" parent="globals/NaviView" pc="268442736" symbol="&lt;globals/NaviView/&lt;&gt;renderStandby&gt;"/>
+        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviView.mc" id="41" lineNum="26" parent="globals/NaviView" pc="268442771" symbol="onUpdate"/>
+        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviView.mc" id="41" lineNum="27" parent="globals/NaviView" pc="268442775" symbol="onUpdate"/>
+        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviView.mc" id="41" lineNum="28" parent="globals/NaviView" pc="268442788" symbol="onUpdate"/>
+        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviView.mc" id="41" lineNum="29" parent="globals/NaviView" pc="268442801" symbol="onUpdate"/>
+        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviView.mc" id="41" lineNum="30" parent="globals/NaviView" pc="268442811" symbol="onUpdate"/>
+        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviView.mc" id="41" lineNum="33" parent="globals/NaviView" pc="268442821" symbol="onUpdate"/>
+        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviView.mc" id="41" lineNum="34" parent="globals/NaviView" pc="268442843" symbol="onUpdate"/>
+        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviView.mc" id="41" lineNum="36" parent="globals/NaviView" pc="268442855" symbol="onUpdate"/>
+        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviView.mc" id="41" lineNum="37" parent="globals/NaviView" pc="268442872" symbol="onUpdate"/>
+        <entry filename="/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviView.mc" id="41" lineNum="39" parent="globals/NaviView" pc="268442897" symbol="onUpdate"/>
     </pcToLineNum>
     <symbolTable>
         <entry id="8388639" module="true" symbol="Graphics"/>
@@ -379,7 +373,6 @@
         <entry id="7" object="true" symbol="NaviApp"/>
         <entry id="8389122" method="true" symbol="onLayout"/>
         <entry id="8389098" method="true" symbol="onTap"/>
-        <entry id="8388987" method="true" symbol="vibrate"/>
         <entry id="21" method="true" symbol="&lt;globals/ArrowRenderer/&lt;statics&gt;/&lt;&gt;drawSharpTurn&gt;"/>
         <entry field="true" id="8388911" symbol="distance"/>
         <entry id="8388637" module="true" symbol="Communications"/>
@@ -583,36 +576,34 @@
         <entry endPc="268441443" name="newHasRoute" stackId="9" startPc="268440839"/>
         <entry arg="true" endPc="268441512" name="distStr" stackId="1" startPc="268441445"/>
         <entry endPc="268441512" name="lower" stackId="2" startPc="268441449"/>
-        <entry endPc="268441689" name="vibeProfile" stackId="1" startPc="268441532"/>
-        <entry endPc="268441739" name="e" stackId="2" startPc="268441696"/>
-        <entry arg="true" endPc="268441784" name="model" stackId="1" startPc="268441754"/>
-        <entry arg="true" endPc="268441823" name="clickEvent" stackId="1" startPc="268441785"/>
-        <entry arg="true" endPc="268441982" name="dc" stackId="1" startPc="268441847"/>
-        <entry arg="true" endPc="268441982" name="text" stackId="2" startPc="268441847"/>
-        <entry arg="true" endPc="268441982" name="font" stackId="3" startPc="268441847"/>
-        <entry arg="true" endPc="268441982" name="maxWidth" stackId="4" startPc="268441847"/>
-        <entry endPc="268441982" name="strWidth" stackId="5" startPc="268441851"/>
-        <entry endPc="268441982" name="result" stackId="6" startPc="268441851"/>
-        <entry arg="true" endPc="268442792" name="dc" stackId="1" startPc="268441983"/>
-        <entry arg="true" endPc="268442792" name="cx" stackId="2" startPc="268441983"/>
-        <entry arg="true" endPc="268442792" name="cy" stackId="3" startPc="268441983"/>
-        <entry arg="true" endPc="268442792" name="w" stackId="4" startPc="268441983"/>
-        <entry arg="true" endPc="268442792" name="h" stackId="5" startPc="268441983"/>
-        <entry endPc="268442791" name="topText" stackId="6" startPc="268441987"/>
-        <entry endPc="268442791" name="distColor" stackId="7" startPc="268441987"/>
-        <entry endPc="268442791" name="lowerDist" stackId="8" startPc="268441987"/>
-        <entry endPc="268442688" name="streetStr" stackId="9" startPc="268442597"/>
-        <entry arg="true" endPc="268442826" name="model" stackId="1" startPc="268442796"/>
-        <entry arg="true" endPc="268443039" name="dc" stackId="1" startPc="268442827"/>
-        <entry arg="true" endPc="268443039" name="cx" stackId="2" startPc="268442827"/>
-        <entry arg="true" endPc="268443039" name="cy" stackId="3" startPc="268442827"/>
-        <entry arg="true" endPc="268443039" name="w" stackId="4" startPc="268442827"/>
-        <entry arg="true" endPc="268443039" name="h" stackId="5" startPc="268442827"/>
-        <entry arg="true" endPc="268443188" name="dc" stackId="1" startPc="268443040"/>
-        <entry endPc="268443187" name="w" stackId="2" startPc="268443044"/>
-        <entry endPc="268443187" name="h" stackId="3" startPc="268443044"/>
-        <entry endPc="268443187" name="cx" stackId="4" startPc="268443044"/>
-        <entry endPc="268443187" name="cy" stackId="5" startPc="268443044"/>
+        <entry arg="true" endPc="268441551" name="model" stackId="1" startPc="268441521"/>
+        <entry arg="true" endPc="268441572" name="clickEvent" stackId="1" startPc="268441552"/>
+        <entry arg="true" endPc="268441713" name="dc" stackId="1" startPc="268441578"/>
+        <entry arg="true" endPc="268441713" name="text" stackId="2" startPc="268441578"/>
+        <entry arg="true" endPc="268441713" name="font" stackId="3" startPc="268441578"/>
+        <entry arg="true" endPc="268441713" name="maxWidth" stackId="4" startPc="268441578"/>
+        <entry endPc="268441713" name="strWidth" stackId="5" startPc="268441582"/>
+        <entry endPc="268441713" name="result" stackId="6" startPc="268441582"/>
+        <entry arg="true" endPc="268442523" name="dc" stackId="1" startPc="268441714"/>
+        <entry arg="true" endPc="268442523" name="cx" stackId="2" startPc="268441714"/>
+        <entry arg="true" endPc="268442523" name="cy" stackId="3" startPc="268441714"/>
+        <entry arg="true" endPc="268442523" name="w" stackId="4" startPc="268441714"/>
+        <entry arg="true" endPc="268442523" name="h" stackId="5" startPc="268441714"/>
+        <entry endPc="268442522" name="topText" stackId="6" startPc="268441718"/>
+        <entry endPc="268442522" name="distColor" stackId="7" startPc="268441718"/>
+        <entry endPc="268442522" name="lowerDist" stackId="8" startPc="268441718"/>
+        <entry endPc="268442419" name="streetStr" stackId="9" startPc="268442328"/>
+        <entry arg="true" endPc="268442557" name="model" stackId="1" startPc="268442527"/>
+        <entry arg="true" endPc="268442770" name="dc" stackId="1" startPc="268442558"/>
+        <entry arg="true" endPc="268442770" name="cx" stackId="2" startPc="268442558"/>
+        <entry arg="true" endPc="268442770" name="cy" stackId="3" startPc="268442558"/>
+        <entry arg="true" endPc="268442770" name="w" stackId="4" startPc="268442558"/>
+        <entry arg="true" endPc="268442770" name="h" stackId="5" startPc="268442558"/>
+        <entry arg="true" endPc="268442919" name="dc" stackId="1" startPc="268442771"/>
+        <entry endPc="268442918" name="w" stackId="2" startPc="268442775"/>
+        <entry endPc="268442918" name="h" stackId="3" startPc="268442775"/>
+        <entry endPc="268442918" name="cx" stackId="4" startPc="268442775"/>
+        <entry endPc="268442918" name="cy" stackId="5" startPc="268442775"/>
     </localVars>
     <deviceInfo deviceVersion="a331630064dc3043c2508661e93a67218e43d8d4" partNumber="006-B3225-00"/>
     <annotations>
@@ -788,34 +779,34 @@
             <param id="distStr"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268441748" name="triggerHaptic" parent="NaviModel" startPc="268441513">
+        <functionEntry accessMode="public" endPc="268441515" name="triggerHaptic" parent="NaviModel" startPc="268441513">
             <documentation/>
         </functionEntry>
         <functionEntry accessMode="public" name="initialize" parent="NaviModel">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268441753" name="onBack" parent="NaviDelegate" startPc="268441749">
+        <functionEntry accessMode="public" endPc="268441520" name="onBack" parent="NaviDelegate" startPc="268441516">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268441784" name="initialize" parent="NaviDelegate" startPc="268441754">
+        <functionEntry accessMode="public" endPc="268441551" name="initialize" parent="NaviDelegate" startPc="268441521">
             <param id="model"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268441823" name="onTap" parent="NaviDelegate" startPc="268441785">
+        <functionEntry accessMode="public" endPc="268441572" name="onTap" parent="NaviDelegate" startPc="268441552">
             <param id="clickEvent"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268441846" name="onSelect" parent="NaviDelegate" startPc="268441824">
+        <functionEntry accessMode="public" endPc="268441577" name="onSelect" parent="NaviDelegate" startPc="268441573">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="private" endPc="268441982" name="&lt;globals/NaviView/&lt;&gt;fitTextToWidth&gt;" parent="NaviView" startPc="268441847">
+        <functionEntry accessMode="private" endPc="268441713" name="&lt;globals/NaviView/&lt;&gt;fitTextToWidth&gt;" parent="NaviView" startPc="268441578">
             <param id="dc"/>
             <param id="text"/>
             <param id="font"/>
             <param id="maxWidth"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="private" endPc="268442792" name="&lt;globals/NaviView/&lt;&gt;renderActiveRoute&gt;" parent="NaviView" startPc="268441983">
+        <functionEntry accessMode="private" endPc="268442523" name="&lt;globals/NaviView/&lt;&gt;renderActiveRoute&gt;" parent="NaviView" startPc="268441714">
             <param id="dc"/>
             <param id="cx"/>
             <param id="cy"/>
@@ -826,18 +817,18 @@
         <functionEntry accessMode="public" name="onShow" parent="NaviView">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268442795" name="onLayout" parent="NaviView" startPc="268442793">
+        <functionEntry accessMode="public" endPc="268442526" name="onLayout" parent="NaviView" startPc="268442524">
             <param id="dc"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268442826" name="initialize" parent="NaviView" startPc="268442796">
+        <functionEntry accessMode="public" endPc="268442557" name="initialize" parent="NaviView" startPc="268442527">
             <param id="model"/>
             <documentation/>
         </functionEntry>
         <functionEntry accessMode="public" name="onHide" parent="NaviView">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="private" endPc="268443039" name="&lt;globals/NaviView/&lt;&gt;renderStandby&gt;" parent="NaviView" startPc="268442827">
+        <functionEntry accessMode="private" endPc="268442770" name="&lt;globals/NaviView/&lt;&gt;renderStandby&gt;" parent="NaviView" startPc="268442558">
             <param id="dc"/>
             <param id="cx"/>
             <param id="cy"/>
@@ -845,7 +836,7 @@
             <param id="h"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268443188" name="onUpdate" parent="NaviView" startPc="268443040">
+        <functionEntry accessMode="public" endPc="268442919" name="onUpdate" parent="NaviView" startPc="268442771">
             <param id="dc"/>
             <documentation/>
         </functionEntry>

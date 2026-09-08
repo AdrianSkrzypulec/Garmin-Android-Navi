@@ -32,45 +32,33 @@ _Users_adrian_Projects_Garmin_Navi_garmin_source_NaviDelegate_mc_11_44_14_4_stop
     }
     [ @file = "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviDelegate.mc"; @line = 19; @symbol_functiondef = [onTap,19,13,18]; @symbol_param<0> = [clickEvent,19,19,29]; @symbol_param<0>_type<0> = [WatchUi,19,33,40]; @symbol_param<0>_type<1> = [ClickEvent,19,41,51]; @symbol_return<0> = [Lang,19,56,60]; @symbol_return<1> = [Boolean,19,61,68]; ]
     function onTap(clickEvent as WatchUi.ClickEvent) as Lang.Boolean {
-_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviDelegate_mc_19_69_23_4_start:
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviDelegate_mc_19_69_22_4_start:
 [ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviDelegate.mc" 20 8 ]
-        symbol [ _model %tmp.2 20 8 14 ];
-        %tmp.2 = getv ? :_model;
-        symbol [ triggerHaptic %tmp.3 20 15 28 ];
-        %tmp.3 = getv function %tmp.2 :triggerHaptic;
-        invoke %tmp.2 %tmp.3();
+        symbol [ WatchUi %tmp.1 20 8 15 ];
+        %tmp.1 = getm $.Toybox.WatchUi;
+        symbol [ requestUpdate %tmp.2 20 16 29 ];
+        %tmp.2 = getv function %tmp.1 :requestUpdate;
+        invoke %tmp.1 %tmp.2();
 [ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviDelegate.mc" 21 8 ]
-        symbol [ WatchUi %tmp.4 21 8 15 ];
-        %tmp.4 = getm $.Toybox.WatchUi;
-        symbol [ requestUpdate %tmp.5 21 16 29 ];
-        %tmp.5 = getv function %tmp.4 :requestUpdate;
-        invoke %tmp.4 %tmp.5();
-[ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviDelegate.mc" 22 8 ]
-        %tmp.6 = true;
-        ret %tmp.6;
-_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviDelegate_mc_19_69_23_4_stop:
+        %tmp.3 = true;
+        ret %tmp.3;
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviDelegate_mc_19_69_22_4_stop:
     }
-    [ @file = "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviDelegate.mc"; @line = 28; @symbol_functiondef = [onBack,28,13,19]; @symbol_return<0> = [Lang,28,25,29]; @symbol_return<1> = [Boolean,28,30,37]; ]
+    [ @file = "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviDelegate.mc"; @line = 27; @symbol_functiondef = [onBack,27,13,19]; @symbol_return<0> = [Lang,27,25,29]; @symbol_return<1> = [Boolean,27,30,37]; ]
     function onBack() as Lang.Boolean {
-_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviDelegate_mc_28_38_31_4_start:
-[ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviDelegate.mc" 30 8 ]
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviDelegate_mc_27_38_30_4_start:
+[ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviDelegate.mc" 29 8 ]
         %tmp.1 = false;
         ret %tmp.1;
-_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviDelegate_mc_28_38_31_4_stop:
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviDelegate_mc_27_38_30_4_stop:
     }
-    [ @file = "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviDelegate.mc"; @line = 36; @symbol_functiondef = [onSelect,36,13,21]; @symbol_return<0> = [Lang,36,27,31]; @symbol_return<1> = [Boolean,36,32,39]; ]
+    [ @file = "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviDelegate.mc"; @line = 35; @symbol_functiondef = [onSelect,35,13,21]; @symbol_return<0> = [Lang,35,27,31]; @symbol_return<1> = [Boolean,35,32,39]; ]
     function onSelect() as Lang.Boolean {
-_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviDelegate_mc_36_40_39_4_start:
-[ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviDelegate.mc" 37 8 ]
-        symbol [ _model %tmp.2 37 8 14 ];
-        %tmp.2 = getv ? :_model;
-        symbol [ triggerHaptic %tmp.3 37 15 28 ];
-        %tmp.3 = getv function %tmp.2 :triggerHaptic;
-        invoke %tmp.2 %tmp.3();
-[ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviDelegate.mc" 38 8 ]
-        %tmp.4 = true;
-        ret %tmp.4;
-_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviDelegate_mc_36_40_39_4_stop:
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviDelegate_mc_35_40_37_4_start:
+[ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviDelegate.mc" 36 8 ]
+        %tmp.1 = true;
+        ret %tmp.1;
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviDelegate_mc_35_40_37_4_stop:
     }
 }
 [ @file = "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviDelegate.mc"; @line = 1; ]
