@@ -1,4 +1,4 @@
-#Tue Sep 08 21:09:38 CEST 2026
+#Tue Sep 08 21:52:21 CEST 2026
 base.0=/Users/adrian/Projects/Garmin/Navi/android/app/build/intermediates/dex/debug/mergeExtDexDebug/classes.dex
 base.1=/Users/adrian/Projects/Garmin/Navi/android/app/build/intermediates/dex/debug/mergeProjectDexDebug/0/classes.dex
 base.2=/Users/adrian/Projects/Garmin/Navi/android/app/build/intermediates/dex/debug/mergeProjectDexDebug/1/classes.dex
