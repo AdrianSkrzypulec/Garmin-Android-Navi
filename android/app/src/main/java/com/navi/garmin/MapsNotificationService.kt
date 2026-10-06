@@ -1,6 +1,9 @@
 package com.navi.garmin
 
 import android.app.Notification
+import android.content.Intent
+import android.content.IntentFilter
+import android.os.BatteryManager
 import android.service.notification.NotificationListenerService
 import android.service.notification.StatusBarNotification
 import android.util.Log
@@ -37,6 +40,17 @@ class MapsNotificationService : NotificationListenerService() {
     override fun onCreate() {
         super.onCreate()
         createNotificationChannel()
+    }
+
+    /**
+     * Reads the current phone battery level as a percentage (0–100), or -1 on failure.
+     */
+    private fun getPhoneBatteryLevel(): Int {
+        val intent = registerReceiver(null, IntentFilter(Intent.ACTION_BATTERY_CHANGED))
+        val level = intent?.getIntExtra(BatteryManager.EXTRA_LEVEL, -1) ?: -1
+        val scale = intent?.getIntExtra(BatteryManager.EXTRA_SCALE, -1) ?: -1
+        if (level < 0 || scale <= 0) return -1
+        return (level * 100 / scale)
     }
 
     override fun onListenerConnected() {
@@ -115,9 +129,10 @@ class MapsNotificationService : NotificationListenerService() {
 
         // Ignore empty or non-navigation alerts (e.g. traffic in area without active route)
         if (navData.hasRoute) {
-            _currentNavData.value = navData
-            GarminBridge.sendNavigationUpdate(navData)
-            updateSystemNotification("Nawigacja: ${navData.distance} - ${navData.action.name.lowercase().replace('_', ' ')}")
+            val enriched = navData.copy(phoneBattery = getPhoneBatteryLevel())
+            _currentNavData.value = enriched
+            GarminBridge.sendNavigationUpdate(enriched)
+            updateSystemNotification("Nawigacja: ${enriched.distance} - ${enriched.action.name.lowercase().replace('_', ' ')}")
         }
     }
 

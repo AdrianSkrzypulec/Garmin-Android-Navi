@@ -18,6 +18,7 @@ class NaviModel {
     public var remainTime as String = "";
     public var exitNumber as Number = 0;
     public var hasRoute as Boolean = false;
+    public var phoneBattery as Number = -1;   // Poziom baterii telefonu w % (-1 = brak danych)
 
     private var _lastAction as String = "NONE";
     private var _lastDistance as String = "";
@@ -68,6 +69,11 @@ class NaviModel {
         var newHasRoute = dict.get("hasRoute");
         if (newHasRoute != null && newHasRoute instanceof Lang.Boolean) {
             hasRoute = newHasRoute;
+        }
+
+        var newPhoneBattery = dict.get("phoneBattery");
+        if (newPhoneBattery != null && newPhoneBattery instanceof Lang.Number) {
+            phoneBattery = newPhoneBattery;
         }
 
         // Trigger haptic vibration if maneuver changed or active navigation just started

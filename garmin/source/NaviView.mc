@@ -89,14 +89,17 @@ class NaviView extends WatchUi.View {
         if (_model.street.length() > 0) {
             var streetStr = fitTextToWidth(dc, _model.street, Graphics.FONT_SMALL, 190);
             dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
-            dc.drawText(cx, 188, Graphics.FONT_SMALL, streetStr, Graphics.TEXT_JUSTIFY_CENTER);
+            dc.drawText(cx, 182, Graphics.FONT_SMALL, streetStr, Graphics.TEXT_JUSTIFY_CENTER);
         }
 
         // --- BOTTOM FOOTER: Remaining duration ---
         if (_model.remainTime.length() > 0) {
             dc.setColor(Graphics.COLOR_LT_GRAY, Graphics.COLOR_TRANSPARENT);
-            dc.drawText(cx, 218, Graphics.FONT_XTINY, _model.remainTime, Graphics.TEXT_JUSTIFY_CENTER);
+            dc.drawText(cx, 213, Graphics.FONT_XTINY, _model.remainTime, Graphics.TEXT_JUSTIFY_CENTER);
         }
+
+        // --- BOTTOM BAR: Speed Limit + Phone Battery ---
+        renderBottomBar(dc, cx, h, w);
     }
 
     /**
@@ -122,6 +125,64 @@ class NaviView extends WatchUi.View {
 
         dc.setColor(Graphics.COLOR_LT_GRAY, Graphics.COLOR_TRANSPARENT);
         dc.drawText(cx, 204, Graphics.FONT_XTINY, "Włącz nawigację w Google Maps", Graphics.TEXT_JUSTIFY_CENTER);
+
+        // --- BOTTOM BAR: Phone Battery (standby) ---
+        renderBottomBar(dc, cx, h, w);
+    }
+
+    /**
+     * Renders bottom status bar: speed limit sign (left) + phone battery (right).
+     * Occupies the last 20px row at the bottom of the 260px screen.
+     */
+    private function renderBottomBar(
+        dc as Graphics.Dc,
+        cx as Number,
+        h as Number,
+        w as Number
+    ) as Void {
+        var barY = h - 20;  // Top edge of the bar (y=240 for 260px display)
+
+        // Thin separator line
+        dc.setColor(Graphics.COLOR_DK_GRAY, Graphics.COLOR_TRANSPARENT);
+        dc.setPenWidth(1);
+        dc.drawLine(10, barY, w - 10, barY);
+
+        // --- RIGHT: Phone Battery ---
+        if (_model.phoneBattery >= 0) {
+            var bat = _model.phoneBattery;
+
+            // Colour: green > 30%, yellow > 15%, red <= 15%
+            var batColor = Graphics.COLOR_GREEN;
+            if (bat <= 15) {
+                batColor = Graphics.COLOR_RED;
+            } else if (bat <= 30) {
+                batColor = Graphics.COLOR_YELLOW;
+            }
+
+            // Battery icon position
+            var batX = w - 22;
+            var batY = barY + 5;
+            var batW = 16;
+            var batH = 10;
+            var tipH = 4;
+
+            // Icon outline
+            dc.setColor(Graphics.COLOR_LT_GRAY, Graphics.COLOR_TRANSPARENT);
+            dc.drawRectangle(batX, batY, batW, batH);
+            // Battery tip
+            dc.fillRectangle(batX + batW, batY + (batH - tipH) / 2, 2, tipH);
+
+            // Fill bar proportional to level
+            var fillW = (batW - 2) * bat / 100;
+            if (fillW > 0) {
+                dc.setColor(batColor, Graphics.COLOR_TRANSPARENT);
+                dc.fillRectangle(batX + 1, batY + 1, fillW, batH - 2);
+            }
+
+            // Percentage text to the left of the icon
+            dc.setColor(batColor, Graphics.COLOR_TRANSPARENT);
+            dc.drawText(batX - 3, batY - 1, Graphics.FONT_XTINY, bat.toString() + "%", Graphics.TEXT_JUSTIFY_RIGHT);
+        }
     }
 
     /**

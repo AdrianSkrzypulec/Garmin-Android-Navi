@@ -12,6 +12,7 @@ data class NavigationData(
     val remainTime: String = "",
     val exitNumber: Int = 0,
     val hasRoute: Boolean = false,
+    val phoneBattery: Int = -1,    // Poziom baterii telefonu w % (-1 = brak danych)
     val timestamp: Long = System.currentTimeMillis()
 ) {
     /**
@@ -27,7 +28,7 @@ data class NavigationData(
         map["remainTime"] = remainTime
         map["exitNumber"] = exitNumber
         map["hasRoute"] = hasRoute
+        map["phoneBattery"] = phoneBattery
         return map
     }
 }
-
