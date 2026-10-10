@@ -778,6 +778,11 @@ library {
   repo_index {
   }
 }
+library {
+  digests {
+    sha256: "\371\0005\262e\355\207\216\347\270R>/=$zq\277\250\"V\350\000W\3748-\t\220{$\223"
+  }
+}
 library_dependencies {
   library_dep_index: 1
 }
@@ -1286,6 +1291,7 @@ module_dependencies {
   dependency_index: 55
   dependency_index: 28
   dependency_index: 30
+  dependency_index: 65
 }
 repositories {
   maven_repo {

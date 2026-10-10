@@ -183,8 +183,21 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun sendSimulated(data: NavigationData) {
-        GarminBridge.sendNavigationUpdate(data)
-        Toast.makeText(this, "Wysłano: ${data.action} (${data.distance})", Toast.LENGTH_SHORT).show()
+        val battery = getPhoneBatteryLevel()
+        val enriched = if (data.hasRoute) data.copy(phoneBattery = battery) else data
+        GarminBridge.sendNavigationUpdate(enriched)
+        Toast.makeText(this, "Wysłano: ${data.action} (${data.distance}) • Bateria: $battery%", Toast.LENGTH_SHORT).show()
+    }
+
+    private fun getPhoneBatteryLevel(): Int {
+        return try {
+            val intent = registerReceiver(null, android.content.IntentFilter(android.content.Intent.ACTION_BATTERY_CHANGED))
+            val level = intent?.getIntExtra(android.os.BatteryManager.EXTRA_LEVEL, -1) ?: -1
+            val scale = intent?.getIntExtra(android.os.BatteryManager.EXTRA_SCALE, -1) ?: -1
+            if (level < 0 || scale <= 0) -1 else (level * 100 / scale)
+        } catch (e: Exception) {
+            -1
+        }
     }
 
     private fun checkBluetoothPermissions() {

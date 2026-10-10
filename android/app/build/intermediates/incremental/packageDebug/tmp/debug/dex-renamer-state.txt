@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 #Tue Sep 08 21:52:21 CEST 2026
+=======
+#Sat Oct 10 09:55:52 CEST 2026
+>>>>>>> 90447e6 (baterry fix)
 base.0=/Users/adrian/Projects/Garmin/Navi/android/app/build/intermediates/dex/debug/mergeExtDexDebug/classes.dex
 base.1=/Users/adrian/Projects/Garmin/Navi/android/app/build/intermediates/dex/debug/mergeProjectDexDebug/0/classes.dex
 base.2=/Users/adrian/Projects/Garmin/Navi/android/app/build/intermediates/dex/debug/mergeProjectDexDebug/1/classes.dex
