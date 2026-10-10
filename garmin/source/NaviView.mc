@@ -1,5 +1,8 @@
 import Toybox.Graphics;
 import Toybox.Lang;
+import Toybox.System;
+import Toybox.Time;
+import Toybox.Time.Gregorian;
 import Toybox.WatchUi;
 
 /**
@@ -33,7 +36,9 @@ class NaviView extends WatchUi.View {
         dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_BLACK);
         dc.clear();
 
-        if (_model.hasRoute) {
+        if (_model.showClock) {
+            renderClockView(dc, cx, cy, w, h);
+        } else if (_model.hasRoute) {
             renderActiveRoute(dc, cx, cy, w, h);
         } else {
             renderStandby(dc, cx, cy, w, h);
@@ -99,6 +104,37 @@ class NaviView extends WatchUi.View {
         }
 
         // --- BOTTOM BAR: Phone Battery ---
+        renderBottomBar(dc, cx, h, w);
+    }
+
+    /**
+     * Renders full-screen clock / watch face screen displaying current digital time and date.
+     */
+    private function renderClockView(
+        dc as Graphics.Dc,
+        cx as Number,
+        cy as Number,
+        w as Number,
+        h as Number
+    ) as Void {
+        var clockTime = System.getClockTime();
+        var hours = clockTime.hour;
+        var mins = clockTime.min;
+        var timeStr = Lang.format("$1$:$2$", [hours.format("%02d"), mins.format("%02d")]);
+
+        var now = Time.now();
+        var dateInfo = Gregorian.info(now, Time.FORMAT_MEDIUM);
+        var dateStr = Lang.format("$1$ $2$ $3$", [dateInfo.day, dateInfo.month, dateInfo.year]);
+
+        // Large Digital Clock Time (centered)
+        dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
+        dc.drawText(cx, cy - 45, Graphics.FONT_NUMBER_HOT, timeStr, Graphics.TEXT_JUSTIFY_CENTER);
+
+        // Date String
+        dc.setColor(Graphics.COLOR_LT_GRAY, Graphics.COLOR_TRANSPARENT);
+        dc.drawText(cx, cy + 32, Graphics.FONT_SMALL, dateStr, Graphics.TEXT_JUSTIFY_CENTER);
+
+        // Phone battery percentage at bottom
         renderBottomBar(dc, cx, h, w);
     }
 

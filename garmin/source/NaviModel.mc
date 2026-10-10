@@ -19,11 +19,20 @@ class NaviModel {
     public var exitNumber as Number = 0;
     public var hasRoute as Boolean = false;
     public var phoneBattery as Number = -1;   // Poziom baterii telefonu w % (-1 = brak danych)
+    public var showClock as Boolean = false;  // Czy tarcza zegarka (godzina) jest aktywna
 
     private var _lastAction as String = "NONE";
     private var _lastDistance as String = "";
 
     function initialize() {
+    }
+
+    /**
+     * Toggles clock / watch face screen overlay.
+     */
+    public function toggleClock() as Void {
+        showClock = !showClock;
+        WatchUi.requestUpdate();
     }
 
     /**
