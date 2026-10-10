@@ -72,8 +72,12 @@ class NaviModel {
         }
 
         var newPhoneBattery = dict.get("phoneBattery");
-        if (newPhoneBattery != null && newPhoneBattery instanceof Lang.Number) {
-            phoneBattery = newPhoneBattery;
+        if (newPhoneBattery != null) {
+            if (newPhoneBattery instanceof Lang.Number) {
+                phoneBattery = newPhoneBattery as Lang.Number;
+            } else if (newPhoneBattery has :toNumber) {
+                phoneBattery = (newPhoneBattery as Object).toNumber();
+            }
         }
 
         // Trigger haptic vibration if maneuver changed or active navigation just started

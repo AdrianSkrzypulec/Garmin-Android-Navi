@@ -53,9 +53,9 @@ class NaviModel {
     }
     [ @file = "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviModel.mc"; @line = 32; @symbol_functiondef = [updateFromDictionary,32,13,33]; @symbol_param<0> = [dict,32,34,38]; @symbol_param<0>_type<0> = [Lang,32,42,46]; @symbol_param<0>_type<1> = [Dictionary,32,47,57]; ]
     function updateFromDictionary(dict as Lang.Dictionary) as Void {
-_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_32_67_90_4_start:
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_32_67_94_4_start:
 [ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviModel.mc" 34 8 ]
-        [ "_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_32_67_90_4_start" "_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_32_67_90_4_stop" ]
+        [ "_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_32_67_94_4_start" "_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_32_67_94_4_stop" ]
         %newAction.1 = local;
         symbol [ newAction %newAction.1 34 12 21 ];
         %tmp.1 = lgetv %dict;
@@ -99,7 +99,7 @@ _Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_35_67_37_8_stop:
         goto @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_35_8_37_8_if_end;
 _Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_35_8_37_8_if_end:
 [ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviModel.mc" 39 8 ]
-        [ "_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_32_67_90_4_start" "_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_32_67_90_4_stop" ]
+        [ "_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_32_67_94_4_start" "_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_32_67_94_4_stop" ]
         %newDist.2 = local;
         symbol [ newDist %newDist.2 39 12 19 ];
         %tmp.16 = lgetv %dict;
@@ -143,7 +143,7 @@ _Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_40_63_42_8_stop:
         goto @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_40_8_42_8_if_end;
 _Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_40_8_42_8_if_end:
 [ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviModel.mc" 44 8 ]
-        [ "_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_32_67_90_4_start" "_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_32_67_90_4_stop" ]
+        [ "_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_32_67_94_4_start" "_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_32_67_94_4_stop" ]
         %newStreet.3 = local;
         symbol [ newStreet %newStreet.3 44 12 21 ];
         %tmp.31 = lgetv %dict;
@@ -187,7 +187,7 @@ _Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_45_67_47_8_stop:
         goto @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_45_8_47_8_if_end;
 _Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_45_8_47_8_if_end:
 [ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviModel.mc" 49 8 ]
-        [ "_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_32_67_90_4_start" "_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_32_67_90_4_stop" ]
+        [ "_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_32_67_94_4_start" "_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_32_67_94_4_stop" ]
         %newEta.4 = local;
         symbol [ newEta %newEta.4 49 12 18 ];
         %tmp.46 = lgetv %dict;
@@ -231,7 +231,7 @@ _Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_50_61_52_8_stop:
         goto @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_50_8_52_8_if_end;
 _Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_50_8_52_8_if_end:
 [ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviModel.mc" 54 8 ]
-        [ "_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_32_67_90_4_start" "_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_32_67_90_4_stop" ]
+        [ "_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_32_67_94_4_start" "_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_32_67_94_4_stop" ]
         %newRemainDist.5 = local;
         symbol [ newRemainDist %newRemainDist.5 54 12 25 ];
         %tmp.61 = lgetv %dict;
@@ -275,7 +275,7 @@ _Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_55_75_57_8_stop:
         goto @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_55_8_57_8_if_end;
 _Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_55_8_57_8_if_end:
 [ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviModel.mc" 59 8 ]
-        [ "_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_32_67_90_4_start" "_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_32_67_90_4_stop" ]
+        [ "_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_32_67_94_4_start" "_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_32_67_94_4_stop" ]
         %newRemainTime.6 = local;
         symbol [ newRemainTime %newRemainTime.6 59 12 25 ];
         %tmp.76 = lgetv %dict;
@@ -319,7 +319,7 @@ _Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_60_75_62_8_stop:
         goto @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_60_8_62_8_if_end;
 _Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_60_8_62_8_if_end:
 [ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviModel.mc" 64 8 ]
-        [ "_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_32_67_90_4_start" "_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_32_67_90_4_stop" ]
+        [ "_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_32_67_94_4_start" "_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_32_67_94_4_stop" ]
         %newExitNum.7 = local;
         symbol [ newExitNum %newExitNum.7 64 12 22 ];
         %tmp.91 = lgetv %dict;
@@ -363,7 +363,7 @@ _Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_65_69_67_8_stop:
         goto @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_65_8_67_8_if_end;
 _Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_65_8_67_8_if_end:
 [ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviModel.mc" 69 8 ]
-        [ "_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_32_67_90_4_start" "_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_32_67_90_4_stop" ]
+        [ "_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_32_67_94_4_start" "_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_32_67_94_4_stop" ]
         %newHasRoute.8 = local;
         symbol [ newHasRoute %newHasRoute.8 69 12 23 ];
         %tmp.106 = lgetv %dict;
@@ -407,7 +407,7 @@ _Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_70_72_72_8_stop:
         goto @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_70_8_72_8_if_end;
 _Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_70_8_72_8_if_end:
 [ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviModel.mc" 74 8 ]
-        [ "_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_32_67_90_4_start" "_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_32_67_90_4_stop" ]
+        [ "_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_32_67_94_4_start" "_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_32_67_94_4_stop" ]
         %newPhoneBattery.9 = local;
         symbol [ newPhoneBattery %newPhoneBattery.9 74 12 27 ];
         %tmp.121 = lgetv %dict;
@@ -419,172 +419,203 @@ _Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_70_8_72_8_if_end:
         lputv %newPhoneBattery.9 %tmp.124;
         symbol [ newPhoneBattery %newPhoneBattery.9 74 12 27 ];
 [ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviModel.mc" 75 8 ]
-_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_75_8_77_8_if_stmt:
-_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_75_12_75_71_begin:
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_75_8_81_8_if_stmt:
         %tmp.125 = lgetv %newPhoneBattery.9;
         symbol [ newPhoneBattery %tmp.125 75 12 27 ];
         %tmp.126 = null;
         %tmp.127 = ne %tmp.125 %tmp.126;
-        bf %tmp.127 @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_75_8_77_8_if_end;
-_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_75_39_75_71_true:
+        bf %tmp.127 @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_75_8_81_8_if_end;
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_75_8_81_8_if_true:
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_75_37_81_8_start:
+[ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviModel.mc" 76 12 ]
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_76_12_80_12_if_stmt:
         %tmp.128 = lgetv %newPhoneBattery.9;
-        symbol [ newPhoneBattery %tmp.128 75 39 54 ];
+        symbol [ newPhoneBattery %tmp.128 76 16 31 ];
         %tmp.129 = as %tmp.128 { (!Null) };
-        symbol [ Lang %tmp.130 75 66 70 ];
+        symbol [ Lang %tmp.130 76 43 47 ];
         %tmp.130 = getm $.Toybox.Lang;
-        symbol [ Number %tmp.131 75 71 77 ];
+        symbol [ Number %tmp.131 76 48 54 ];
         %tmp.131 = getv %tmp.130 :Number;
         %tmp.132 = isa %tmp.129 %tmp.131;
-        push %tmp.132;
-_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_75_39_75_71_end:
-        %tmp.133 = phi [%tmp.127 @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_75_12_75_71_begin] [%tmp.132 @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_75_39_75_71_true] [%tmp.133 @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_75_39_75_71_end];
-        bf %tmp.133 @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_75_8_77_8_if_end;
-_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_75_8_77_8_if_true:
-_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_75_79_77_8_start:
-[ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviModel.mc" 76 12 ]
-        %tmp.134 = lgetv %newPhoneBattery.9;
-        symbol [ newPhoneBattery %tmp.134 76 27 42 ];
-        %tmp.135 = as %tmp.134 { (!Null) && (Lang.Number) };
-        symbol [ phoneBattery ? 76 12 24 ];
+        bf %tmp.132 @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_76_12_80_12_if_false;
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_76_12_80_12_if_true:
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_76_56_78_12_start:
+[ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviModel.mc" 77 16 ]
+        %tmp.133 = lgetv %newPhoneBattery.9;
+        symbol [ newPhoneBattery %tmp.133 77 31 46 ];
+        %tmp.134 = as %tmp.133 { (!Null) && (Lang.Number) };
+        %tmp.135 = as %tmp.134 Lang.Number;
+        symbol [ Lang %tmp.135 77 50 54 ];
+        symbol [ Number %tmp.135 77 55 61 ];
+        symbol [ phoneBattery ? 77 16 28 ];
         putv self :phoneBattery %tmp.135;
-_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_75_79_77_8_stop:
-        goto @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_75_8_77_8_if_end;
-_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_75_8_77_8_if_end:
-[ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviModel.mc" 80 8 ]
-_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_80_8_84_8_if_stmt:
-        symbol [ hasRoute %tmp.137 80 12 20 ];
-        %tmp.137 = getv ? :hasRoute;
-        bf %tmp.137 @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_80_8_84_8_if_end;
-_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_80_8_84_8_if_true:
-_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_80_22_84_8_start:
-[ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviModel.mc" 81 12 ]
-_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_81_12_83_12_if_stmt:
-_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_81_16_81_107_begin:
-        symbol [ action %tmp.139 81 17 23 ];
-        %tmp.139 = getv ? :action;
-        symbol [ equals %tmp.140 81 24 30 ];
-        %tmp.140 = getv function %tmp.139 :equals;
-        symbol [ _lastAction %tmp.142 81 31 42 ];
-        %tmp.142 = getv ? :_lastAction;
-        %tmp.143 = invoke %tmp.139 %tmp.140(%tmp.142);
-        %tmp.144 = not %tmp.143;
-        bt %tmp.144 @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_81_12_83_12_if_true;
-_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_81_47_81_107_false:
-_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_81_48_81_106_begin:
-        symbol [ distance %tmp.146 81 49 57 ];
-        %tmp.146 = getv ? :distance;
-        symbol [ equals %tmp.147 81 58 64 ];
-        %tmp.147 = getv function %tmp.146 :equals;
-        symbol [ _lastDistance %tmp.149 81 65 78 ];
-        %tmp.149 = getv ? :_lastDistance;
-        %tmp.150 = invoke %tmp.146 %tmp.147(%tmp.149);
-        %tmp.151 = not %tmp.150;
-        bf %tmp.151 @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_81_12_83_12_if_end;
-_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_81_83_81_106_true:
-        %tmp.152 = self;
-        symbol [ isImminentTurn %tmp.153 81 83 97 ];
-        %tmp.153 = getv function %tmp.152 :isImminentTurn;
-        symbol [ distance %tmp.155 81 98 106 ];
-        %tmp.155 = getv ? :distance;
-        %tmp.156 = invoke %tmp.152 %tmp.153(%tmp.155);
-        push %tmp.156;
-_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_81_83_81_106_end:
-        %tmp.157 = phi [%tmp.151 @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_81_48_81_106_begin] [%tmp.156 @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_81_83_81_106_true] [%tmp.157 @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_81_83_81_106_end];
-        push %tmp.157;
-_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_81_47_81_107_end:
-        %tmp.158 = phi [%tmp.144 @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_81_16_81_107_begin] [%tmp.157 @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_81_47_81_107_false] [%tmp.158 @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_81_47_81_107_end];
-        bf %tmp.158 @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_81_12_83_12_if_end;
-_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_81_12_83_12_if_true:
-_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_81_110_83_12_start:
-[ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviModel.mc" 82 16 ]
-        %tmp.159 = self;
-        symbol [ triggerHaptic %tmp.160 82 16 29 ];
-        %tmp.160 = getv function %tmp.159 :triggerHaptic;
-        invoke %tmp.159 %tmp.160();
-_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_81_110_83_12_stop:
-        goto @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_81_12_83_12_if_end;
-_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_81_12_83_12_if_end:
-_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_80_22_84_8_stop:
-        goto @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_80_8_84_8_if_end;
-_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_80_8_84_8_if_end:
-[ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviModel.mc" 86 8 ]
-        symbol [ action %tmp.162 86 22 28 ];
-        %tmp.162 = getv ? :action;
-        symbol [ _lastAction ? 86 8 19 ];
-        putv self :_lastAction %tmp.162;
-[ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviModel.mc" 87 8 ]
-        symbol [ distance %tmp.164 87 24 32 ];
-        %tmp.164 = getv ? :distance;
-        symbol [ _lastDistance ? 87 8 21 ];
-        putv self :_lastDistance %tmp.164;
-[ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviModel.mc" 89 8 ]
-        symbol [ WatchUi %tmp.165 89 8 15 ];
-        %tmp.165 = getm $.Toybox.WatchUi;
-        symbol [ requestUpdate %tmp.166 89 16 29 ];
-        %tmp.166 = getv function %tmp.165 :requestUpdate;
-        invoke %tmp.165 %tmp.166();
-_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_32_67_90_4_stop:
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_76_56_78_12_stop:
+        goto @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_76_12_80_12_if_end;
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_76_12_80_12_if_false:
+[ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviModel.mc" 78 19 ]
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_78_19_80_12_if_stmt:
+        %tmp.136 = lgetv %newPhoneBattery.9;
+        symbol [ newPhoneBattery %tmp.136 78 23 38 ];
+        %tmp.137 = as %tmp.136 { (!Lang.Number) && (!Null) };
+        %tmp.139 = const :toNumber;
+        symbol [ toNumber %tmp.139 78 44 52 const ];
+        %tmp.140 = canhazplz %tmp.137 %tmp.139;
+        bf %tmp.140 @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_78_19_80_12_if_end;
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_78_19_80_12_if_true:
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_78_54_80_12_start:
+[ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviModel.mc" 79 16 ]
+        %tmp.141 = lgetv %newPhoneBattery.9;
+        symbol [ newPhoneBattery %tmp.141 79 32 47 ];
+        %tmp.142 = as %tmp.141 { (!Lang.Number) && (interface { var toNumber; }) && (!Null) };
+        %tmp.143 = as %tmp.142 Object;
+        symbol [ Object %tmp.143 79 51 57 ];
+        symbol [ toNumber %tmp.144 79 59 67 ];
+        %tmp.144 = getv function %tmp.143 :toNumber;
+        %tmp.145 = invoke %tmp.143 %tmp.144();
+        symbol [ phoneBattery ? 79 16 28 ];
+        putv self :phoneBattery %tmp.145;
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_78_54_80_12_stop:
+        goto @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_78_19_80_12_if_end;
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_78_19_80_12_if_end:
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_76_12_80_12_if_end:
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_75_37_81_8_stop:
+        goto @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_75_8_81_8_if_end;
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_75_8_81_8_if_end:
+[ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviModel.mc" 84 8 ]
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_84_8_88_8_if_stmt:
+        symbol [ hasRoute %tmp.147 84 12 20 ];
+        %tmp.147 = getv ? :hasRoute;
+        bf %tmp.147 @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_84_8_88_8_if_end;
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_84_8_88_8_if_true:
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_84_22_88_8_start:
+[ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviModel.mc" 85 12 ]
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_85_12_87_12_if_stmt:
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_85_16_85_107_begin:
+        symbol [ action %tmp.149 85 17 23 ];
+        %tmp.149 = getv ? :action;
+        symbol [ equals %tmp.150 85 24 30 ];
+        %tmp.150 = getv function %tmp.149 :equals;
+        symbol [ _lastAction %tmp.152 85 31 42 ];
+        %tmp.152 = getv ? :_lastAction;
+        %tmp.153 = invoke %tmp.149 %tmp.150(%tmp.152);
+        %tmp.154 = not %tmp.153;
+        bt %tmp.154 @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_85_12_87_12_if_true;
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_85_47_85_107_false:
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_85_48_85_106_begin:
+        symbol [ distance %tmp.156 85 49 57 ];
+        %tmp.156 = getv ? :distance;
+        symbol [ equals %tmp.157 85 58 64 ];
+        %tmp.157 = getv function %tmp.156 :equals;
+        symbol [ _lastDistance %tmp.159 85 65 78 ];
+        %tmp.159 = getv ? :_lastDistance;
+        %tmp.160 = invoke %tmp.156 %tmp.157(%tmp.159);
+        %tmp.161 = not %tmp.160;
+        bf %tmp.161 @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_85_12_87_12_if_end;
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_85_83_85_106_true:
+        %tmp.162 = self;
+        symbol [ isImminentTurn %tmp.163 85 83 97 ];
+        %tmp.163 = getv function %tmp.162 :isImminentTurn;
+        symbol [ distance %tmp.165 85 98 106 ];
+        %tmp.165 = getv ? :distance;
+        %tmp.166 = invoke %tmp.162 %tmp.163(%tmp.165);
+        push %tmp.166;
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_85_83_85_106_end:
+        %tmp.167 = phi [%tmp.161 @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_85_48_85_106_begin] [%tmp.166 @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_85_83_85_106_true] [%tmp.167 @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_85_83_85_106_end];
+        push %tmp.167;
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_85_47_85_107_end:
+        %tmp.168 = phi [%tmp.154 @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_85_16_85_107_begin] [%tmp.167 @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_85_47_85_107_false] [%tmp.168 @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_85_47_85_107_end];
+        bf %tmp.168 @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_85_12_87_12_if_end;
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_85_12_87_12_if_true:
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_85_110_87_12_start:
+[ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviModel.mc" 86 16 ]
+        %tmp.169 = self;
+        symbol [ triggerHaptic %tmp.170 86 16 29 ];
+        %tmp.170 = getv function %tmp.169 :triggerHaptic;
+        invoke %tmp.169 %tmp.170();
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_85_110_87_12_stop:
+        goto @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_85_12_87_12_if_end;
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_85_12_87_12_if_end:
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_84_22_88_8_stop:
+        goto @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_84_8_88_8_if_end;
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_84_8_88_8_if_end:
+[ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviModel.mc" 90 8 ]
+        symbol [ action %tmp.172 90 22 28 ];
+        %tmp.172 = getv ? :action;
+        symbol [ _lastAction ? 90 8 19 ];
+        putv self :_lastAction %tmp.172;
+[ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviModel.mc" 91 8 ]
+        symbol [ distance %tmp.174 91 24 32 ];
+        %tmp.174 = getv ? :distance;
+        symbol [ _lastDistance ? 91 8 21 ];
+        putv self :_lastDistance %tmp.174;
+[ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviModel.mc" 93 8 ]
+        symbol [ WatchUi %tmp.175 93 8 15 ];
+        %tmp.175 = getm $.Toybox.WatchUi;
+        symbol [ requestUpdate %tmp.176 93 16 29 ];
+        %tmp.176 = getv function %tmp.175 :requestUpdate;
+        invoke %tmp.175 %tmp.176();
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_32_67_94_4_stop:
     }
-    [ @file = "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviModel.mc"; @line = 95; @symbol_functiondef = [isImminentTurn,95,21,35]; @symbol_param<0> = [distStr,95,36,43]; @symbol_param<0>_type<0> = [String,95,47,53]; @symbol_return<0> = [Boolean,95,58,65]; ]
+    [ @file = "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviModel.mc"; @line = 99; @symbol_functiondef = [isImminentTurn,99,21,35]; @symbol_param<0> = [distStr,99,36,43]; @symbol_param<0>_type<0> = [String,99,47,53]; @symbol_return<0> = [Boolean,99,58,65]; ]
     private
     function isImminentTurn(distStr as String) as Boolean {
-_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_95_66_101_4_start:
-[ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviModel.mc" 96 8 ]
-        [ "_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_95_66_101_4_start" "_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_95_66_101_4_stop" ]
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_99_66_105_4_start:
+[ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviModel.mc" 100 8 ]
+        [ "_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_99_66_105_4_start" "_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_99_66_105_4_stop" ]
         %lower.1 = local;
-        symbol [ lower %lower.1 96 12 17 ];
+        symbol [ lower %lower.1 100 12 17 ];
         %tmp.1 = lgetv %distStr;
-        symbol [ distStr %tmp.1 96 20 27 ];
-        symbol [ toLower %tmp.2 96 28 35 ];
+        symbol [ distStr %tmp.1 100 20 27 ];
+        symbol [ toLower %tmp.2 100 28 35 ];
         %tmp.2 = getv function %tmp.1 :toLower;
         %tmp.3 = invoke %tmp.1 %tmp.2();
         lputv %lower.1 %tmp.3;
-        symbol [ lower %lower.1 96 12 17 ];
-[ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviModel.mc" 97 8 ]
-_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_97_8_99_8_if_stmt:
-_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_97_12_97_65_begin:
+        symbol [ lower %lower.1 100 12 17 ];
+[ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviModel.mc" 101 8 ]
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_101_8_103_8_if_stmt:
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_101_12_101_65_begin:
         %tmp.4 = lgetv %lower.1;
-        symbol [ lower %tmp.4 97 12 17 ];
-        symbol [ find %tmp.5 97 18 22 ];
+        symbol [ lower %tmp.4 101 12 17 ];
+        symbol [ find %tmp.5 101 18 22 ];
         %tmp.5 = getv function %tmp.4 :find;
         %tmp.6 = "50 m";
         %tmp.7 = invoke %tmp.4 %tmp.5(%tmp.6);
         %tmp.8 = null;
         %tmp.9 = ne %tmp.7 %tmp.8;
-        bt %tmp.9 @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_97_8_99_8_if_true;
-_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_97_42_97_65_false:
+        bt %tmp.9 @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_101_8_103_8_if_true;
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_101_42_101_65_false:
         %tmp.10 = lgetv %lower.1;
-        symbol [ lower %tmp.10 97 42 47 ];
-        symbol [ find %tmp.11 97 48 52 ];
+        symbol [ lower %tmp.10 101 42 47 ];
+        symbol [ find %tmp.11 101 48 52 ];
         %tmp.11 = getv function %tmp.10 :find;
         %tmp.12 = "100 m";
         %tmp.13 = invoke %tmp.10 %tmp.11(%tmp.12);
         %tmp.14 = null;
         %tmp.15 = ne %tmp.13 %tmp.14;
         push %tmp.15;
-_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_97_42_97_65_end:
-        %tmp.16 = phi [%tmp.9 @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_97_12_97_65_begin] [%tmp.15 @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_97_42_97_65_false] [%tmp.16 @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_97_42_97_65_end];
-        bf %tmp.16 @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_97_8_99_8_if_end;
-_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_97_8_99_8_if_true:
-_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_97_71_99_8_start:
-[ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviModel.mc" 98 12 ]
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_101_42_101_65_end:
+        %tmp.16 = phi [%tmp.9 @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_101_12_101_65_begin] [%tmp.15 @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_101_42_101_65_false] [%tmp.16 @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_101_42_101_65_end];
+        bf %tmp.16 @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_101_8_103_8_if_end;
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_101_8_103_8_if_true:
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_101_71_103_8_start:
+[ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviModel.mc" 102 12 ]
         %tmp.17 = true;
         ret %tmp.17;
-_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_97_71_99_8_stop:
-        goto @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_97_8_99_8_if_end;
-_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_97_8_99_8_if_end:
-[ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviModel.mc" 100 8 ]
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_101_71_103_8_stop:
+        goto @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_101_8_103_8_if_end;
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_101_8_103_8_if_end:
+[ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviModel.mc" 104 8 ]
         %tmp.18 = false;
         ret %tmp.18;
-_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_95_66_101_4_stop:
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_99_66_105_4_stop:
     }
-    [ @file = "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviModel.mc"; @line = 106; @symbol_functiondef = [triggerHaptic,106,20,33]; ]
+    [ @file = "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviModel.mc"; @line = 110; @symbol_functiondef = [triggerHaptic,110,20,33]; ]
     public
     function triggerHaptic() as Void {
-_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_106_44_109_4_start:
-[ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviModel.mc" 108 8 ]
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_110_44_113_4_start:
+[ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviModel.mc" 112 8 ]
         ret ?;
-_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_106_44_109_4_stop:
+_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviModel_mc_110_44_113_4_stop:
     }
 }
 [ @file = "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviModel.mc"; @line = 1; ]
