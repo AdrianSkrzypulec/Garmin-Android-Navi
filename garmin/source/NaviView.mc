@@ -160,7 +160,7 @@ class NaviView extends WatchUi.View {
         dc.drawText(cx, 172, Graphics.FONT_SMALL, "Oczekiwanie na trasę...", Graphics.TEXT_JUSTIFY_CENTER);
 
         dc.setColor(Graphics.COLOR_LT_GRAY, Graphics.COLOR_TRANSPARENT);
-        dc.drawText(cx, 200, Graphics.FONT_XTINY, "Włącz nawigację w Google Maps / Waze", Graphics.TEXT_JUSTIFY_CENTER);
+        dc.drawText(cx, 200, Graphics.FONT_XTINY, "Włącz nawigację w telefonie", Graphics.TEXT_JUSTIFY_CENTER);
 
         // --- BOTTOM BAR: Phone Battery (standby) ---
         renderBottomBar(dc, cx, h, w);

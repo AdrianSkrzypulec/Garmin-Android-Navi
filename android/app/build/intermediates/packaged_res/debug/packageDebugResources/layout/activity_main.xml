@@ -123,7 +123,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
-                    android:text="Oczekiwanie na uruchomienie nawigacji w Google Maps..."
+                    android:text="Oczekiwanie na uruchomienie nawigacji w Google Maps lub Mapy.cz (Mapy.com)..."
                     android:textColor="@color/text_secondary"
                     android:textSize="13sp" />
 
@@ -176,6 +176,15 @@
                     android:text="ETA: -- • Dystans całkowity: --"
                     android:textColor="@color/text_secondary"
                     android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tvLiveDebug"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="Status: Brak powiadomień"
+                    android:textColor="#888888"
+                    android:textSize="11sp" />
 
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>

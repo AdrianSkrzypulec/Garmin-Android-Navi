@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.navi.garmin.ManeuverParserTest" tests="11" skipped="0" failures="0" errors="0" timestamp="2026-10-10T21:00:55.572Z" hostname="Mac.lan" time="0.068">
+  <properties/>
+  <testcase name="testPolishUTurn" classname="com.navi.garmin.ManeuverParserTest" time="0.04"/>
+  <testcase name="testPolishTurnRight" classname="com.navi.garmin.ManeuverParserTest" time="0.002"/>
+  <testcase name="testMapyComUnicodeArrowDetection" classname="com.navi.garmin.ManeuverParserTest" time="0.002"/>
+  <testcase name="testEnglishTurnLeft" classname="com.navi.garmin.ManeuverParserTest" time="0.002"/>
+  <testcase name="testMapyComIconResourceNameDetection" classname="com.navi.garmin.ManeuverParserTest" time="0.002"/>
+  <testcase name="testEnglishRoundabout" classname="com.navi.garmin.ManeuverParserTest" time="0.004"/>
+  <testcase name="testMapyComPolishRoundabout" classname="com.navi.garmin.ManeuverParserTest" time="0.002"/>
+  <testcase name="testPolishTurnLeft" classname="com.navi.garmin.ManeuverParserTest" time="0.002"/>
+  <testcase name="testPolishRoundaboutWithExit" classname="com.navi.garmin.ManeuverParserTest" time="0.001"/>
+  <testcase name="testMapyComPolishTurnRight" classname="com.navi.garmin.ManeuverParserTest" time="0.001"/>
+  <testcase name="testPolishDestination" classname="com.navi.garmin.ManeuverParserTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,10 +1,10 @@
-# Garmin Maps Navi — Nawigacja Google Maps na Garmin vívoactive 4
+# Garmin Maps Navi — Nawigacja Google Maps & Mapy.com (Mapy.cz) na Garmin vívoactive 4
 
-Kompletny system nawigacyjny przenoszący wskazówki turn-by-turn z aplikacji **Google Maps** na telefonie z systemem Android wprost na ekran zegarka **Garmin vívoactive 4**.
+Kompletny system nawigacyjny przenoszący wskazówki turn-by-turn z aplikacji **Google Maps** oraz **Mapy.com (dawniej Mapy.cz)** na telefonie z systemem Android wprost na ekran zegarka **Garmin vívoactive 4**.
 
 System składa się z dwóch współpracujących modułów:
 1. **Aplikacja na zegarek Garmin (`garmin/`)** – napisana w języku Monkey C dla Connect IQ, rysująca kontrastowe, wektorowe symbole manewrów (strzałki skrętu, ronda z numerami zjazdów, zawracanie), odległość, ulicę, czas dojazdu (ETA) oraz generująca wibracje haptyczne przed manewrem.
-2. **Aplikacja towarzysząca na telefon Android (`android/`)** – usługa w tle przechwytująca powiadomienia Google Maps w czasie rzeczywistym (w języku polskim i angielskim) i transmitująca je bezprzewodowo przez Bluetooth do zegarka za pomocą Garmin Connect IQ Mobile SDK.
+2. **Aplikacja towarzysząca na telefon Android (`android/`)** – usługa w tle przechwytująca powiadomienia Google Maps oraz Mapy.com (Mapy.cz) w czasie rzeczywistym (w języku polskim i angielskim) i transmitująca je bezprzewodowo przez Bluetooth do zegarka za pomocą Garmin Connect IQ Mobile SDK.
 
 ---
 
@@ -118,10 +118,10 @@ Aplikacja Android posiada wbudowany **Symulator Manewrów**:
 
 ---
 
-## 🧭 Krok 4: Używanie z Google Maps na co dzień
+## 🧭 Krok 4: Używanie z Google Maps / Mapy.com na co dzień
 
 1. Uruchom aplikację **Maps Navi** na zegarku.
-2. Otwórz **Google Maps** na telefonie i rozpocznij nawigację do dowolnego celu.
+2. Otwórz **Google Maps** lub **Mapy.com (Mapy.cz)** na telefonie i rozpocznij nawigację do dowolnego celu.
 3. Wskazówki będą przesyłane na zegarek w czasie rzeczywistym:
    - Każda zmiana manewru wywoła krótki impuls wibracyjny na nadgarstku.
    - Odległość na zegarku będzie płynnie maleć w miarę zbliżania się do manewru.

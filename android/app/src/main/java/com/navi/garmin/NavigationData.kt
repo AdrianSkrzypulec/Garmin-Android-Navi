@@ -13,6 +13,7 @@ data class NavigationData(
     val exitNumber: Int = 0,
     val hasRoute: Boolean = false,
     val phoneBattery: Int = -1,    // Poziom baterii telefonu w % (-1 = brak danych)
+    val rawDebugText: String = "", // Informacje diagnostyczne dla ekranu telefonu
     val timestamp: Long = System.currentTimeMillis()
 ) {
     /**

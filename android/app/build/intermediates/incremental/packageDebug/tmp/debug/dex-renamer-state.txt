@@ -1,12 +1,8 @@
-<<<<<<< HEAD
-#Tue Sep 08 21:52:21 CEST 2026
-=======
-#Sat Oct 10 09:55:52 CEST 2026
->>>>>>> 90447e6 (baterry fix)
-base.0=/Users/adrian/Projects/Garmin/Navi/android/app/build/intermediates/dex/debug/mergeExtDexDebug/classes.dex
-base.1=/Users/adrian/Projects/Garmin/Navi/android/app/build/intermediates/dex/debug/mergeProjectDexDebug/0/classes.dex
-base.2=/Users/adrian/Projects/Garmin/Navi/android/app/build/intermediates/dex/debug/mergeProjectDexDebug/1/classes.dex
-base.3=/Users/adrian/Projects/Garmin/Navi/android/app/build/intermediates/dex/debug/mergeProjectDexDebug/13/classes.dex
+#Sat Oct 10 23:00:47 CEST 2026
+base.0=/Users/adrian/Projects/Garmin/Garmin-Android-Navi/android/app/build/intermediates/dex/debug/mergeExtDexDebug/classes.dex
+base.1=/Users/adrian/Projects/Garmin/Garmin-Android-Navi/android/app/build/intermediates/dex/debug/mergeProjectDexDebug/0/classes.dex
+base.2=/Users/adrian/Projects/Garmin/Garmin-Android-Navi/android/app/build/intermediates/dex/debug/mergeProjectDexDebug/1/classes.dex
+base.3=/Users/adrian/Projects/Garmin/Garmin-Android-Navi/android/app/build/intermediates/dex/debug/mergeProjectDexDebug/13/classes.dex
 path.0=classes.dex
 path.1=0/classes.dex
 path.2=1/classes.dex

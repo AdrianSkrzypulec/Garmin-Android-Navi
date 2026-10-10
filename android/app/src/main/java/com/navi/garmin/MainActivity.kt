@@ -53,7 +53,7 @@ class MainActivity : AppCompatActivity() {
         if (isGranted) {
             binding.tvPermissionTitle.text = getString(R.string.permission_granted)
             binding.tvPermissionTitle.setTextColor(ContextCompat.getColor(this, R.color.status_green))
-            binding.tvPermissionDesc.text = "Usługa nasłuchuje powiadomień nawigacji Google Maps."
+            binding.tvPermissionDesc.text = "Usługa nasłuchuje powiadomień nawigacji Google Maps oraz Mapy.cz (Mapy.com)."
             binding.btnGrantPermission.visibility = View.GONE
         } else {
             binding.tvPermissionTitle.text = getString(R.string.permission_title)
@@ -88,17 +88,19 @@ class MainActivity : AppCompatActivity() {
         lifecycleScope.launch {
             MapsNotificationService.currentNavData.collectLatest { nav ->
                 if (nav != null && nav.hasRoute) {
-                    binding.tvLiveStatus.text = "Aktywna nawigacja Google Maps"
+                    binding.tvLiveStatus.text = "Aktywna nawigacja: Google Maps / Mapy.com"
                     binding.tvLiveAction.text = "Manewr: ${nav.action}"
                     binding.tvLiveDistance.text = "Dystans: ${nav.distance}"
                     binding.tvLiveStreet.text = "Ulica: ${nav.street}"
                     binding.tvLiveTripInfo.text = "ETA: ${nav.eta} • Dystans: ${nav.remainDist} (${nav.remainTime})"
+                    binding.tvLiveDebug.text = if (nav.rawDebugText.isNotEmpty()) nav.rawDebugText else "Status: Otrzymano odczyt"
                 } else {
-                    binding.tvLiveStatus.text = "Oczekiwanie na uruchomienie nawigacji w Google Maps..."
+                    binding.tvLiveStatus.text = "Oczekiwanie na uruchomienie nawigacji w Google Maps lub Mapy.cz (Mapy.com)..."
                     binding.tvLiveAction.text = "Manewr: --"
                     binding.tvLiveDistance.text = "Dystans: --"
                     binding.tvLiveStreet.text = "Ulica: --"
                     binding.tvLiveTripInfo.text = "ETA: -- • Dystans całkowity: --"
+                    binding.tvLiveDebug.text = "Status: Brak powiadomień"
                 }
             }
         }

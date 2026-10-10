@@ -55,6 +55,9 @@ public final class ActivityMainBinding implements ViewBinding {
   public final TextView tvLiveAction;
 
   @NonNull
+  public final TextView tvLiveDebug;
+
+  @NonNull
   public final TextView tvLiveDistance;
 
   @NonNull
@@ -78,10 +81,10 @@ public final class ActivityMainBinding implements ViewBinding {
       @NonNull MaterialButton btnSimRoundabout, @NonNull MaterialButton btnSimStraight,
       @NonNull MaterialButton btnSimTurnLeft, @NonNull MaterialButton btnSimTurnRight,
       @NonNull MaterialCardView cardPermission, @NonNull TextView tvGarminStatus,
-      @NonNull TextView tvLiveAction, @NonNull TextView tvLiveDistance,
-      @NonNull TextView tvLiveStatus, @NonNull TextView tvLiveStreet,
-      @NonNull TextView tvLiveTripInfo, @NonNull TextView tvPermissionDesc,
-      @NonNull TextView tvPermissionTitle) {
+      @NonNull TextView tvLiveAction, @NonNull TextView tvLiveDebug,
+      @NonNull TextView tvLiveDistance, @NonNull TextView tvLiveStatus,
+      @NonNull TextView tvLiveStreet, @NonNull TextView tvLiveTripInfo,
+      @NonNull TextView tvPermissionDesc, @NonNull TextView tvPermissionTitle) {
     this.rootView = rootView;
     this.btnGrantPermission = btnGrantPermission;
     this.btnRefreshGarmin = btnRefreshGarmin;
@@ -94,6 +97,7 @@ public final class ActivityMainBinding implements ViewBinding {
     this.cardPermission = cardPermission;
     this.tvGarminStatus = tvGarminStatus;
     this.tvLiveAction = tvLiveAction;
+    this.tvLiveDebug = tvLiveDebug;
     this.tvLiveDistance = tvLiveDistance;
     this.tvLiveStatus = tvLiveStatus;
     this.tvLiveStreet = tvLiveStreet;
@@ -195,6 +199,12 @@ public final class ActivityMainBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.tvLiveDebug;
+      TextView tvLiveDebug = ViewBindings.findChildViewById(rootView, id);
+      if (tvLiveDebug == null) {
+        break missingId;
+      }
+
       id = R.id.tvLiveDistance;
       TextView tvLiveDistance = ViewBindings.findChildViewById(rootView, id);
       if (tvLiveDistance == null) {
@@ -233,8 +243,9 @@ public final class ActivityMainBinding implements ViewBinding {
 
       return new ActivityMainBinding((ScrollView) rootView, btnGrantPermission, btnRefreshGarmin,
           btnSimClear, btnSimDestination, btnSimRoundabout, btnSimStraight, btnSimTurnLeft,
-          btnSimTurnRight, cardPermission, tvGarminStatus, tvLiveAction, tvLiveDistance,
-          tvLiveStatus, tvLiveStreet, tvLiveTripInfo, tvPermissionDesc, tvPermissionTitle);
+          btnSimTurnRight, cardPermission, tvGarminStatus, tvLiveAction, tvLiveDebug,
+          tvLiveDistance, tvLiveStatus, tvLiveStreet, tvLiveTripInfo, tvPermissionDesc,
+          tvPermissionTitle);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

@@ -3569,6 +3569,7 @@ id transition_transform
 id triangle
 id tvGarminStatus
 id tvLiveAction
+id tvLiveDebug
 id tvLiveDistance
 id tvLiveStatus
 id tvLiveStreet
