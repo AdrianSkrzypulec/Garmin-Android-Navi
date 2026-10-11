@@ -1,42 +1,42 @@
-[ @file = "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviGlanceView.mc"; @line = 1; @symbol_importdef<0> = [Toybox,1,7,13]; @symbol_importdef<1> = [Graphics,1,14,22]; ]
+[ @file = "/Users/adrian/Projects/Garmin/Garmin-Android-Navi/garmin/source/NaviGlanceView.mc"; @line = 1; @symbol_importdef<0> = [Toybox,1,7,13]; @symbol_importdef<1> = [Graphics,1,14,22]; ]
 import Toybox.Graphics;
-[ @file = "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviGlanceView.mc"; @line = 2; @symbol_importdef<0> = [Toybox,2,7,13]; @symbol_importdef<1> = [Lang,2,14,18]; ]
+[ @file = "/Users/adrian/Projects/Garmin/Garmin-Android-Navi/garmin/source/NaviGlanceView.mc"; @line = 2; @symbol_importdef<0> = [Toybox,2,7,13]; @symbol_importdef<1> = [Lang,2,14,18]; ]
 import Toybox.Lang;
-[ @file = "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviGlanceView.mc"; @line = 3; @symbol_importdef<0> = [Toybox,3,7,13]; @symbol_importdef<1> = [WatchUi,3,14,21]; ]
+[ @file = "/Users/adrian/Projects/Garmin/Garmin-Android-Navi/garmin/source/NaviGlanceView.mc"; @line = 3; @symbol_importdef<0> = [Toybox,3,7,13]; @symbol_importdef<1> = [WatchUi,3,14,21]; ]
 import Toybox.WatchUi;
-[ @file = "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviGlanceView.mc"; @line = 9; glance = true; @symbol_classdef = [NaviGlanceView,9,6,20]; @symbol_extends<0> = [WatchUi,9,29,36]; @symbol_extends<1> = [GlanceView,9,37,47]; ]
+[ @file = "/Users/adrian/Projects/Garmin/Garmin-Android-Navi/garmin/source/NaviGlanceView.mc"; @line = 9; glance = true; @symbol_classdef = [NaviGlanceView,9,6,20]; @symbol_extends<0> = [WatchUi,9,29,36]; @symbol_extends<1> = [GlanceView,9,37,47]; ]
 class NaviGlanceView extends WatchUi.GlanceView {
-    [ @file = "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviGlanceView.mc"; @line = 9; ]
+    [ @file = "/Users/adrian/Projects/Garmin/Garmin-Android-Navi/garmin/source/NaviGlanceView.mc"; @line = 9; ]
     <init> {
     }
-    [ @file = "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviGlanceView.mc"; @line = 9; ]
+    [ @file = "/Users/adrian/Projects/Garmin/Garmin-Android-Navi/garmin/source/NaviGlanceView.mc"; @line = 9; ]
     static
     <init> {
     }
-    [ @file = "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviGlanceView.mc"; @line = 11; @position = 16; @symbol_vardef = [_model,11,16,22]; @symbol_type<0> = [NaviModel,11,26,35]; ]
+    [ @file = "/Users/adrian/Projects/Garmin/Garmin-Android-Navi/garmin/source/NaviGlanceView.mc"; @line = 11; @position = 16; @symbol_vardef = [_model,11,16,22]; @symbol_type<0> = [NaviModel,11,26,35]; ]
     private
     var _model as NaviModel;
-    [ @file = "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviGlanceView.mc"; @line = 13; @symbol_functiondef = [initialize,13,13,23]; @symbol_param<0> = [model,13,24,29]; @symbol_param<0>_type<0> = [NaviModel,13,33,42]; ]
+    [ @file = "/Users/adrian/Projects/Garmin/Garmin-Android-Navi/garmin/source/NaviGlanceView.mc"; @line = 13; @symbol_functiondef = [initialize,13,13,23]; @symbol_param<0> = [model,13,24,29]; @symbol_param<0>_type<0> = [NaviModel,13,33,42]; ]
     function initialize(model as NaviModel) as Void {
-_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviGlanceView_mc_13_44_16_4_start:
-[ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviGlanceView.mc" 14 8 ]
+_Users_adrian_Projects_Garmin_Garmin_Android_Navi_garmin_source_NaviGlanceView_mc_13_44_16_4_start:
+[ "/Users/adrian/Projects/Garmin/Garmin-Android-Navi/garmin/source/NaviGlanceView.mc" 14 8 ]
         symbol [ GlanceView %tmp.2 14 8 18 ];
         %tmp.2 = getv ? :GlanceView;
         symbol [ initialize %tmp.3 14 19 29 ];
         %tmp.3 = getv function %tmp.2 :initialize;
         invoke %tmp.2 %tmp.3();
-[ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviGlanceView.mc" 15 8 ]
+[ "/Users/adrian/Projects/Garmin/Garmin-Android-Navi/garmin/source/NaviGlanceView.mc" 15 8 ]
         %tmp.4 = lgetv %model;
         symbol [ model %tmp.4 15 17 22 ];
         symbol [ _model ? 15 8 14 ];
         putv self :_model %tmp.4;
-_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviGlanceView_mc_13_44_16_4_stop:
+_Users_adrian_Projects_Garmin_Garmin_Android_Navi_garmin_source_NaviGlanceView_mc_13_44_16_4_stop:
     }
-    [ @file = "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviGlanceView.mc"; @line = 18; @symbol_functiondef = [onUpdate,18,13,21]; @symbol_param<0> = [dc,18,22,24]; @symbol_param<0>_type<0> = [Graphics,18,28,36]; @symbol_param<0>_type<1> = [Dc,18,37,39]; ]
+    [ @file = "/Users/adrian/Projects/Garmin/Garmin-Android-Navi/garmin/source/NaviGlanceView.mc"; @line = 18; @symbol_functiondef = [onUpdate,18,13,21]; @symbol_param<0> = [dc,18,22,24]; @symbol_param<0>_type<0> = [Graphics,18,28,36]; @symbol_param<0>_type<1> = [Dc,18,37,39]; ]
     function onUpdate(dc as Graphics.Dc) as Void {
-_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviGlanceView_mc_18_49_37_4_start:
-[ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviGlanceView.mc" 19 8 ]
-        [ "_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviGlanceView_mc_18_49_37_4_start" "_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviGlanceView_mc_18_49_37_4_stop" ]
+_Users_adrian_Projects_Garmin_Garmin_Android_Navi_garmin_source_NaviGlanceView_mc_18_49_37_4_start:
+[ "/Users/adrian/Projects/Garmin/Garmin-Android-Navi/garmin/source/NaviGlanceView.mc" 19 8 ]
+        [ "_Users_adrian_Projects_Garmin_Garmin_Android_Navi_garmin_source_NaviGlanceView_mc_18_49_37_4_start" "_Users_adrian_Projects_Garmin_Garmin_Android_Navi_garmin_source_NaviGlanceView_mc_18_49_37_4_stop" ]
         %h.1 = local;
         symbol [ h %h.1 19 12 13 ];
         %tmp.1 = lgetv %dc;
@@ -46,7 +46,7 @@ _Users_adrian_Projects_Garmin_Navi_garmin_source_NaviGlanceView_mc_18_49_37_4_st
         %tmp.3 = invoke %tmp.1 %tmp.2();
         lputv %h.1 %tmp.3;
         symbol [ h %h.1 19 12 13 ];
-[ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviGlanceView.mc" 21 8 ]
+[ "/Users/adrian/Projects/Garmin/Garmin-Android-Navi/garmin/source/NaviGlanceView.mc" 21 8 ]
         %tmp.4 = lgetv %dc;
         symbol [ dc %tmp.4 21 8 10 ];
         symbol [ setColor %tmp.5 21 11 19 ];
@@ -60,13 +60,13 @@ _Users_adrian_Projects_Garmin_Navi_garmin_source_NaviGlanceView_mc_18_49_37_4_st
         symbol [ COLOR_BLACK %tmp.9 21 51 62 ];
         %tmp.9 = getv %tmp.8 :COLOR_BLACK;
         invoke %tmp.4 %tmp.5(%tmp.7, %tmp.9);
-[ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviGlanceView.mc" 22 8 ]
+[ "/Users/adrian/Projects/Garmin/Garmin-Android-Navi/garmin/source/NaviGlanceView.mc" 22 8 ]
         %tmp.10 = lgetv %dc;
         symbol [ dc %tmp.10 22 8 10 ];
         symbol [ clear %tmp.11 22 11 16 ];
         %tmp.11 = getv function %tmp.10 :clear;
         invoke %tmp.10 %tmp.11();
-[ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviGlanceView.mc" 25 8 ]
+[ "/Users/adrian/Projects/Garmin/Garmin-Android-Navi/garmin/source/NaviGlanceView.mc" 25 8 ]
         %tmp.12 = lgetv %dc;
         symbol [ dc %tmp.12 25 8 10 ];
         symbol [ setColor %tmp.13 25 11 19 ];
@@ -80,7 +80,7 @@ _Users_adrian_Projects_Garmin_Navi_garmin_source_NaviGlanceView_mc_18_49_37_4_st
         symbol [ COLOR_TRANSPARENT %tmp.17 25 51 68 ];
         %tmp.17 = getv %tmp.16 :COLOR_TRANSPARENT;
         invoke %tmp.12 %tmp.13(%tmp.15, %tmp.17);
-[ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviGlanceView.mc" 26 8 ]
+[ "/Users/adrian/Projects/Garmin/Garmin-Android-Navi/garmin/source/NaviGlanceView.mc" 26 8 ]
         %tmp.18 = lgetv %dc;
         symbol [ dc %tmp.18 26 8 10 ];
         symbol [ drawText %tmp.19 26 11 19 ];
@@ -97,17 +97,17 @@ _Users_adrian_Projects_Garmin_Navi_garmin_source_NaviGlanceView_mc_18_49_37_4_st
         symbol [ TEXT_JUSTIFY_LEFT %tmp.26 26 68 85 ];
         %tmp.26 = getv %tmp.25 :TEXT_JUSTIFY_LEFT;
         invoke %tmp.18 %tmp.19(%tmp.20, %tmp.21, %tmp.23, %tmp.24, %tmp.26);
-[ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviGlanceView.mc" 29 8 ]
-_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviGlanceView_mc_29_8_36_8_if_stmt:
+[ "/Users/adrian/Projects/Garmin/Garmin-Android-Navi/garmin/source/NaviGlanceView.mc" 29 8 ]
+_Users_adrian_Projects_Garmin_Garmin_Android_Navi_garmin_source_NaviGlanceView_mc_29_8_36_8_if_stmt:
         symbol [ _model %tmp.28 29 12 18 ];
         %tmp.28 = getv ? :_model;
         symbol [ hasRoute %tmp.29 29 19 27 ];
         %tmp.29 = getv %tmp.28 :hasRoute;
-        bf %tmp.29 @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviGlanceView_mc_29_8_36_8_if_else_false;
-_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviGlanceView_mc_29_8_36_8_if_true:
-_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviGlanceView_mc_29_29_33_8_start:
-[ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviGlanceView.mc" 30 12 ]
-        [ "_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviGlanceView_mc_29_29_33_8_start" "_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviGlanceView_mc_29_29_33_8_stop" ]
+        bf %tmp.29 @_Users_adrian_Projects_Garmin_Garmin_Android_Navi_garmin_source_NaviGlanceView_mc_29_8_36_8_if_else_false;
+_Users_adrian_Projects_Garmin_Garmin_Android_Navi_garmin_source_NaviGlanceView_mc_29_8_36_8_if_true:
+_Users_adrian_Projects_Garmin_Garmin_Android_Navi_garmin_source_NaviGlanceView_mc_29_29_33_8_start:
+[ "/Users/adrian/Projects/Garmin/Garmin-Android-Navi/garmin/source/NaviGlanceView.mc" 30 12 ]
+        [ "_Users_adrian_Projects_Garmin_Garmin_Android_Navi_garmin_source_NaviGlanceView_mc_29_29_33_8_start" "_Users_adrian_Projects_Garmin_Garmin_Android_Navi_garmin_source_NaviGlanceView_mc_29_29_33_8_stop" ]
         %summary.2 = local;
         symbol [ summary %summary.2 30 16 23 ];
         symbol [ _model %tmp.31 30 26 32 ];
@@ -123,7 +123,7 @@ _Users_adrian_Projects_Garmin_Navi_garmin_source_NaviGlanceView_mc_29_29_33_8_st
         %tmp.38 = add %tmp.34 %tmp.37;
         lputv %summary.2 %tmp.38;
         symbol [ summary %summary.2 30 16 23 ];
-[ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviGlanceView.mc" 31 12 ]
+[ "/Users/adrian/Projects/Garmin/Garmin-Android-Navi/garmin/source/NaviGlanceView.mc" 31 12 ]
         %tmp.39 = lgetv %dc;
         symbol [ dc %tmp.39 31 12 14 ];
         symbol [ setColor %tmp.40 31 15 23 ];
@@ -137,7 +137,7 @@ _Users_adrian_Projects_Garmin_Navi_garmin_source_NaviGlanceView_mc_29_29_33_8_st
         symbol [ COLOR_TRANSPARENT %tmp.44 31 55 72 ];
         %tmp.44 = getv %tmp.43 :COLOR_TRANSPARENT;
         invoke %tmp.39 %tmp.40(%tmp.42, %tmp.44);
-[ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviGlanceView.mc" 32 12 ]
+[ "/Users/adrian/Projects/Garmin/Garmin-Android-Navi/garmin/source/NaviGlanceView.mc" 32 12 ]
         %tmp.45 = lgetv %dc;
         symbol [ dc %tmp.45 32 12 14 ];
         symbol [ drawText %tmp.46 32 15 23 ];
@@ -160,11 +160,11 @@ _Users_adrian_Projects_Garmin_Navi_garmin_source_NaviGlanceView_mc_29_29_33_8_st
         symbol [ TEXT_JUSTIFY_LEFT %tmp.57 32 79 96 ];
         %tmp.57 = getv %tmp.56 :TEXT_JUSTIFY_LEFT;
         invoke %tmp.45 %tmp.46(%tmp.47, %tmp.52, %tmp.54, %tmp.55, %tmp.57);
-_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviGlanceView_mc_29_29_33_8_stop:
-        goto @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviGlanceView_mc_29_8_36_8_if_end;
-_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviGlanceView_mc_29_8_36_8_if_else_false:
-_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviGlanceView_mc_33_15_36_8_start:
-[ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviGlanceView.mc" 34 12 ]
+_Users_adrian_Projects_Garmin_Garmin_Android_Navi_garmin_source_NaviGlanceView_mc_29_29_33_8_stop:
+        goto @_Users_adrian_Projects_Garmin_Garmin_Android_Navi_garmin_source_NaviGlanceView_mc_29_8_36_8_if_end;
+_Users_adrian_Projects_Garmin_Garmin_Android_Navi_garmin_source_NaviGlanceView_mc_29_8_36_8_if_else_false:
+_Users_adrian_Projects_Garmin_Garmin_Android_Navi_garmin_source_NaviGlanceView_mc_33_15_36_8_start:
+[ "/Users/adrian/Projects/Garmin/Garmin-Android-Navi/garmin/source/NaviGlanceView.mc" 34 12 ]
         %tmp.58 = lgetv %dc;
         symbol [ dc %tmp.58 34 12 14 ];
         symbol [ setColor %tmp.59 34 15 23 ];
@@ -178,7 +178,7 @@ _Users_adrian_Projects_Garmin_Navi_garmin_source_NaviGlanceView_mc_33_15_36_8_st
         symbol [ COLOR_TRANSPARENT %tmp.63 34 57 74 ];
         %tmp.63 = getv %tmp.62 :COLOR_TRANSPARENT;
         invoke %tmp.58 %tmp.59(%tmp.61, %tmp.63);
-[ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviGlanceView.mc" 35 12 ]
+[ "/Users/adrian/Projects/Garmin/Garmin-Android-Navi/garmin/source/NaviGlanceView.mc" 35 12 ]
         %tmp.64 = lgetv %dc;
         symbol [ dc %tmp.64 35 12 14 ];
         symbol [ drawText %tmp.65 35 15 23 ];
@@ -200,11 +200,11 @@ _Users_adrian_Projects_Garmin_Navi_garmin_source_NaviGlanceView_mc_33_15_36_8_st
         symbol [ TEXT_JUSTIFY_LEFT %tmp.76 35 84 101 ];
         %tmp.76 = getv %tmp.75 :TEXT_JUSTIFY_LEFT;
         invoke %tmp.64 %tmp.65(%tmp.66, %tmp.71, %tmp.73, %tmp.74, %tmp.76);
-_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviGlanceView_mc_33_15_36_8_stop:
-_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviGlanceView_mc_29_8_36_8_if_end:
-_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviGlanceView_mc_18_49_37_4_stop:
+_Users_adrian_Projects_Garmin_Garmin_Android_Navi_garmin_source_NaviGlanceView_mc_33_15_36_8_stop:
+_Users_adrian_Projects_Garmin_Garmin_Android_Navi_garmin_source_NaviGlanceView_mc_29_8_36_8_if_end:
+_Users_adrian_Projects_Garmin_Garmin_Android_Navi_garmin_source_NaviGlanceView_mc_18_49_37_4_stop:
     }
 }
-[ @file = "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviGlanceView.mc"; @line = 1; ]
+[ @file = "/Users/adrian/Projects/Garmin/Garmin-Android-Navi/garmin/source/NaviGlanceView.mc"; @line = 1; ]
 <init> {
 }

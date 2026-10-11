@@ -4,23 +4,19 @@
         "source": "com.navi.garmin.app-main-36:/layout/activity_main.xml"
     },
     {
-        "merged": "/Users/adrian/.gradle/daemon/9.3.0/com.navi.garmin.app-debug-34:/drawable_ic_launcher_background.xml.flat",
-        "source": "/Users/adrian/.gradle/daemon/9.3.0/com.navi.garmin.app-main-36:/drawable/ic_launcher_background.xml"
+        "merged": "com.navi.garmin.app-debug-34:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.navi.garmin.app-main-36:/mipmap-anydpi-v26/ic_launcher.xml"
     },
     {
-        "merged": "/Users/adrian/.gradle/daemon/9.3.0/com.navi.garmin.app-debug-34:/mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "/Users/adrian/.gradle/daemon/9.3.0/com.navi.garmin.app-main-36:/mipmap-anydpi-v26/ic_launcher.xml"
+        "merged": "com.navi.garmin.app-debug-34:/drawable_ic_launcher_background.xml.flat",
+        "source": "com.navi.garmin.app-main-36:/drawable/ic_launcher_background.xml"
     },
     {
-        "merged": "/Users/adrian/.gradle/daemon/9.3.0/com.navi.garmin.app-debug-34:/layout_activity_main.xml.flat",
-        "source": "/Users/adrian/.gradle/daemon/9.3.0/com.navi.garmin.app-main-36:/layout/activity_main.xml"
+        "merged": "com.navi.garmin.app-debug-34:/drawable_ic_launcher_foreground.xml.flat",
+        "source": "com.navi.garmin.app-main-36:/drawable/ic_launcher_foreground.xml"
     },
     {
-        "merged": "/Users/adrian/.gradle/daemon/9.3.0/com.navi.garmin.app-debug-34:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "/Users/adrian/.gradle/daemon/9.3.0/com.navi.garmin.app-main-36:/mipmap-anydpi-v26/ic_launcher_round.xml"
-    },
-    {
-        "merged": "/Users/adrian/.gradle/daemon/9.3.0/com.navi.garmin.app-debug-34:/drawable_ic_launcher_foreground.xml.flat",
-        "source": "/Users/adrian/.gradle/daemon/9.3.0/com.navi.garmin.app-main-36:/drawable/ic_launcher_foreground.xml"
+        "merged": "com.navi.garmin.app-debug-34:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.navi.garmin.app-main-36:/mipmap-anydpi-v26/ic_launcher_round.xml"
     }
 ]

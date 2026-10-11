@@ -1,42 +1,42 @@
-[ @file = "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviDelegate.mc"; @line = 1; @symbol_importdef<0> = [Toybox,1,7,13]; @symbol_importdef<1> = [Lang,1,14,18]; ]
+[ @file = "/Users/adrian/Projects/Garmin/Garmin-Android-Navi/garmin/source/NaviDelegate.mc"; @line = 1; @symbol_importdef<0> = [Toybox,1,7,13]; @symbol_importdef<1> = [Lang,1,14,18]; ]
 import Toybox.Lang;
-[ @file = "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviDelegate.mc"; @line = 2; @symbol_importdef<0> = [Toybox,2,7,13]; @symbol_importdef<1> = [System,2,14,20]; ]
+[ @file = "/Users/adrian/Projects/Garmin/Garmin-Android-Navi/garmin/source/NaviDelegate.mc"; @line = 2; @symbol_importdef<0> = [Toybox,2,7,13]; @symbol_importdef<1> = [System,2,14,20]; ]
 import Toybox.System;
-[ @file = "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviDelegate.mc"; @line = 3; @symbol_importdef<0> = [Toybox,3,7,13]; @symbol_importdef<1> = [WatchUi,3,14,21]; ]
+[ @file = "/Users/adrian/Projects/Garmin/Garmin-Android-Navi/garmin/source/NaviDelegate.mc"; @line = 3; @symbol_importdef<0> = [Toybox,3,7,13]; @symbol_importdef<1> = [WatchUi,3,14,21]; ]
 import Toybox.WatchUi;
-[ @file = "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviDelegate.mc"; @line = 9; @symbol_classdef = [NaviDelegate,9,6,18]; @symbol_extends<0> = [WatchUi,9,27,34]; @symbol_extends<1> = [BehaviorDelegate,9,35,51]; ]
+[ @file = "/Users/adrian/Projects/Garmin/Garmin-Android-Navi/garmin/source/NaviDelegate.mc"; @line = 9; @symbol_classdef = [NaviDelegate,9,6,18]; @symbol_extends<0> = [WatchUi,9,27,34]; @symbol_extends<1> = [BehaviorDelegate,9,35,51]; ]
 class NaviDelegate extends WatchUi.BehaviorDelegate {
-    [ @file = "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviDelegate.mc"; @line = 9; ]
+    [ @file = "/Users/adrian/Projects/Garmin/Garmin-Android-Navi/garmin/source/NaviDelegate.mc"; @line = 9; ]
     <init> {
     }
-    [ @file = "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviDelegate.mc"; @line = 9; ]
+    [ @file = "/Users/adrian/Projects/Garmin/Garmin-Android-Navi/garmin/source/NaviDelegate.mc"; @line = 9; ]
     static
     <init> {
     }
-    [ @file = "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviDelegate.mc"; @line = 11; @position = 16; @symbol_vardef = [_model,11,16,22]; @symbol_type<0> = [NaviModel,11,26,35]; ]
+    [ @file = "/Users/adrian/Projects/Garmin/Garmin-Android-Navi/garmin/source/NaviDelegate.mc"; @line = 11; @position = 16; @symbol_vardef = [_model,11,16,22]; @symbol_type<0> = [NaviModel,11,26,35]; ]
     private
     var _model as NaviModel;
-    [ @file = "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviDelegate.mc"; @line = 13; @symbol_functiondef = [initialize,13,13,23]; @symbol_param<0> = [model,13,24,29]; @symbol_param<0>_type<0> = [NaviModel,13,33,42]; ]
+    [ @file = "/Users/adrian/Projects/Garmin/Garmin-Android-Navi/garmin/source/NaviDelegate.mc"; @line = 13; @symbol_functiondef = [initialize,13,13,23]; @symbol_param<0> = [model,13,24,29]; @symbol_param<0>_type<0> = [NaviModel,13,33,42]; ]
     function initialize(model as NaviModel) as Void {
-_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviDelegate_mc_13_44_16_4_start:
-[ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviDelegate.mc" 14 8 ]
+_Users_adrian_Projects_Garmin_Garmin_Android_Navi_garmin_source_NaviDelegate_mc_13_44_16_4_start:
+[ "/Users/adrian/Projects/Garmin/Garmin-Android-Navi/garmin/source/NaviDelegate.mc" 14 8 ]
         symbol [ BehaviorDelegate %tmp.2 14 8 24 ];
         %tmp.2 = getv ? :BehaviorDelegate;
         symbol [ initialize %tmp.3 14 25 35 ];
         %tmp.3 = getv function %tmp.2 :initialize;
         invoke %tmp.2 %tmp.3();
-[ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviDelegate.mc" 15 8 ]
+[ "/Users/adrian/Projects/Garmin/Garmin-Android-Navi/garmin/source/NaviDelegate.mc" 15 8 ]
         %tmp.4 = lgetv %model;
         symbol [ model %tmp.4 15 17 22 ];
         symbol [ _model ? 15 8 14 ];
         putv self :_model %tmp.4;
-_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviDelegate_mc_13_44_16_4_stop:
+_Users_adrian_Projects_Garmin_Garmin_Android_Navi_garmin_source_NaviDelegate_mc_13_44_16_4_stop:
     }
-    [ @file = "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviDelegate.mc"; @line = 23; @symbol_functiondef = [onKey,23,13,18]; @symbol_param<0> = [keyEvent,23,19,27]; @symbol_param<0>_type<0> = [WatchUi,23,31,38]; @symbol_param<0>_type<1> = [KeyEvent,23,39,47]; @symbol_return<0> = [Lang,23,52,56]; @symbol_return<1> = [Boolean,23,57,64]; ]
+    [ @file = "/Users/adrian/Projects/Garmin/Garmin-Android-Navi/garmin/source/NaviDelegate.mc"; @line = 23; @symbol_functiondef = [onKey,23,13,18]; @symbol_param<0> = [keyEvent,23,19,27]; @symbol_param<0>_type<0> = [WatchUi,23,31,38]; @symbol_param<0>_type<1> = [KeyEvent,23,39,47]; @symbol_return<0> = [Lang,23,52,56]; @symbol_return<1> = [Boolean,23,57,64]; ]
     function onKey(keyEvent as WatchUi.KeyEvent) as Lang.Boolean {
-_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviDelegate_mc_23_65_36_4_start:
-[ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviDelegate.mc" 24 8 ]
-        [ "_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviDelegate_mc_23_65_36_4_start" "_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviDelegate_mc_23_65_36_4_stop" ]
+_Users_adrian_Projects_Garmin_Garmin_Android_Navi_garmin_source_NaviDelegate_mc_23_65_36_4_start:
+[ "/Users/adrian/Projects/Garmin/Garmin-Android-Navi/garmin/source/NaviDelegate.mc" 24 8 ]
+        [ "_Users_adrian_Projects_Garmin_Garmin_Android_Navi_garmin_source_NaviDelegate_mc_23_65_36_4_start" "_Users_adrian_Projects_Garmin_Garmin_Android_Navi_garmin_source_NaviDelegate_mc_23_65_36_4_stop" ]
         %key.1 = local;
         symbol [ key %key.1 24 12 15 ];
         %tmp.1 = lgetv %keyEvent;
@@ -46,9 +46,9 @@ _Users_adrian_Projects_Garmin_Navi_garmin_source_NaviDelegate_mc_23_65_36_4_star
         %tmp.3 = invoke %tmp.1 %tmp.2();
         lputv %key.1 %tmp.3;
         symbol [ key %key.1 24 12 15 ];
-[ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviDelegate.mc" 26 8 ]
-_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviDelegate_mc_26_8_29_8_if_stmt:
-_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviDelegate_mc_26_12_26_55_begin:
+[ "/Users/adrian/Projects/Garmin/Garmin-Android-Navi/garmin/source/NaviDelegate.mc" 26 8 ]
+_Users_adrian_Projects_Garmin_Garmin_Android_Navi_garmin_source_NaviDelegate_mc_26_8_29_8_if_stmt:
+_Users_adrian_Projects_Garmin_Garmin_Android_Navi_garmin_source_NaviDelegate_mc_26_12_26_55_begin:
         %tmp.4 = lgetv %key.1;
         symbol [ key %tmp.4 26 12 15 ];
         symbol [ WatchUi %tmp.5 26 19 26 ];
@@ -56,8 +56,8 @@ _Users_adrian_Projects_Garmin_Navi_garmin_source_NaviDelegate_mc_26_12_26_55_beg
         symbol [ KEY_ENTER %tmp.6 26 27 36 ];
         %tmp.6 = getv %tmp.5 :KEY_ENTER;
         %tmp.7 = eq %tmp.4 %tmp.6;
-        bt %tmp.7 @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviDelegate_mc_26_8_29_8_if_true;
-_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviDelegate_mc_26_40_26_55_false:
+        bt %tmp.7 @_Users_adrian_Projects_Garmin_Garmin_Android_Navi_garmin_source_NaviDelegate_mc_26_8_29_8_if_true;
+_Users_adrian_Projects_Garmin_Garmin_Android_Navi_garmin_source_NaviDelegate_mc_26_40_26_55_false:
         %tmp.8 = lgetv %key.1;
         symbol [ key %tmp.8 26 40 43 ];
         symbol [ WatchUi %tmp.9 26 47 54 ];
@@ -66,26 +66,26 @@ _Users_adrian_Projects_Garmin_Navi_garmin_source_NaviDelegate_mc_26_40_26_55_fal
         %tmp.10 = getv %tmp.9 :KEY_START;
         %tmp.11 = eq %tmp.8 %tmp.10;
         push %tmp.11;
-_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviDelegate_mc_26_40_26_55_end:
-        %tmp.12 = phi [%tmp.7 @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviDelegate_mc_26_12_26_55_begin] [%tmp.11 @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviDelegate_mc_26_40_26_55_false] [%tmp.12 @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviDelegate_mc_26_40_26_55_end];
-        bf %tmp.12 @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviDelegate_mc_26_8_29_8_if_end;
-_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviDelegate_mc_26_8_29_8_if_true:
-_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviDelegate_mc_26_66_29_8_start:
-[ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviDelegate.mc" 27 12 ]
+_Users_adrian_Projects_Garmin_Garmin_Android_Navi_garmin_source_NaviDelegate_mc_26_40_26_55_end:
+        %tmp.12 = phi [%tmp.7 @_Users_adrian_Projects_Garmin_Garmin_Android_Navi_garmin_source_NaviDelegate_mc_26_12_26_55_begin] [%tmp.11 @_Users_adrian_Projects_Garmin_Garmin_Android_Navi_garmin_source_NaviDelegate_mc_26_40_26_55_false] [%tmp.12 @_Users_adrian_Projects_Garmin_Garmin_Android_Navi_garmin_source_NaviDelegate_mc_26_40_26_55_end];
+        bf %tmp.12 @_Users_adrian_Projects_Garmin_Garmin_Android_Navi_garmin_source_NaviDelegate_mc_26_8_29_8_if_end;
+_Users_adrian_Projects_Garmin_Garmin_Android_Navi_garmin_source_NaviDelegate_mc_26_8_29_8_if_true:
+_Users_adrian_Projects_Garmin_Garmin_Android_Navi_garmin_source_NaviDelegate_mc_26_66_29_8_start:
+[ "/Users/adrian/Projects/Garmin/Garmin-Android-Navi/garmin/source/NaviDelegate.mc" 27 12 ]
         symbol [ _model %tmp.14 27 12 18 ];
         %tmp.14 = getv ? :_model;
         symbol [ toggleClock %tmp.15 27 19 30 ];
         %tmp.15 = getv function %tmp.14 :toggleClock;
         invoke %tmp.14 %tmp.15();
-[ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviDelegate.mc" 28 12 ]
+[ "/Users/adrian/Projects/Garmin/Garmin-Android-Navi/garmin/source/NaviDelegate.mc" 28 12 ]
         %tmp.16 = true;
         ret %tmp.16;
-_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviDelegate_mc_26_66_29_8_stop:
-        goto @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviDelegate_mc_26_8_29_8_if_end;
-_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviDelegate_mc_26_8_29_8_if_end:
-[ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviDelegate.mc" 31 8 ]
-_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviDelegate_mc_31_8_33_8_if_stmt:
-_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviDelegate_mc_31_12_31_53_begin:
+_Users_adrian_Projects_Garmin_Garmin_Android_Navi_garmin_source_NaviDelegate_mc_26_66_29_8_stop:
+        goto @_Users_adrian_Projects_Garmin_Garmin_Android_Navi_garmin_source_NaviDelegate_mc_26_8_29_8_if_end;
+_Users_adrian_Projects_Garmin_Garmin_Android_Navi_garmin_source_NaviDelegate_mc_26_8_29_8_if_end:
+[ "/Users/adrian/Projects/Garmin/Garmin-Android-Navi/garmin/source/NaviDelegate.mc" 31 8 ]
+_Users_adrian_Projects_Garmin_Garmin_Android_Navi_garmin_source_NaviDelegate_mc_31_8_33_8_if_stmt:
+_Users_adrian_Projects_Garmin_Garmin_Android_Navi_garmin_source_NaviDelegate_mc_31_12_31_53_begin:
         %tmp.17 = lgetv %key.1;
         symbol [ key %tmp.17 31 12 15 ];
         symbol [ WatchUi %tmp.18 31 19 26 ];
@@ -93,8 +93,8 @@ _Users_adrian_Projects_Garmin_Navi_garmin_source_NaviDelegate_mc_31_12_31_53_beg
         symbol [ KEY_ESC %tmp.19 31 27 34 ];
         %tmp.19 = getv %tmp.18 :KEY_ESC;
         %tmp.20 = eq %tmp.17 %tmp.19;
-        bt %tmp.20 @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviDelegate_mc_31_8_33_8_if_true;
-_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviDelegate_mc_31_38_31_53_false:
+        bt %tmp.20 @_Users_adrian_Projects_Garmin_Garmin_Android_Navi_garmin_source_NaviDelegate_mc_31_8_33_8_if_true;
+_Users_adrian_Projects_Garmin_Garmin_Android_Navi_garmin_source_NaviDelegate_mc_31_38_31_53_false:
         %tmp.21 = lgetv %key.1;
         symbol [ key %tmp.21 31 38 41 ];
         symbol [ WatchUi %tmp.22 31 45 52 ];
@@ -103,85 +103,85 @@ _Users_adrian_Projects_Garmin_Navi_garmin_source_NaviDelegate_mc_31_38_31_53_fal
         %tmp.23 = getv %tmp.22 :KEY_LAP;
         %tmp.24 = eq %tmp.21 %tmp.23;
         push %tmp.24;
-_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviDelegate_mc_31_38_31_53_end:
-        %tmp.25 = phi [%tmp.20 @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviDelegate_mc_31_12_31_53_begin] [%tmp.24 @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviDelegate_mc_31_38_31_53_false] [%tmp.25 @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviDelegate_mc_31_38_31_53_end];
-        bf %tmp.25 @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviDelegate_mc_31_8_33_8_if_end;
-_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviDelegate_mc_31_8_33_8_if_true:
-_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviDelegate_mc_31_62_33_8_start:
-[ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviDelegate.mc" 32 12 ]
+_Users_adrian_Projects_Garmin_Garmin_Android_Navi_garmin_source_NaviDelegate_mc_31_38_31_53_end:
+        %tmp.25 = phi [%tmp.20 @_Users_adrian_Projects_Garmin_Garmin_Android_Navi_garmin_source_NaviDelegate_mc_31_12_31_53_begin] [%tmp.24 @_Users_adrian_Projects_Garmin_Garmin_Android_Navi_garmin_source_NaviDelegate_mc_31_38_31_53_false] [%tmp.25 @_Users_adrian_Projects_Garmin_Garmin_Android_Navi_garmin_source_NaviDelegate_mc_31_38_31_53_end];
+        bf %tmp.25 @_Users_adrian_Projects_Garmin_Garmin_Android_Navi_garmin_source_NaviDelegate_mc_31_8_33_8_if_end;
+_Users_adrian_Projects_Garmin_Garmin_Android_Navi_garmin_source_NaviDelegate_mc_31_8_33_8_if_true:
+_Users_adrian_Projects_Garmin_Garmin_Android_Navi_garmin_source_NaviDelegate_mc_31_62_33_8_start:
+[ "/Users/adrian/Projects/Garmin/Garmin-Android-Navi/garmin/source/NaviDelegate.mc" 32 12 ]
         symbol [ System %tmp.26 32 12 18 ];
         %tmp.26 = getm $.Toybox.System;
         symbol [ exit %tmp.27 32 19 23 ];
         %tmp.27 = getv function %tmp.26 :exit;
         invoke %tmp.26 %tmp.27();
-_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviDelegate_mc_31_62_33_8_stop:
-        goto @_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviDelegate_mc_31_8_33_8_if_end;
-_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviDelegate_mc_31_8_33_8_if_end:
-[ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviDelegate.mc" 35 8 ]
+_Users_adrian_Projects_Garmin_Garmin_Android_Navi_garmin_source_NaviDelegate_mc_31_62_33_8_stop:
+        goto @_Users_adrian_Projects_Garmin_Garmin_Android_Navi_garmin_source_NaviDelegate_mc_31_8_33_8_if_end;
+_Users_adrian_Projects_Garmin_Garmin_Android_Navi_garmin_source_NaviDelegate_mc_31_8_33_8_if_end:
+[ "/Users/adrian/Projects/Garmin/Garmin-Android-Navi/garmin/source/NaviDelegate.mc" 35 8 ]
         %tmp.28 = true;
         ret %tmp.28;
-_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviDelegate_mc_23_65_36_4_stop:
+_Users_adrian_Projects_Garmin_Garmin_Android_Navi_garmin_source_NaviDelegate_mc_23_65_36_4_stop:
     }
-    [ @file = "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviDelegate.mc"; @line = 41; @symbol_functiondef = [onTap,41,13,18]; @symbol_param<0> = [clickEvent,41,19,29]; @symbol_param<0>_type<0> = [WatchUi,41,33,40]; @symbol_param<0>_type<1> = [ClickEvent,41,41,51]; @symbol_return<0> = [Lang,41,56,60]; @symbol_return<1> = [Boolean,41,61,68]; ]
+    [ @file = "/Users/adrian/Projects/Garmin/Garmin-Android-Navi/garmin/source/NaviDelegate.mc"; @line = 41; @symbol_functiondef = [onTap,41,13,18]; @symbol_param<0> = [clickEvent,41,19,29]; @symbol_param<0>_type<0> = [WatchUi,41,33,40]; @symbol_param<0>_type<1> = [ClickEvent,41,41,51]; @symbol_return<0> = [Lang,41,56,60]; @symbol_return<1> = [Boolean,41,61,68]; ]
     function onTap(clickEvent as WatchUi.ClickEvent) as Lang.Boolean {
-_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviDelegate_mc_41_69_43_4_start:
-[ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviDelegate.mc" 42 8 ]
+_Users_adrian_Projects_Garmin_Garmin_Android_Navi_garmin_source_NaviDelegate_mc_41_69_43_4_start:
+[ "/Users/adrian/Projects/Garmin/Garmin-Android-Navi/garmin/source/NaviDelegate.mc" 42 8 ]
         %tmp.1 = true;
         ret %tmp.1;
-_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviDelegate_mc_41_69_43_4_stop:
+_Users_adrian_Projects_Garmin_Garmin_Android_Navi_garmin_source_NaviDelegate_mc_41_69_43_4_stop:
     }
-    [ @file = "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviDelegate.mc"; @line = 45; @symbol_functiondef = [onClick,45,13,20]; @symbol_param<0> = [clickEvent,45,21,31]; @symbol_param<0>_type<0> = [WatchUi,45,35,42]; @symbol_param<0>_type<1> = [ClickEvent,45,43,53]; @symbol_return<0> = [Lang,45,58,62]; @symbol_return<1> = [Boolean,45,63,70]; ]
+    [ @file = "/Users/adrian/Projects/Garmin/Garmin-Android-Navi/garmin/source/NaviDelegate.mc"; @line = 45; @symbol_functiondef = [onClick,45,13,20]; @symbol_param<0> = [clickEvent,45,21,31]; @symbol_param<0>_type<0> = [WatchUi,45,35,42]; @symbol_param<0>_type<1> = [ClickEvent,45,43,53]; @symbol_return<0> = [Lang,45,58,62]; @symbol_return<1> = [Boolean,45,63,70]; ]
     function onClick(clickEvent as WatchUi.ClickEvent) as Lang.Boolean {
-_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviDelegate_mc_45_71_47_4_start:
-[ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviDelegate.mc" 46 8 ]
+_Users_adrian_Projects_Garmin_Garmin_Android_Navi_garmin_source_NaviDelegate_mc_45_71_47_4_start:
+[ "/Users/adrian/Projects/Garmin/Garmin-Android-Navi/garmin/source/NaviDelegate.mc" 46 8 ]
         %tmp.1 = true;
         ret %tmp.1;
-_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviDelegate_mc_45_71_47_4_stop:
+_Users_adrian_Projects_Garmin_Garmin_Android_Navi_garmin_source_NaviDelegate_mc_45_71_47_4_stop:
     }
-    [ @file = "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviDelegate.mc"; @line = 49; @symbol_functiondef = [onSwipe,49,13,20]; @symbol_param<0> = [swipeEvent,49,21,31]; @symbol_param<0>_type<0> = [WatchUi,49,35,42]; @symbol_param<0>_type<1> = [SwipeEvent,49,43,53]; @symbol_return<0> = [Lang,49,58,62]; @symbol_return<1> = [Boolean,49,63,70]; ]
+    [ @file = "/Users/adrian/Projects/Garmin/Garmin-Android-Navi/garmin/source/NaviDelegate.mc"; @line = 49; @symbol_functiondef = [onSwipe,49,13,20]; @symbol_param<0> = [swipeEvent,49,21,31]; @symbol_param<0>_type<0> = [WatchUi,49,35,42]; @symbol_param<0>_type<1> = [SwipeEvent,49,43,53]; @symbol_return<0> = [Lang,49,58,62]; @symbol_return<1> = [Boolean,49,63,70]; ]
     function onSwipe(swipeEvent as WatchUi.SwipeEvent) as Lang.Boolean {
-_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviDelegate_mc_49_71_51_4_start:
-[ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviDelegate.mc" 50 8 ]
+_Users_adrian_Projects_Garmin_Garmin_Android_Navi_garmin_source_NaviDelegate_mc_49_71_51_4_start:
+[ "/Users/adrian/Projects/Garmin/Garmin-Android-Navi/garmin/source/NaviDelegate.mc" 50 8 ]
         %tmp.1 = true;
         ret %tmp.1;
-_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviDelegate_mc_49_71_51_4_stop:
+_Users_adrian_Projects_Garmin_Garmin_Android_Navi_garmin_source_NaviDelegate_mc_49_71_51_4_stop:
     }
-    [ @file = "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviDelegate.mc"; @line = 53; @symbol_functiondef = [onHold,53,13,19]; @symbol_param<0> = [clickEvent,53,20,30]; @symbol_param<0>_type<0> = [WatchUi,53,34,41]; @symbol_param<0>_type<1> = [ClickEvent,53,42,52]; @symbol_return<0> = [Lang,53,57,61]; @symbol_return<1> = [Boolean,53,62,69]; ]
+    [ @file = "/Users/adrian/Projects/Garmin/Garmin-Android-Navi/garmin/source/NaviDelegate.mc"; @line = 53; @symbol_functiondef = [onHold,53,13,19]; @symbol_param<0> = [clickEvent,53,20,30]; @symbol_param<0>_type<0> = [WatchUi,53,34,41]; @symbol_param<0>_type<1> = [ClickEvent,53,42,52]; @symbol_return<0> = [Lang,53,57,61]; @symbol_return<1> = [Boolean,53,62,69]; ]
     function onHold(clickEvent as WatchUi.ClickEvent) as Lang.Boolean {
-_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviDelegate_mc_53_70_55_4_start:
-[ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviDelegate.mc" 54 8 ]
+_Users_adrian_Projects_Garmin_Garmin_Android_Navi_garmin_source_NaviDelegate_mc_53_70_55_4_start:
+[ "/Users/adrian/Projects/Garmin/Garmin-Android-Navi/garmin/source/NaviDelegate.mc" 54 8 ]
         %tmp.1 = true;
         ret %tmp.1;
-_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviDelegate_mc_53_70_55_4_stop:
+_Users_adrian_Projects_Garmin_Garmin_Android_Navi_garmin_source_NaviDelegate_mc_53_70_55_4_stop:
     }
-    [ @file = "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviDelegate.mc"; @line = 57; @symbol_functiondef = [onRelease,57,13,22]; @symbol_param<0> = [clickEvent,57,23,33]; @symbol_param<0>_type<0> = [WatchUi,57,37,44]; @symbol_param<0>_type<1> = [ClickEvent,57,45,55]; @symbol_return<0> = [Lang,57,60,64]; @symbol_return<1> = [Boolean,57,65,72]; ]
+    [ @file = "/Users/adrian/Projects/Garmin/Garmin-Android-Navi/garmin/source/NaviDelegate.mc"; @line = 57; @symbol_functiondef = [onRelease,57,13,22]; @symbol_param<0> = [clickEvent,57,23,33]; @symbol_param<0>_type<0> = [WatchUi,57,37,44]; @symbol_param<0>_type<1> = [ClickEvent,57,45,55]; @symbol_return<0> = [Lang,57,60,64]; @symbol_return<1> = [Boolean,57,65,72]; ]
     function onRelease(clickEvent as WatchUi.ClickEvent) as Lang.Boolean {
-_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviDelegate_mc_57_73_59_4_start:
-[ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviDelegate.mc" 58 8 ]
+_Users_adrian_Projects_Garmin_Garmin_Android_Navi_garmin_source_NaviDelegate_mc_57_73_59_4_start:
+[ "/Users/adrian/Projects/Garmin/Garmin-Android-Navi/garmin/source/NaviDelegate.mc" 58 8 ]
         %tmp.1 = true;
         ret %tmp.1;
-_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviDelegate_mc_57_73_59_4_stop:
+_Users_adrian_Projects_Garmin_Garmin_Android_Navi_garmin_source_NaviDelegate_mc_57_73_59_4_stop:
     }
-    [ @file = "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviDelegate.mc"; @line = 64; @symbol_functiondef = [onSelect,64,13,21]; @symbol_return<0> = [Lang,64,27,31]; @symbol_return<1> = [Boolean,64,32,39]; ]
+    [ @file = "/Users/adrian/Projects/Garmin/Garmin-Android-Navi/garmin/source/NaviDelegate.mc"; @line = 64; @symbol_functiondef = [onSelect,64,13,21]; @symbol_return<0> = [Lang,64,27,31]; @symbol_return<1> = [Boolean,64,32,39]; ]
     function onSelect() as Lang.Boolean {
-_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviDelegate_mc_64_40_66_4_start:
-[ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviDelegate.mc" 65 8 ]
+_Users_adrian_Projects_Garmin_Garmin_Android_Navi_garmin_source_NaviDelegate_mc_64_40_66_4_start:
+[ "/Users/adrian/Projects/Garmin/Garmin-Android-Navi/garmin/source/NaviDelegate.mc" 65 8 ]
         %tmp.1 = true;
         ret %tmp.1;
-_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviDelegate_mc_64_40_66_4_stop:
+_Users_adrian_Projects_Garmin_Garmin_Android_Navi_garmin_source_NaviDelegate_mc_64_40_66_4_stop:
     }
-    [ @file = "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviDelegate.mc"; @line = 71; @symbol_functiondef = [onBack,71,13,19]; @symbol_return<0> = [Lang,71,25,29]; @symbol_return<1> = [Boolean,71,30,37]; ]
+    [ @file = "/Users/adrian/Projects/Garmin/Garmin-Android-Navi/garmin/source/NaviDelegate.mc"; @line = 71; @symbol_functiondef = [onBack,71,13,19]; @symbol_return<0> = [Lang,71,25,29]; @symbol_return<1> = [Boolean,71,30,37]; ]
     function onBack() as Lang.Boolean {
-_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviDelegate_mc_71_38_73_4_start:
-[ "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviDelegate.mc" 72 8 ]
+_Users_adrian_Projects_Garmin_Garmin_Android_Navi_garmin_source_NaviDelegate_mc_71_38_73_4_start:
+[ "/Users/adrian/Projects/Garmin/Garmin-Android-Navi/garmin/source/NaviDelegate.mc" 72 8 ]
         symbol [ System %tmp.1 72 8 14 ];
         %tmp.1 = getm $.Toybox.System;
         symbol [ exit %tmp.2 72 15 19 ];
         %tmp.2 = getv function %tmp.1 :exit;
         invoke %tmp.1 %tmp.2();
-_Users_adrian_Projects_Garmin_Navi_garmin_source_NaviDelegate_mc_71_38_73_4_stop:
+_Users_adrian_Projects_Garmin_Garmin_Android_Navi_garmin_source_NaviDelegate_mc_71_38_73_4_stop:
     }
 }
-[ @file = "/Users/adrian/Projects/Garmin/Navi/garmin/source/NaviDelegate.mc"; @line = 1; ]
+[ @file = "/Users/adrian/Projects/Garmin/Garmin-Android-Navi/garmin/source/NaviDelegate.mc"; @line = 1; ]
 <init> {
 }

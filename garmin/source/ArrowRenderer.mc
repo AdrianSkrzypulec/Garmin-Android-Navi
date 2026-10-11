@@ -225,128 +225,66 @@ class ArrowRenderer {
         size as Number,
         exitNum as Number
     ) as Void {
-        // Normalize exit number: default to 2 (straight through) if missing
-        var target = (exitNum > 0) ? exitNum : 2;
-
-        // Number of exits to draw. Support 1–6. Minimum 3 for a useful roundabout.
-        var numExits = (target > 4) ? target : 4;
-        if (numExits < 3) { numExits = 3; }
-
-        // Ring geometry
-        var ringR = size - 8;
-        var innerR = (ringR * 0.45).toNumber();   // hollow center size
-        var exitLen = 14;                          // spoke extension beyond ring
+        // Enlarge roundabout geometry for maximum clarity and visibility
+        var ringR = size + 4;                       // 48 px radius outer ring
+        var innerR = (ringR * 0.58).toNumber();     // 28 px radius central badge
+        var exitLen = 12;                           // Length of neutral exit stubs
 
         // ---- APPROACH ARROW from bottom (entry lane) ----
-        // Entry at angle 270° (bottom = -90° from top = 3π/2)
-        // We draw entry BEFORE ring so ring paints over overlap
-        var entryAngle = Math.PI * 1.5;  // 270° = bottom
-        var entryX = cx + (Math.cos(entryAngle) * ringR).toNumber();
-        var entryY = cy - (Math.sin(entryAngle) * ringR).toNumber();
-        var entryEndX = cx + (Math.cos(entryAngle) * (ringR + exitLen + 4)).toNumber();
-        var entryEndY = cy - (Math.sin(entryAngle) * (ringR + exitLen + 4)).toNumber();
-
+        var entryY = cy + ringR + 12;
         dc.setPenWidth(7);
         dc.setColor(COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
-        dc.drawLine(entryX, entryY, entryEndX, entryEndY);
+        dc.drawLine(cx, entryY, cx, cy + ringR - 2);
 
-        // Small arrowhead pointing INTO the circle (up)
-        var eaLen = 10;
-        var eaW = 7;
+        // Entry arrowhead pointing UP into circle
         dc.fillPolygon([
-            [entryX, entryY],
-            [entryX - eaW, entryY + eaLen],
-            [entryX, entryY + (eaLen - 3)],
-            [entryX + eaW, entryY + eaLen]
+            [cx, cy + ringR - 5],
+            [cx - 8, cy + ringR + 6],
+            [cx, cy + ringR + 3],
+            [cx + 8, cy + ringR + 6]
         ]);
 
         // ---- RING ----
-        dc.setPenWidth(5);
+        dc.setPenWidth(7);
         dc.setColor(COLOR_MAIN, Graphics.COLOR_TRANSPARENT);
         dc.drawCircle(cx, cy, ringR);
 
-        // ---- EXIT SPOKES ----
-        // Exits are numbered clockwise starting from the first exit after entry.
-        // Entry is at bottom (270°). First exit is at ~0° (right), going clockwise.
-        // angleStep distributes exits evenly around the circle, skipping the entry sector.
-        //
-        // We reserve ~60° for the entry gap and distribute exits in the remaining 300°.
-        // Exit 1 starts at 0° (right), going clockwise (decreasing angle in standard math).
-        //
-        // In screen coords: angle 0°=right, increases counter-clockwise in math,
-        // but drawArc/cos/sin use standard math angles.
-        // Clockwise on screen means decreasing angle.
-        //
-        // Entry gap: bottom (270°) ±30° = 240°..300° blocked
-        // Available arc: 300°..240° going clockwise (i.e. 300° down to -60°+360°=300° through 0°,90°,180°,240°)
-        // Spread numExits exits evenly in that 300° arc.
+        // ---- NEUTRAL EXIT SPOKES (Top, Right, Left) ----
+        // Neutral white/gray stubs around roundabout - no single exit is bolded or highlighted
+        dc.setPenWidth(5);
+        dc.setColor(COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
 
-        var gapDeg = 60.0;                        // degrees blocked by entry lane
-        var arcDeg = 360.0 - gapDeg;              // available arc for exits = 300°
-        var startDeg = 270.0 + (gapDeg / 2.0);   // first exit angle (clockwise from entry) = 300°
-        var stepDeg = arcDeg / numExits.toFloat();
+        // Right exit (0°)
+        var rX = cx + ringR + exitLen;
+        dc.drawLine(cx + ringR, cy, rX, cy);
+        dc.fillCircle(rX, cy, 3);
 
-        for (var i = 0; i < numExits; i++) {
-            // Clockwise on screen → subtract from startDeg
-            var angleDeg = startDeg - (i.toFloat() * stepDeg);
-            var angleRad = angleDeg * Math.PI / 180.0;
+        // Top exit (90°)
+        var tY = cy - ringR - exitLen;
+        dc.drawLine(cx, cy - ringR, cx, tY);
+        dc.fillCircle(cx, tY, 3);
 
-            // Spoke start (on ring) and end (beyond ring)
-            var spokeStartX = cx + (Math.cos(angleRad) * ringR).toNumber();
-            var spokeStartY = cy - (Math.sin(angleRad) * ringR).toNumber();
-            var spokeEndX   = cx + (Math.cos(angleRad) * (ringR + exitLen)).toNumber();
-            var spokeEndY   = cy - (Math.sin(angleRad) * (ringR + exitLen)).toNumber();
+        // Left exit (180°)
+        var lX = cx - ringR - exitLen;
+        dc.drawLine(cx - ringR, cy, lX, cy);
+        dc.fillCircle(lX, cy, 3);
 
-            var isTarget = (i + 1 == target);
-
-            if (isTarget) {
-                // Highlighted exit: thick green spoke + arrowhead
-                dc.setPenWidth(8);
-                dc.setColor(COLOR_MAIN, Graphics.COLOR_TRANSPARENT);
-                dc.drawLine(spokeStartX, spokeStartY, spokeEndX, spokeEndY);
-
-                // Arrowhead pointing outward along the spoke direction
-                var aLen = 13.0;
-                var aW   = 8.0;
-                var ux = Math.cos(angleRad).toFloat();
-                var uy = -Math.sin(angleRad).toFloat();  // screen y is flipped
-                var perpX = -uy;
-                var perpY =  ux;
-
-                var tx = spokeEndX + (ux * 6.0).toNumber();
-                var ty = spokeEndY + (uy * 6.0).toNumber();
-                var p1 = [tx, ty];
-                var p2 = [(tx - ux * aLen + perpX * aW).toNumber(), (ty - uy * aLen + perpY * aW).toNumber()];
-                var p3 = [(tx - ux * (aLen - 4.0)).toNumber(), (ty - uy * (aLen - 4.0)).toNumber()];
-                var p4 = [(tx - ux * aLen - perpX * aW).toNumber(), (ty - uy * aLen - perpY * aW).toNumber()];
-
-                dc.setColor(COLOR_MAIN, Graphics.COLOR_TRANSPARENT);
-                dc.fillPolygon([p1, p2, p3, p4]);
-
-                // Bright dot at spoke tip to make it pop
-                dc.fillCircle(spokeEndX, spokeEndY, 4);
-
-            } else {
-                // Inactive exit: thin gray stub
-                dc.setPenWidth(3);
-                dc.setColor(COLOR_INACTIVE, Graphics.COLOR_TRANSPARENT);
-                dc.drawLine(spokeStartX, spokeStartY, spokeEndX, spokeEndY);
-                // Small gray dot at tip
-                dc.fillCircle(spokeEndX, spokeEndY, 3);
-            }
-        }
-
-        // ---- CENTER BADGE with exit number ----
+        // ---- CENTER BADGE WITH LARGE READABLE DIGIT ----
+        // Bright yellow central circle with bold black outline
         dc.setColor(COLOR_ACCENT, Graphics.COLOR_TRANSPARENT);
         dc.fillCircle(cx, cy, innerR);
         dc.setColor(COLOR_BLACK, Graphics.COLOR_TRANSPARENT);
-        dc.setPenWidth(2);
+        dc.setPenWidth(3);
         dc.drawCircle(cx, cy, innerR);
 
-        var exitStr = target.toString();
-        var fontH = Graphics.getFontHeight(Graphics.FONT_MEDIUM);
+        // Display exact exit number (e.g. 1, 2, 3, 4) in large bold font
+        var exitStr = (exitNum > 0) ? exitNum.toString() : "1";
+
+        // Draw large digital font centered inside yellow circle
+        var font = Graphics.FONT_NUMBER_MILD;
+        var fontH = Graphics.getFontHeight(font);
         dc.setColor(COLOR_BLACK, Graphics.COLOR_TRANSPARENT);
-        dc.drawText(cx, cy - (fontH / 2) + 1, Graphics.FONT_MEDIUM, exitStr, Graphics.TEXT_JUSTIFY_CENTER);
+        dc.drawText(cx, cy - (fontH / 2) - 1, font, exitStr, Graphics.TEXT_JUSTIFY_CENTER);
     }
 
     // --- KEEP LEFT (-1) / KEEP RIGHT (+1) ---
