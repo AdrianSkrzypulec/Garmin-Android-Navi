@@ -225,33 +225,32 @@ class ArrowRenderer {
         size as Number,
         exitNum as Number
     ) as Void {
-        // Enlarge roundabout geometry for maximum clarity and visibility
-        var ringR = size + 4;                       // 48 px radius outer ring
-        var innerR = (ringR * 0.58).toNumber();     // 28 px radius central badge
-        var exitLen = 12;                           // Length of neutral exit stubs
+        // Compact roundabout geometry to prevent overlapping top header line
+        var ringR = size - 6;                        // 32 px radius ring
+        var innerR = (ringR * 0.68).toNumber();     // 22 px radius central badge
+        var exitLen = 9;                            // Length of neutral exit stubs
 
         // ---- APPROACH ARROW from bottom (entry lane) ----
-        var entryY = cy + ringR + 12;
-        dc.setPenWidth(7);
+        var entryY = cy + ringR + 9;
+        dc.setPenWidth(6);
         dc.setColor(COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
         dc.drawLine(cx, entryY, cx, cy + ringR - 2);
 
         // Entry arrowhead pointing UP into circle
         dc.fillPolygon([
-            [cx, cy + ringR - 5],
-            [cx - 8, cy + ringR + 6],
-            [cx, cy + ringR + 3],
-            [cx + 8, cy + ringR + 6]
+            [cx, cy + ringR - 4],
+            [cx - 6, cy + ringR + 5],
+            [cx, cy + ringR + 2],
+            [cx + 6, cy + ringR + 5]
         ]);
 
         // ---- RING ----
-        dc.setPenWidth(7);
+        dc.setPenWidth(6);
         dc.setColor(COLOR_MAIN, Graphics.COLOR_TRANSPARENT);
         dc.drawCircle(cx, cy, ringR);
 
         // ---- NEUTRAL EXIT SPOKES (Top, Right, Left) ----
-        // Neutral white/gray stubs around roundabout - no single exit is bolded or highlighted
-        dc.setPenWidth(5);
+        dc.setPenWidth(4);
         dc.setColor(COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
 
         // Right exit (0°)
@@ -274,7 +273,7 @@ class ArrowRenderer {
         dc.setColor(COLOR_ACCENT, Graphics.COLOR_TRANSPARENT);
         dc.fillCircle(cx, cy, innerR);
         dc.setColor(COLOR_BLACK, Graphics.COLOR_TRANSPARENT);
-        dc.setPenWidth(3);
+        dc.setPenWidth(2);
         dc.drawCircle(cx, cy, innerR);
 
         // Display exact exit number (e.g. 1, 2, 3, 4) in large bold font
@@ -384,4 +383,3 @@ class ArrowRenderer {
         dc.fillCircle(cx, cy, 3);
     }
 }
-

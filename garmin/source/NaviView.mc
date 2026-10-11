@@ -62,17 +62,18 @@ class NaviView extends WatchUi.View {
         if (topText.length() > 0) {
             var headerColor = _model.showClock ? Graphics.COLOR_WHITE : Graphics.COLOR_LT_GRAY;
             dc.setColor(headerColor, Graphics.COLOR_TRANSPARENT);
-            dc.drawText(cx, 16, Graphics.FONT_XTINY, topText, Graphics.TEXT_JUSTIFY_CENTER);
+            // 50% larger font (FONT_TINY) for maximum top header readability
+            dc.drawText(cx, 10, Graphics.FONT_TINY, topText, Graphics.TEXT_JUSTIFY_CENTER);
         }
 
         // Top subtle divider line
         dc.setColor(Graphics.COLOR_DK_GRAY, Graphics.COLOR_TRANSPARENT);
         dc.setPenWidth(1);
-        dc.drawLine(cx - 50, 36, cx + 50, 36);
+        dc.drawLine(cx - 55, 38, cx + 55, 38);
 
         // --- CENTER SECTION: Vector Maneuver Graphic ---
-        // Enlarged maneuver icon centered at cx=130, cy=88 with half-size 44 px
-        ArrowRenderer.drawManeuver(dc, cx, 88, 44, _model.action, _model.exitNumber);
+        // Maneuver icon centered at cx=130, cy=92 with size 38 px (fits cleanly below divider)
+        ArrowRenderer.drawManeuver(dc, cx, 92, 38, _model.action, _model.exitNumber);
 
         // --- MIDDLE-LOWER SECTION: Turn Distance ---
         var distColor = Graphics.COLOR_WHITE;
@@ -187,10 +188,10 @@ class NaviView extends WatchUi.View {
             var timeStr = Lang.format("$1$:$2$", [clockTime.hour.format("%02d"), clockTime.min.format("%02d")]);
             var header = timeStr + "  •  " + getFormattedTemperature();
             dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
-            dc.drawText(cx, 24, Graphics.FONT_XTINY, header, Graphics.TEXT_JUSTIFY_CENTER);
+            dc.drawText(cx, 10, Graphics.FONT_TINY, header, Graphics.TEXT_JUSTIFY_CENTER);
         } else {
             dc.setColor(Graphics.COLOR_GREEN, Graphics.COLOR_TRANSPARENT);
-            dc.drawText(cx, 24, Graphics.FONT_TINY, "MAPS NAVI", Graphics.TEXT_JUSTIFY_CENTER);
+            dc.drawText(cx, 10, Graphics.FONT_TINY, "MAPS NAVI", Graphics.TEXT_JUSTIFY_CENTER);
         }
 
         // Stylized compass icon
