@@ -1,9 +1,12 @@
 import Toybox.Graphics;
 import Toybox.Lang;
+import Toybox.Sensor;
+import Toybox.SensorHistory;
 import Toybox.System;
 import Toybox.Time;
 import Toybox.Time.Gregorian;
 import Toybox.WatchUi;
+import Toybox.Weather;
 
 /**
  * NaviView renders the full-screen navigation UI on the 260x260 Garmin vívoactive 4 screen.
@@ -36,9 +39,7 @@ class NaviView extends WatchUi.View {
         dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_BLACK);
         dc.clear();
 
-        if (_model.showClock) {
-            renderClockView(dc, cx, cy, w, h);
-        } else if (_model.hasRoute) {
+        if (_model.hasRoute) {
             renderActiveRoute(dc, cx, cy, w, h);
         } else {
             renderStandby(dc, cx, cy, w, h);
@@ -55,18 +56,12 @@ class NaviView extends WatchUi.View {
         w as Number,
         h as Number
     ) as Void {
-        // --- TOP SECTION: ETA and Remaining Distance ---
-        var topText = "";
-        if (_model.eta.length() > 0 && _model.remainDist.length() > 0) {
-            topText = _model.eta + "  •  " + _model.remainDist;
-        } else if (_model.eta.length() > 0) {
-            topText = "ETA " + _model.eta;
-        } else if (_model.remainDist.length() > 0) {
-            topText = _model.remainDist;
-        }
+        // --- TOP SECTION: ETA & Distance OR Current Time & Temperature ---
+        var topText = getTopHeaderText();
 
         if (topText.length() > 0) {
-            dc.setColor(Graphics.COLOR_LT_GRAY, Graphics.COLOR_TRANSPARENT);
+            var headerColor = _model.showClock ? Graphics.COLOR_WHITE : Graphics.COLOR_LT_GRAY;
+            dc.setColor(headerColor, Graphics.COLOR_TRANSPARENT);
             dc.drawText(cx, 16, Graphics.FONT_XTINY, topText, Graphics.TEXT_JUSTIFY_CENTER);
         }
 
@@ -108,38 +103,76 @@ class NaviView extends WatchUi.View {
     }
 
     /**
-     * Renders full-screen clock / watch face screen displaying current digital time and date.
+     * Builds top header string: either ETA & Remaining Distance OR Current Time & Temperature (toggled via top button).
      */
-    private function renderClockView(
-        dc as Graphics.Dc,
-        cx as Number,
-        cy as Number,
-        w as Number,
-        h as Number
-    ) as Void {
-        var clockTime = System.getClockTime();
-        var hours = clockTime.hour;
-        var mins = clockTime.min;
-        var timeStr = Lang.format("$1$:$2$", [hours.format("%02d"), mins.format("%02d")]);
-
-        var now = Time.now();
-        var dateInfo = Gregorian.info(now, Time.FORMAT_MEDIUM);
-        var dateStr = Lang.format("$1$ $2$ $3$", [dateInfo.day, dateInfo.month, dateInfo.year]);
-
-        // Large Digital Clock Time (centered)
-        dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
-        dc.drawText(cx, cy - 45, Graphics.FONT_NUMBER_HOT, timeStr, Graphics.TEXT_JUSTIFY_CENTER);
-
-        // Date String
-        dc.setColor(Graphics.COLOR_LT_GRAY, Graphics.COLOR_TRANSPARENT);
-        dc.drawText(cx, cy + 32, Graphics.FONT_SMALL, dateStr, Graphics.TEXT_JUSTIFY_CENTER);
-
-        // Phone battery percentage at bottom
-        renderBottomBar(dc, cx, h, w);
+    private function getTopHeaderText() as String {
+        if (_model.showClock) {
+            // Mode B (Top button active): Current Time & Temperature
+            var clockTime = System.getClockTime();
+            var hours = clockTime.hour;
+            var mins = clockTime.min;
+            var timeStr = Lang.format("$1$:$2$", [hours.format("%02d"), mins.format("%02d")]);
+            var tempStr = getFormattedTemperature();
+            return timeStr + "  •  " + tempStr;
+        } else {
+            // Mode A (Default): ETA & Remaining Distance
+            if (_model.eta.length() > 0 && _model.remainDist.length() > 0) {
+                return _model.eta + "  •  " + _model.remainDist;
+            } else if (_model.eta.length() > 0) {
+                return "ETA " + _model.eta;
+            } else if (_model.remainDist.length() > 0) {
+                return _model.remainDist;
+            }
+            return "";
+        }
     }
 
     /**
-     * Renders clean standby screen when no route is active in Google Maps.
+     * Retrieves current temperature string in °C from Weather, SensorHistory, or Sensor API.
+     */
+    private function getFormattedTemperature() as String {
+        // 1. Try Weather API
+        if (Toybox has :Weather) {
+            try {
+                var cond = Weather.getCurrentConditions();
+                if (cond != null && cond.temperature != null) {
+                    return cond.temperature.toString() + "°C";
+                }
+            } catch (e) {
+            }
+        }
+
+        // 2. Try SensorHistory API
+        if (Toybox has :SensorHistory && SensorHistory has :getTemperatureHistory) {
+            try {
+                var iter = SensorHistory.getTemperatureHistory({:period => 1});
+                if (iter != null) {
+                    var sample = iter.next();
+                    if (sample != null && sample.data != null) {
+                        var val = sample.data.toNumber();
+                        return val.toString() + "°C";
+                    }
+                }
+            } catch (e) {
+            }
+        }
+
+        // 3. Try Sensor Info
+        if (Toybox has :Sensor) {
+            try {
+                var info = Sensor.getInfo();
+                if (info has :temperature && info.temperature != null) {
+                    return info.temperature.toString() + "°C";
+                }
+            } catch (e) {
+            }
+        }
+
+        return "--°C";
+    }
+
+    /**
+     * Renders clean standby screen when no route is active.
      */
     private function renderStandby(
         dc as Graphics.Dc,
@@ -148,9 +181,17 @@ class NaviView extends WatchUi.View {
         w as Number,
         h as Number
     ) as Void {
-        // App title header
-        dc.setColor(Graphics.COLOR_GREEN, Graphics.COLOR_TRANSPARENT);
-        dc.drawText(cx, 24, Graphics.FONT_TINY, "MAPS NAVI", Graphics.TEXT_JUSTIFY_CENTER);
+        // Top header: If top button pressed, show Time & Temp; otherwise show "MAPS NAVI"
+        if (_model.showClock) {
+            var clockTime = System.getClockTime();
+            var timeStr = Lang.format("$1$:$2$", [clockTime.hour.format("%02d"), clockTime.min.format("%02d")]);
+            var header = timeStr + "  •  " + getFormattedTemperature();
+            dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
+            dc.drawText(cx, 24, Graphics.FONT_XTINY, header, Graphics.TEXT_JUSTIFY_CENTER);
+        } else {
+            dc.setColor(Graphics.COLOR_GREEN, Graphics.COLOR_TRANSPARENT);
+            dc.drawText(cx, 24, Graphics.FONT_TINY, "MAPS NAVI", Graphics.TEXT_JUSTIFY_CENTER);
+        }
 
         // Stylized compass icon
         ArrowRenderer.drawManeuver(dc, cx, 110, 44, "NONE", 0);
@@ -219,4 +260,3 @@ class NaviView extends WatchUi.View {
         return result + "...";
     }
 }
-
