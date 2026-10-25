@@ -2202,7 +2202,7 @@ _Users_adrian_Projects_Garmin_Garmin_Android_Navi_garmin_source_ArrowRenderer_mc
         push %tmp.200;
         goto @_Users_adrian_Projects_Garmin_Garmin_Android_Navi_garmin_source_ArrowRenderer_mc_280_22_280_59_end;
 _Users_adrian_Projects_Garmin_Garmin_Android_Navi_garmin_source_ArrowRenderer_mc_280_22_280_59_else_false:
-        %tmp.201 = "1";
+        %tmp.201 = "R";
         push %tmp.201;
 _Users_adrian_Projects_Garmin_Garmin_Android_Navi_garmin_source_ArrowRenderer_mc_280_22_280_59_end:
         %tmp.202 = phi [%tmp.197 @_Users_adrian_Projects_Garmin_Garmin_Android_Navi_garmin_source_ArrowRenderer_mc_280_22_280_59_begin] [%tmp.200 @_Users_adrian_Projects_Garmin_Garmin_Android_Navi_garmin_source_ArrowRenderer_mc_280_22_280_59_true] [%tmp.201 @_Users_adrian_Projects_Garmin_Garmin_Android_Navi_garmin_source_ArrowRenderer_mc_280_22_280_59_else_false] [%tmp.202 @_Users_adrian_Projects_Garmin_Garmin_Android_Navi_garmin_source_ArrowRenderer_mc_280_22_280_59_end];

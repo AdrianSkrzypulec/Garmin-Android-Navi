@@ -276,8 +276,8 @@ class ArrowRenderer {
         dc.setPenWidth(2);
         dc.drawCircle(cx, cy, innerR);
 
-        // Display exact exit number (e.g. 1, 2, 3, 4) in large bold font
-        var exitStr = (exitNum > 0) ? exitNum.toString() : "1";
+        // Display exact exit number if known (e.g. 1, 2, 3, 4), or "R" if exit number is unknown
+        var exitStr = (exitNum > 0) ? exitNum.toString() : "R";
 
         // Draw large digital font centered inside yellow circle
         var font = Graphics.FONT_NUMBER_MILD;

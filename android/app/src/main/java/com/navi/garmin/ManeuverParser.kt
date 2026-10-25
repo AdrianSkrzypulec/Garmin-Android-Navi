@@ -23,16 +23,6 @@ object ManeuverParser {
     private val TIME_FORMAT_REGEX = Pattern.compile("(\\d{1,2}:\\d{2}(\\s*[AaPp][Mm])?)")
     private val DURATION_REGEX = Pattern.compile("(\\d+\\s*(min|godz|h|hr|hrs|min\\.|godz\\.))", Pattern.CASE_INSENSITIVE)
 
-    private val ROUNDABOUT_EXIT_PRIMARY_REGEX = Pattern.compile(
-        "(?:zjed[zź]|we[zź]|take|wybierz|wyjazd|zjazd)\\s*(?:the)?\\s*(\\d+)(?:[.-]|st|nd|rd|th)?\\s*(?:zjazdem|zjazd|exit)?",
-        Pattern.CASE_INSENSITIVE
-    )
-
-    private val ROUNDABOUT_EXIT_FALLBACK_REGEX = Pattern.compile(
-        "(\\d+)\\s*\\.?\\s*(?:zjazdem|zjazd|exit)",
-        Pattern.CASE_INSENSITIVE
-    )
-
     /**
      * Parses notification fields & optional graphic icon into structured NavigationData.
      */
@@ -121,7 +111,7 @@ object ManeuverParser {
         }
 
         // 2. Check text keywords and Unicode direction symbols
-        val textResult = detectFromText(text)
+        val textResult = detectFromText(text, iconResName)
         if (textResult.first != ManeuverType.STRAIGHT && textResult.first != ManeuverType.NONE) {
             return textResult
         }
@@ -130,7 +120,10 @@ object ManeuverParser {
         if (iconBitmap != null) {
             val bitmapResult = detectFromBitmap(iconBitmap)
             if (bitmapResult.first != ManeuverType.NONE) {
-                return bitmapResult
+                val exitNum = if (bitmapResult.first == ManeuverType.ROUNDABOUT) {
+                    extractRoundaboutExitNumber(text, iconResName)
+                } else 0
+                return Pair(bitmapResult.first, exitNum)
             }
         }
 
@@ -139,25 +132,9 @@ object ManeuverParser {
 
     private fun detectFromResName(resName: String, text: String): Pair<ManeuverType, Int> {
         val lower = resName.lowercase()
-        var exitNumber = 0
 
         if (lower.contains("roundabout") || lower.contains("rondo") || lower.contains("circle") || lower.contains("kruh")) {
-            val primaryMatcher = ROUNDABOUT_EXIT_PRIMARY_REGEX.matcher(text)
-            if (primaryMatcher.find()) {
-                exitNumber = primaryMatcher.group(1)?.toIntOrNull() ?: 0
-            }
-            if (exitNumber == 0) {
-                val fallbackMatcher = ROUNDABOUT_EXIT_FALLBACK_REGEX.matcher(text)
-                if (fallbackMatcher.find()) {
-                    exitNumber = fallbackMatcher.group(1)?.toIntOrNull() ?: 0
-                }
-            }
-            if (exitNumber == 0) {
-                val digitMatcher = Pattern.compile("(\\d+)").matcher(resName)
-                if (digitMatcher.find()) {
-                    exitNumber = digitMatcher.group(1)?.toIntOrNull() ?: 0
-                }
-            }
+            val exitNumber = extractRoundaboutExitNumber(text, resName)
             return Pair(ManeuverType.ROUNDABOUT, exitNumber)
         }
 
@@ -204,23 +181,13 @@ object ManeuverParser {
         return Pair(ManeuverType.NONE, 0)
     }
 
-    private fun detectFromText(text: String): Pair<ManeuverType, Int> {
+    private fun detectFromText(text: String, iconResName: String? = null): Pair<ManeuverType, Int> {
         val lower = text.lowercase()
-        var exitNumber = 0
 
         // Roundabout check
         if (lower.contains("rondo") || lower.contains("rondzie") || lower.contains("ronda") ||
             lower.contains("roundabout") || lower.contains("↻") || lower.contains("⟳")) {
-            val primaryMatcher = ROUNDABOUT_EXIT_PRIMARY_REGEX.matcher(text)
-            if (primaryMatcher.find()) {
-                exitNumber = primaryMatcher.group(1)?.toIntOrNull() ?: 0
-            }
-            if (exitNumber == 0) {
-                val fallbackMatcher = ROUNDABOUT_EXIT_FALLBACK_REGEX.matcher(text)
-                if (fallbackMatcher.find()) {
-                    exitNumber = fallbackMatcher.group(1)?.toIntOrNull() ?: 0
-                }
-            }
+            val exitNumber = extractRoundaboutExitNumber(text, iconResName)
             return Pair(ManeuverType.ROUNDABOUT, exitNumber)
         }
 
@@ -290,6 +257,34 @@ object ManeuverParser {
         }
 
         return Pair(ManeuverType.STRAIGHT, 0)
+    }
+
+    private fun extractRoundaboutExitNumber(text: String, iconResName: String?): Int {
+        if (!iconResName.isNullOrEmpty()) {
+            val matcher = Pattern.compile("(?:exit|zjazd|rondo|roundabout)?\\D*?(\\d+)", Pattern.CASE_INSENSITIVE).matcher(iconResName)
+            if (matcher.find()) {
+                val num = matcher.group(1)?.toIntOrNull() ?: 0
+                if (num in 1..8) return num
+            }
+        }
+
+        val patterns = listOf(
+            Pattern.compile("(?:zjed[zź]|we[zź]|take|wybierz|wyjazd|zjazd|exit)\\s*(?:the|nr|numer)?\\s*(\\d+)", Pattern.CASE_INSENSITIVE),
+            Pattern.compile("(\\d+)\\s*(?:[.-]|st|nd|rd|th)?\\s*(?:zjazd|zjazdem|exit|výjezd|wyjazd)", Pattern.CASE_INSENSITIVE),
+            Pattern.compile("(?:zjazd|zjazdem|exit|výjezd|wyjazd)\\s*(?:nr|numer)?\\s*(\\d+)", Pattern.CASE_INSENSITIVE),
+            Pattern.compile("rondo.*?(\\d+)", Pattern.CASE_INSENSITIVE),
+            Pattern.compile("roundabout.*?(\\d+)", Pattern.CASE_INSENSITIVE)
+        )
+
+        for (pattern in patterns) {
+            val matcher = pattern.matcher(text)
+            if (matcher.find()) {
+                val num = matcher.group(1)?.toIntOrNull() ?: 0
+                if (num in 1..8) return num
+            }
+        }
+
+        return 0
     }
 
     /**
