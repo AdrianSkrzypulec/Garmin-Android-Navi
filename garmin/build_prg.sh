@@ -64,9 +64,14 @@ echo "⚙️  Kompilowanie aplikacji dla Garmin vívoactive 4..."
     -y "$KEY_FILE" \
     -w
 
+BIN_APP_DIR="$SCRIPT_DIR/../bin_app"
+mkdir -p "$BIN_APP_DIR"
+cp "$OUTPUT_PRG" "$BIN_APP_DIR/NaviApp.prg"
+
 echo ""
-echo "🎉 SUKCES! Plik został wygenerowany:"
+echo "🎉 SUKCES! Pliki zostały wygenerowane:"
 echo "👉 $OUTPUT_PRG"
+echo "👉 $BIN_APP_DIR/NaviApp.prg"
 echo ""
 echo "🚀 Jak wgrać na zegarek Garmin vívoactive 4:"
 echo " 1. Podłącz zegarek kablem USB do komputera (pojawi się jako dysk GARMIN)."

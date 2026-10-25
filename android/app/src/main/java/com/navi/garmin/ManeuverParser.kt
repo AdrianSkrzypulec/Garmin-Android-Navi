@@ -118,7 +118,7 @@ object ManeuverParser {
 
         // 3. Perform bitmap shape analysis on graphic arrow icon
         if (iconBitmap != null) {
-            val bitmapResult = detectFromBitmap(iconBitmap)
+            val bitmapResult = detectFromBitmap(iconBitmap, text, iconResName)
             if (bitmapResult.first != ManeuverType.NONE) {
                 val exitNum = if (bitmapResult.first == ManeuverType.ROUNDABOUT) {
                     extractRoundaboutExitNumber(text, iconResName)
@@ -287,10 +287,30 @@ object ManeuverParser {
         return 0
     }
 
+    private fun hasRoundaboutCue(text: String, iconResName: String?): Boolean {
+        val lowerText = text.lowercase()
+        if (lowerText.contains("rondo") || lowerText.contains("rondzie") || lowerText.contains("ronda") ||
+            lowerText.contains("roundabout") || lowerText.contains("zjazd") || lowerText.contains("exit") ||
+            lowerText.contains("výjezd") || lowerText.contains("↻") || lowerText.contains("⟳")) {
+            return true
+        }
+        if (!iconResName.isNullOrEmpty()) {
+            val lowerRes = iconResName.lowercase()
+            if (lowerRes.contains("rondo") || lowerRes.contains("roundabout") || lowerRes.contains("circle") || lowerRes.contains("kruh")) {
+                return true
+            }
+        }
+        return false
+    }
+
     /**
      * Performs pixel geometry & distribution analysis on graphic arrow icon.
      */
-    fun detectFromBitmap(bitmap: Bitmap): Pair<ManeuverType, Int> {
+    fun detectFromBitmap(
+        bitmap: Bitmap,
+        text: String = "",
+        iconResName: String? = null
+    ): Pair<ManeuverType, Int> {
         val w = bitmap.width
         val h = bitmap.height
         if (w < 8 || h < 8) return Pair(ManeuverType.NONE, 0)
@@ -387,10 +407,12 @@ object ManeuverParser {
         val blRatio = bl.toDouble() / total
         val brRatio = br.toDouble() / total
 
-        // Roundabout check: pixels distributed in 4 quadrants with hollow center core
-        if (tlRatio > 0.12 && trRatio > 0.12 && blRatio > 0.12 && brRatio > 0.12) {
-            if (centerCore.toDouble() / total < 0.15) {
-                return Pair(ManeuverType.ROUNDABOUT, 0)
+        // Roundabout check: only if text or icon name confirms a roundabout context
+        if (hasRoundaboutCue(text, iconResName)) {
+            if (tlRatio > 0.12 && trRatio > 0.12 && blRatio > 0.12 && brRatio > 0.12) {
+                if (centerCore.toDouble() / total < 0.15) {
+                    return Pair(ManeuverType.ROUNDABOUT, 0)
+                }
             }
         }
 
