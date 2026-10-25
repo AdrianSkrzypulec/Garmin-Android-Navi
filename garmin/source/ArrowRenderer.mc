@@ -186,33 +186,33 @@ class ArrowRenderer {
 
     // --- U-TURN ---
     private static function drawUTurn(dc as Graphics.Dc, cx as Number, cy as Number, size as Number) as Void {
-        var penW = 9;
+        var penW = 10;
         dc.setPenWidth(penW);
         dc.setColor(COLOR_MAIN, Graphics.COLOR_TRANSPARENT);
 
-        var rightX = cx + 16;
-        var leftX = cx - 16;
+        var arcR = 18;
+        var rightX = cx + arcR;
+        var leftX = cx - arcR;
         var botY = cy + size - 4;
-        var loopY = cy - size + 20;
+        var loopY = cy - size + 22;
 
         // Upward right track
         dc.drawLine(rightX, botY, rightX, loopY);
 
-        // Top arc loop
-        var arcR = 16;
-        dc.drawArc(cx, loopY, arcR, Graphics.ARC_CLOCKWISE, 0, 180);
+        // Top arc loop (ARC_COUNTER_CLOCKWISE from 0° to 180° draws top rainbow arch)
+        dc.drawArc(cx, loopY, arcR, Graphics.ARC_COUNTER_CLOCKWISE, 0, 180);
 
         // Downward left track
-        var leftArrowStop = cy + size - 20;
-        dc.drawLine(leftX, loopY, leftX, leftArrowStop);
+        var arrowTipY = cy + size - 2;
+        dc.drawLine(leftX, loopY, leftX, arrowTipY - 10);
 
-        // Downward arrow head
-        var tipY = cy + size - 2;
+        // Downward arrowhead pointing down
         var pts = [
-            [leftX, tipY],
-            [leftX - 13, tipY - 16],
-            [leftX, tipY - 10],
-            [leftX + 13, tipY - 16]
+            [leftX, arrowTipY],
+            [leftX - 14, arrowTipY - 18],
+            [leftX - 4, arrowTipY - 14],
+            [leftX + 4, arrowTipY - 14],
+            [leftX + 14, arrowTipY - 18]
         ];
         dc.fillPolygon(pts);
     }
