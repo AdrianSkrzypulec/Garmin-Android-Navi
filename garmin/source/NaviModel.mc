@@ -20,6 +20,7 @@ class NaviModel {
     public var hasRoute as Boolean = false;
     public var phoneBattery as Number = -1;   // Poziom baterii telefonu w % (-1 = brak danych)
     public var showClock as Boolean = false;  // Czy tarcza zegarka (godzina) jest aktywna
+    public var isImminent as Boolean = false; // Czy manewr jest bliski (< 100m) - pre-calculated for 0-allocation rendering
 
     private var _lastAction as String = "NONE";
     private var _lastDistance as String = "";
@@ -48,6 +49,7 @@ class NaviModel {
         var newDist = dict.get("distance");
         if (newDist != null && newDist instanceof Lang.String) {
             distance = newDist;
+            isImminent = checkImminent(distance);
         }
 
         var newStreet = dict.get("street");
@@ -91,7 +93,7 @@ class NaviModel {
 
         // Trigger haptic vibration if maneuver changed or active navigation just started
         if (hasRoute) {
-            if (!action.equals(_lastAction) || (!distance.equals(_lastDistance) && isImminentTurn(distance))) {
+            if (!action.equals(_lastAction) || (!distance.equals(_lastDistance) && isImminent)) {
                 triggerHaptic();
             }
         }
@@ -103,9 +105,9 @@ class NaviModel {
     }
 
     /**
-     * Checks if distance indicates turn is imminent (< 100m)
+     * Pre-calculates if distance indicates turn is imminent (< 100m)
      */
-    private function isImminentTurn(distStr as String) as Boolean {
+    private function checkImminent(distStr as String) as Boolean {
         var lower = distStr.toLower();
         if (lower.find("50 m") != null || lower.find("100 m") != null) {
             return true;
@@ -121,4 +123,3 @@ class NaviModel {
         return;
     }
 }
-

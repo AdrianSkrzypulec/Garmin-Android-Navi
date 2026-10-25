@@ -10,10 +10,15 @@ import Toybox.Weather;
 
 /**
  * NaviView renders the full-screen navigation UI on the 260x260 Garmin vívoactive 4 screen.
+ * Optimized for minimal CPU usage and maximum MIP display battery life.
  */
 class NaviView extends WatchUi.View {
 
     private var _model as NaviModel;
+
+    // Cache temperature for 60 seconds (60,000 ms) to avoid querying sensors on every frame
+    private var _cachedTemp as String = "--°C";
+    private var _lastTempCheckTimer as Number = 0;
 
     function initialize(model as NaviModel) {
         View.initialize();
@@ -72,15 +77,12 @@ class NaviView extends WatchUi.View {
         dc.drawLine(cx - 55, 38, cx + 55, 38);
 
         // --- CENTER SECTION: Vector Maneuver Graphic ---
-        // Maneuver icon centered at cx=130, cy=92 with size 38 px (fits cleanly below divider)
+        // Maneuver icon centered at cx=130, cy=92 with size 38 px
         ArrowRenderer.drawManeuver(dc, cx, 92, 38, _model.action, _model.exitNumber);
 
         // --- MIDDLE-LOWER SECTION: Turn Distance ---
-        var distColor = Graphics.COLOR_WHITE;
-        var lowerDist = _model.distance.toLower();
-        if (lowerDist.find("50 m") != null || lowerDist.find("100 m") != null) {
-            distColor = Graphics.COLOR_YELLOW; // Warning highlight when close to turn
-        }
+        // Zero-allocation pre-calculated imminent distance color check
+        var distColor = _model.isImminent ? Graphics.COLOR_YELLOW : Graphics.COLOR_WHITE;
 
         dc.setColor(distColor, Graphics.COLOR_TRANSPARENT);
         // Distance in bold large font
@@ -113,7 +115,7 @@ class NaviView extends WatchUi.View {
             var hours = clockTime.hour;
             var mins = clockTime.min;
             var timeStr = Lang.format("$1$:$2$", [hours.format("%02d"), mins.format("%02d")]);
-            var tempStr = getFormattedTemperature();
+            var tempStr = getFormattedTemperatureCached();
             return timeStr + "  •  " + tempStr;
         } else {
             // Mode A (Default): ETA & Remaining Distance
@@ -129,9 +131,21 @@ class NaviView extends WatchUi.View {
     }
 
     /**
+     * Caches temperature for 60,000 ms (60s) to avoid querying sensors on every frame refresh.
+     */
+    private function getFormattedTemperatureCached() as String {
+        var nowTimer = System.getTimer();
+        if ((nowTimer - _lastTempCheckTimer) > 60000 || _lastTempCheckTimer == 0) {
+            _lastTempCheckTimer = nowTimer;
+            _cachedTemp = fetchTemperature();
+        }
+        return _cachedTemp;
+    }
+
+    /**
      * Retrieves current temperature string in °C from Weather, SensorHistory, or Sensor API.
      */
-    private function getFormattedTemperature() as String {
+    private function fetchTemperature() as String {
         // 1. Try Weather API
         if (Toybox has :Weather) {
             try {
@@ -186,7 +200,7 @@ class NaviView extends WatchUi.View {
         if (_model.showClock) {
             var clockTime = System.getClockTime();
             var timeStr = Lang.format("$1$:$2$", [clockTime.hour.format("%02d"), clockTime.min.format("%02d")]);
-            var header = timeStr + "  •  " + getFormattedTemperature();
+            var header = timeStr + "  •  " + getFormattedTemperatureCached();
             dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
             dc.drawText(cx, 10, Graphics.FONT_TINY, header, Graphics.TEXT_JUSTIFY_CENTER);
         } else {
